@@ -811,62 +811,60 @@
 }
 
 
-/* ---- Praxisnotizen Box braun  ---- */
+/* ---- Praxisnotizen Box (Braun) ---- */
 
-.gp-praxisnotizen-box {
-  background: #f9f6f0;
-  border: 1px solid #e8ddd0;
-  border-radius: 16px;
-  padding: 26px 28px;
-  margin: 18px 0;
+.gp-praxisnotes-box {
+  display: block !important;
+  width: 100% !important; /* Zwingt den Kasten auf die volle verfügbare Breite */
+  box-sizing: border-box !important; /* WICHTIG: Padding wird nach innen gerechnet */
+  background: #f9f6f0 !important;
+  border: 1px solid #e8ddd0 !important;
+  border-radius: 16px !important;
+  padding: 26px 28px !important;
+  margin: 24px 0 !important; /* Etwas mehr Luft nach oben/unten */
 }
 
 .gp-praxisnotes-label {
-  color: #8a6820;
+  color: #8a6820 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
 }
 
 .gp-praxisnotes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 12px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  margin-top: 18px !important;
 }
 
 .gp-praxisnotes-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
+  display: flex !important;
+  gap: 14px !important;
+  align-items: flex-start !important;
 }
 
 .gp-praxisnotes-icon {
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  line-height: 1;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+  margin-top: 4px !important; /* Feinjustierung zum Text */
+  line-height: 1 !important;
 }
 
 .gp-praxisnotes-text {
-  margin: 0;
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: #3a3028;
+  margin: 0 !important;
+  font-size: 15.5px !important;
+  line-height: 1.65 !important;
+  color: #3a3028 !important;
 }
 
 .gp-praxisnotes-text strong {
-  color: #5a3d1e;
+  color: #5a3d1e !important;
 }
 
+/* Mobile Optimierung */
 @media (max-width: 640px) {
   .gp-praxisnotes-box {
-    padding: 22px 18px;
-  }
-
-  .gp-praxisnotes-item {
-    gap: 12px;
-  }
-
-  .gp-praxisnotes-text {
-    font-size: 15px;
-    line-height: 1.6;
+    padding: 22px 18px !important;
   }
 }
