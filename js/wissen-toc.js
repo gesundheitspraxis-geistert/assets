@@ -1,3 +1,4 @@
+
 (function () {
   function setTocOpen(wrap, open) {
     if (!wrap) return;
