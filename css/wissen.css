@@ -228,7 +228,7 @@
 }
 
 .gp-product-image {
-  max-width: 220px;
+  max-width: 200px;
   margin: 0 auto 20px;
 }
 
@@ -240,7 +240,7 @@
 }
 
 .gp-product-image img{
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    box-shadow:0 6px 14px rgba(0,0,0,0.08);
 }
 
 .gp-product-tags {
