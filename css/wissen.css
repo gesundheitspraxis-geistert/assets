@@ -228,7 +228,7 @@
 }
 
 .gp-product-image {
-  max-width: 180px;
+  max-width: 240px;
   margin: 0 auto 14px;
 }
 
@@ -239,11 +239,15 @@
   border-radius: 12px;
 }
 
+.gp-product-image img{
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
 .gp-product-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  row-gap: 8px;
+  gap: 10px;
+  row-gap: 10px;
   justify-content: center;
   margin-top: 16px;
 }
