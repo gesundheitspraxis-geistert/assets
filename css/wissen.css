@@ -194,10 +194,17 @@
 
   .gp-vagus-hero-mobile .gp-hero-magazine {
     order: -1;
-    width: 260px !important;
+    width: 320px !important;
     max-width: 100%;
-    margin: 0 auto 18px auto !important;
+    margin: 0 auto 24px auto !important;
     justify-self: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .gp-vagus-hero-mobile .gp-hero-magazine {
+    width: 240px !important;
+    margin: 0 auto 18px auto !important;
   }
 }
 
