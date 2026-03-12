@@ -558,7 +558,8 @@
 
 .gp-related-wrap {
   width: 100%;
-  max-width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -575,7 +576,6 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  width: 100%;
   padding: 22px 20px;
   border: 1px solid #d7e1db;
   border-radius: 16px;
@@ -623,7 +623,7 @@
   border-color: #c4d4cb;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 600px) {
   .gp-related-grid {
     grid-template-columns: 1fr;
     gap: 16px;
