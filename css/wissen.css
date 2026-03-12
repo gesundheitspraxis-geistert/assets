@@ -20,6 +20,9 @@
 .gp-content-section { margin-bottom: 14px; }
 
 
+/* =========================
+   HERO (Intent / Landing)
+========================= */
 
 .gp-intent-wrap {
   max-width: 100%;
@@ -29,9 +32,6 @@
   font-family: "Lora", Georgia, serif;
 }
 
-/* =========================
-   HERO (Intent / Landing)
-========================= */
 
 .gp-intent-hero {
   background: #1e3a34;
@@ -561,12 +561,14 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
   margin-top: 22px;
+  width: 100%;
 }
 
 .gp-related-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  width: 100%;
   padding: 22px 20px;
   border: 1px solid #d7e1db;
   border-radius: 16px;
@@ -620,9 +622,6 @@
     gap: 16px;
   }
 
-  .gp-related-title {
-    font-size: 18px;
-  }
   .gp-related-title {
     font-size: 18px;
   }
