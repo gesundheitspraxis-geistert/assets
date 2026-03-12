@@ -192,11 +192,11 @@
 
 .gp-product-subtitle {
   font-family: 'Lora', Georgia, serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--purple-accent);
-  font-style: italic;
-  margin-top: 14px;
+  font-style: normal;
+  margin-top: 20px;
   margin-bottom: 5px;
   line-height: 1.4;
 }
