@@ -556,12 +556,19 @@
 
 /* ---- Related Cards ---- */
 
+.gp-related-wrap {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .gp-related-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
   margin-top: 22px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .gp-related-card {
