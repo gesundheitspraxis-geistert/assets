@@ -1,6 +1,7 @@
 /* =========================
    GLOBAL
 ========================= */
+body { outline: 6px solid hotpink !important; }
 
 :root {
   --green-dark: #3d5a4e;
