@@ -19,16 +19,6 @@
 
 .gp-content-section { margin-bottom: 14px; }
 
-/* In deinem Bereich für GLOBAL oder LAYOUT */
-.gp-article-wrap, 
-#content_area {
-    max-width: 1080px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 25px !important;  /* Fixiert den linken Rand */
-    padding-right: 25px !important; /* Fixiert den rechten Rand */
-    box-sizing: border-box !important;
-}
 
 /* =========================
    ARTICLE LAYOUT
