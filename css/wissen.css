@@ -586,14 +586,12 @@
 /* ---- Related Cards ---- */
 
 .gp-related-grid {
-  display: grid;
-  /* Benutze auto-fit, damit die Karten bei Platzmangel automatisch umbrechen */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-  gap: 24px;
-  margin-top: 22px;
-  width: 100%;
-  /* Sorgt dafür, dass Padding die Breite nicht vergrößert */
-  box-sizing: border-box; 
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important; /* Wichtig: bleibt innerhalb des Rahmens */
+    margin: 20px 0 !important;
+    box-sizing: border-box !important;
 }
 
 .gp-related-card {
@@ -646,6 +644,13 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.05);
   border-color: #c4d4cb;
+}
+/* In deinem Bereich für COMPONENTS */
+.gp-related-card, 
+.gp-info-card, 
+.gp-anwendung-box {
+    width: 100% !important;
+    box-sizing: border-box !important; /* Padding wird nach innen gerechnet */
 }
 
 /* Mobile Optimierung */
