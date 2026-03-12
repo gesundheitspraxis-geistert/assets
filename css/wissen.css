@@ -1,4 +1,12 @@
-
+.gp-css-test {
+  background:#2e5b4e;
+  color:white;
+  padding:40px;
+  border-radius:12px;
+  font-size:22px;
+  text-align:center;
+  margin:40px 0;
+}
 html, body {
   overflow-x: hidden;
 }
