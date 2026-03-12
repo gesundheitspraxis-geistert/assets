@@ -574,10 +574,12 @@
 
 .gp-related-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Ändere 1fr zu einer Berechnung, die den Gap berücksichtigt */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 22px;
   margin-top: 22px;
-  align-items: stretch;
+  width: 100%; /* Erzwinge die Bindung an den Eltern-Container */
+  box-sizing: border-box; /* WICHTIG: Damit Padding/Border nicht zur Breite zählen */
 }
 
 .gp-related-card {
@@ -634,9 +636,9 @@
 }
 
 @media (max-width: 700px) {
-  .gp-related-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+.gp-related-grid {
+    grid-template-columns: 1fr; /* Auf Mobile untereinander */
+    width: 100%;
   }
 
   .gp-related-title {
