@@ -207,7 +207,6 @@
     margin: 0 auto 18px auto !important;
   }
 
-   @media (max-width: 640px) {
   .vagus-mini-grid {
     grid-template-columns: 1fr !important;
   }
