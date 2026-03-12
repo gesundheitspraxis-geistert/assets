@@ -369,7 +369,7 @@
   border-radius: 16px;
   padding: 20px 22px;
   margin-bottom: 15;
-  margin-top: 30px;
+  margin-top: 38px;
 }
 
 .gp-details-grid {
@@ -401,7 +401,7 @@
 @media (max-width: 768px) {
   .gp-details-grid { gap: 12px; }
 }
- .gp-details-box { margin-bottom: 25; }
+ .gp-details-box { margin-bottom: 28; }
 }
 
   .gp-detail-item {
