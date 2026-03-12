@@ -227,8 +227,8 @@
   overflow: hidden;
 }
 .gp-product-image {
-  max-width: 240px;
-  margin: 0 auto 14px;
+  max-width: 220px;
+  margin: 0 auto 20px;
 }
 
 .gp-product-image img {
