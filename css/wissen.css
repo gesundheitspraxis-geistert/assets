@@ -316,7 +316,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--green-light);
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .gp-section-title {
