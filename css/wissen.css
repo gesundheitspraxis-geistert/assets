@@ -306,7 +306,6 @@
    werden auf der gp-Seite noch ohne gp- Präfix verwendet.
    Neue Seiten nutzen gp-section-* — bitte gp-HTML schrittweise migrieren. */
 
-.gp-section-label,
 .gp-section-label {
   font-size: 13px;
   font-weight: 700;
@@ -316,7 +315,6 @@
   margin-bottom: 10px;
 }
 
-.gp-section-title,
 .gp-section-title {
   font-family: 'Lora', Georgia, serif;
   font-size: 22px;
@@ -326,15 +324,11 @@
   margin-bottom: 16px !important;
 }
 
-.gp-section-body,
 .gp-section-body { font-size: 16.5px; line-height: 1.62; color: #2e3d38; }
-.gp-section-body p,
 .gp-section-body p { margin-bottom: 14px; }
 .gp-section-body p:last-child,
 .gp-section-body p:last-child { margin-bottom: 0; }
-.gp-section-body a,
 .gp-section-body a { color: var(--green-mid); font-weight: 600; text-decoration: none; }
-.gp-section-body a:hover,
 .gp-section-body a:hover { text-decoration: underline; }
 
 .content-section,
@@ -690,6 +684,62 @@
     .author-info-break { display: block; }
 }
 
+/* ---- Praxisnotizen Box ---- */
+
+.gp-praxisnotes-box {
+  background: #f9f6f0;
+  border: 1px solid #e8ddd0;
+  border-radius: 16px;
+  padding: 26px 28px;
+  margin: 24px 0;
+  box-sizing: border-box;
+}
+
+.gp-praxisnotes-heading {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8a6820;
+  margin-bottom: 18px;
+}
+
+.gp-praxisnotes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gp-praxisnotes-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.gp-praxisnotes-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  line-height: 1;
+}
+
+.gp-praxisnotes-text {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #3a3028;
+}
+
+.gp-praxisnotes-text strong {
+  color: #5a3d1e;
+}
+
+@media (max-width: 640px) {
+  .gp-praxisnotes-box {
+    padding: 22px 18px;
+  }
+}
+
 
 /* =========================================================
    GP TOC Inhaltsverzeichnis (Accordeon, aufklappbar)
@@ -808,61 +858,4 @@
 
 .gp-toc-acc__toggle-text {
     white-space: nowrap;
-}
-
-
-/* ---- Praxisnotizen Box ---- */
-
-.gp-praxisnotes-box {
-  background: #f9f6f0;
-  border: 1px solid #e8ddd0;
-  border-radius: 16px;
-  padding: 26px 28px;
-  margin: 24px 0;
-  box-sizing: border-box;
-}
-
-.gp-praxisnotes-heading {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #8a6820;
-  margin-bottom: 18px;
-}
-
-.gp-praxisnotes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.gp-praxisnotes-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.gp-praxisnotes-icon {
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 4px;
-  line-height: 1;
-}
-
-.gp-praxisnotes-text {
-  margin: 0;
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: #3a3028;
-}
-
-.gp-praxisnotes-text strong {
-  color: #5a3d1e;
-}
-
-@media (max-width: 640px) {
-  .gp-praxisnotes-box {
-    padding: 22px 18px;
-  }
 }
