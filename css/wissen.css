@@ -213,6 +213,17 @@
 }
 
 /* =========================
+   MAGAZON HERO 
+   Bild ohne Rahmen
+========================= */
+.gp-hero-magazine{
+    margin-right:-40px;
+    transform:scale(1.06);
+    position:relative;
+    z-index:2;
+}
+
+/* =========================
    PRODUCT IMAGE / CARD
    (gp — später auf gp-article-* migrieren)
 ========================= */
