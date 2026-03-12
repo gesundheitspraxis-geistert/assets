@@ -611,6 +611,34 @@
   border-color: #c4d4cb;
 }
 
+.gp-related-title a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+.gp-related-title a:hover {
+  text-decoration: underline;
+}
+
+.gp-related-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.gp-related-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 20px;
+  border: 1px solid #d7e1db;
+  border-radius: 16px;
+  background: #fff;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  min-height: 100%;
+}
+
 @media (max-width: 700px) {
   .gp-related-grid {
     grid-template-columns: 1fr;
