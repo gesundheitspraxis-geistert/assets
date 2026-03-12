@@ -222,6 +222,19 @@
     position:relative;
     z-index:2;
 }
+@media (max-width: 768px){
+
+.vagus-hero-image{
+    width:260px !important;
+    margin-right:0 !important;
+    margin:20px auto 10px auto !important;
+}
+
+.vagus-hero-image img{
+    width:100%;
+}
+
+}
 
 /* =========================
    PRODUCT IMAGE / CARD
