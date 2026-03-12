@@ -28,14 +28,16 @@
 }
 
 .gp-article-wrap {
-  max-width: 100%;
+  max-width: 1100px; /* Begrenzt die Breite (wie auf deinen anderen Seiten) */
+  margin: 0 auto;    /* Zentriert den gesamten Block */
+  padding: 0 40px;   /* Erzeugt den gewünschten Abstand zum Seitenrand */
   overflow-x: hidden;
 }
 
 .gp-intent-wrap {
   max-width: 100%;
-  margin: 0;
-  padding: 0 0 15px;
+  margin: 0 auto;
+  padding: 0 0 15px; /* Jetzt passt es sich dem Wrapper oben an */
   font-family: "Lora", Georgia, serif;
 }
 
