@@ -809,3 +809,64 @@
 .gp-toc-acc__toggle-text {
     white-space: nowrap;
 }
+
+
+/* ---- Praxisnotizen Box braun  ---- */
+
+.gp-praxisnotes-box {
+  background: #f9f6f0;
+  border: 1px solid #e8ddd0;
+  border-radius: 16px;
+  padding: 26px 28px;
+  margin: 18px 0;
+}
+
+.gp-praxisnotes-label {
+  color: #8a6820;
+}
+
+.gp-praxisnotes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.gp-praxisnotes-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.gp-praxisnotes-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.gp-praxisnotes-text {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #3a3028;
+}
+
+.gp-praxisnotes-text strong {
+  color: #5a3d1e;
+}
+
+@media (max-width: 640px) {
+  .gp-praxisnotes-box {
+    padding: 22px 18px;
+  }
+
+  .gp-praxisnotes-item {
+    gap: 12px;
+  }
+
+  .gp-praxisnotes-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
