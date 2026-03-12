@@ -185,6 +185,20 @@
     max-width: 100%;
     grid-column: auto;
   }
+
+
+  .gp-vagus-hero-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .gp-vagus-hero-mobile .gp-hero-magazine {
+    order: -1;
+    width: 260px !important;
+    max-width: 100%;
+    margin: 0 auto 18px auto !important;
+    justify-self: auto !important;
+  }
 }
 
 /* ---- Hero Text (gp) ---- */
@@ -195,7 +209,7 @@
   font-weight: 400;
   color: var(--purple-accent);
   font-style: italic;
-  margin-top: 18px;
+  margin-top: 13px;
   margin-bottom: 5px;
   line-height: 1.4;
 }
