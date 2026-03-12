@@ -1,9 +1,6 @@
 /* =========================
    GLOBAL
 ========================= */
-html, body {
-  overflow-x: hidden;
-}
 
 :root {
   --green-dark: #3d5a4e;
