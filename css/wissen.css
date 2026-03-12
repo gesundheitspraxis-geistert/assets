@@ -16,22 +16,6 @@
   --bg: #f8faf9;
 }
 
-/* =========================================================
-   1. GLOBAL LAYOUT (Der äußere Rahmen)
-   ========================================================= */
-
-/* Fixiert die Jimdo-Käfige und deinen Hauptcontainer */
-#content_area, 
-.cc-matrix-4313185235, 
-.gp-article-wrap {
-    display: block !important;
-    max-width: 1080px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 25px !important;  /* Stellt den linken Rand sicher */
-    padding-right: 25px !important;
-    box-sizing: border-box !important;
-}
 
 .gp-content-section { margin-bottom: 14px; }
 
@@ -603,25 +587,21 @@
 /* ---- Related Cards ---- */
 
 .gp-related-grid {
-    display: grid !important;
-    /* Nutzt auto-fit: Karten springen bei Platzmangel automatisch untereinander */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 25px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    margin: 30px 0 !important;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 22px;
 }
 
 .gp-related-card {
-    display: flex !important;
-    flex-direction: column !important;
-    min-width: 0 !important; /* Verhindert das "Rausquetschen" aus dem Grid */
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 25px !important;
-    background: #ffffff !important;
-    border: 1px solid #d7e1db !important;
-    border-radius: 16px !important;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px 20px;
+  border: 1px solid #d7e1db;
+  border-radius: 16px;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 .gp-related-tag {
@@ -663,21 +643,16 @@
   box-shadow: 0 10px 24px rgba(0,0,0,0.05);
   border-color: #c4d4cb;
 }
-/* In deinem Bereich für COMPONENTS */
-.gp-related-card, 
-.gp-info-card, 
-.gp-anwendung-box {
-    width: 100% !important;
-    box-sizing: border-box !important; /* Padding wird nach innen gerechnet */
-}
 
-/* Mobile Optimierung */
 @media (max-width: 740px) {
   .gp-related-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
+  .gp-related-title {
+    font-size: 18px;
+  }
   .gp-related-title {
     font-size: 18px;
   }
@@ -733,7 +708,7 @@
 @media (max-width: 720px){
 .desktop-only { display: inline; }
 .author-info-break { display: none; }
-
+}
 @media (max-width: 600px) {
     .desktop-only { display: none; }
     .author-info-break { display: block; }
