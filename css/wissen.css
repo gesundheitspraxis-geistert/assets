@@ -424,10 +424,13 @@
 }
 
 @media (max-width: 768px) {
-  .gp-details-grid { gap: 12px; }
-}
- .gp-details-box { margin-bottom: 28; }
-}
+  .gp-details-grid { 
+    gap: 12px; 
+  }
+
+  .gp-details-box { 
+    margin-bottom: 28px; 
+  }
 
   .gp-detail-item {
     padding-left: 17px;
