@@ -331,7 +331,7 @@
 .gp-section-body { font-size: 16.5px; line-height: 1.62; color: #2e3d38; }
 .gp-section-body p { margin-bottom: 14px; }
 .gp-section-body p:last-child,
-.gp-section-body p:last-child { margin-bottom: 0; }
+.gp-section-body p:last-child { margin-bottom: 15; }
 .gp-section-body a { color: var(--green-mid); font-weight: 600; text-decoration: none; }
 .gp-section-body a:hover { text-decoration: underline; }
 
