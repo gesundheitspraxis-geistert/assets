@@ -434,6 +434,7 @@
   display: flex; align-items: center; gap: 8px;
 }
 
+.info-card h4 .icon { font-size: 17px; }
 .gp-info-card ul { list-style: none; padding: 0; }
 
 .gp-info-card ul li {
