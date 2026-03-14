@@ -108,6 +108,26 @@ function gpSendTestEvent(result, score){
     var root = document.getElementById("gpLongevityRoot");
     if(!root) return;
 
+    if (!sessionStorage.getItem("test_started_at")) {
+  sessionStorage.setItem("test_started_at", Date.now().toString());
+}
+
+if (!sessionStorage.getItem("test_started_sent")) {
+  sessionStorage.setItem("test_started_sent", "1");
+
+  fetch(TRACKING_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      event_id: crypto.randomUUID(),
+      event_type: "test_started",
+      entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
+      last_page_before_conversion: sessionStorage.getItem("last_page") || "",
+      test_page: window.location.pathname,
+      source: gpGetSource()
+    })
+  }).catch(function(){});
+}
+
     var form = document.getElementById("gpLongevityForm");
     var msg  = document.getElementById("gpMsg");
     var res  = document.getElementById("gpResult");
