@@ -78,26 +78,6 @@ function gpGetSource(){
 
 
 /* ================================
-   letzte interne Seite merken
-================================ */
-
-function gpRememberPreviousInternalPage() {
-  try {
-    const currentPath = window.location.pathname;
-
-    // Testseite selbst NICHT speichern
-    if (currentPath.indexOf("/selbsttest/") === 0) return;
-
-    sessionStorage.setItem("last_internal_page", currentPath);
-
-  } catch (e) {}
-}
-
-gpRememberPreviousInternalPage();
-
-
-
-/* ================================
    UTM auslesen
 ================================ */
 
