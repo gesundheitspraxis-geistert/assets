@@ -138,22 +138,6 @@ if (!sessionStorage.getItem(startedKey)) {
   sessionStorage.setItem(startedKey, Date.now().toString());
 }
 
-if (!sessionStorage.getItem(sentKey)) {
-  sessionStorage.setItem(sentKey, "1");
-
-  fetch(TRACKING_URL, {
-    method: "POST",
-    body: JSON.stringify({
-      event_id: crypto.randomUUID(),
-      event_type: "test_started",
-      entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
-      last_page_before_conversion: sessionStorage.getItem("last_page") || "",
-      test_page: currentTestPage,
-      source: gpGetSource()
-    })
-  }).catch(function(){});
-}
-
     var form = document.getElementById("gpLongevityForm");
     var msg  = document.getElementById("gpMsg");
     var res  = document.getElementById("gpResult");
