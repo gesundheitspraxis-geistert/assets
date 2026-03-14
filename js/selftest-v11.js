@@ -152,7 +152,7 @@ console.log("Payload wird gesendet", {
   test_duration_seconds: duration,
   test_page: window.location.pathname,
   entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
-  last_page_before_conversion: sessionStorage.getItem("last_page_before_conversion") || "",
+  last_page_before_conversion: gpGetPreviousPath() || "",
   utm_source: utm.utm_source,
   utm_medium: utm.utm_medium,
   utm_campaign: utm.utm_campaign,
