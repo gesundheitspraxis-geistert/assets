@@ -12,7 +12,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-14-7";
+const GP_FORM_VER = "2026-03-14-8";
   console.log("selbsttest.js aktiv", GP_FORM_VER);
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbzAOVnk_LQGe4jzLlJfy6OQxA795xsvd0aSwHu9CSExpDHwqqXpYahbHRWkb_pxEoiGTQ/exec";
@@ -87,6 +87,7 @@ function gpGetTestDuration(){
 }
   
 function gpSendTestEvent(result, score){
+  console.log("gpSendTestEvent feuert", result, score);
   try {
     const utm = gpGetUTM();
     const duration = gpGetTestDuration();
