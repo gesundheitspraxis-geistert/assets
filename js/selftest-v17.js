@@ -180,12 +180,16 @@ function gpSendTestEvent(result, score){
       },
       body: JSON.stringify(payload)
     })
-    .then(function(res){
-      console.log("Tracking Antwort:", res.status);
-      try {
-        sessionStorage.removeItem("gp_test_id:" + window.location.pathname);
-      } catch (e) {}
-    })
+.then(function(res){
+  return res.text().then(function(text){
+    console.log("Tracking Antwort Status:", res.status);
+    console.log("Tracking Antwort Body:", text);
+
+    try {
+      sessionStorage.removeItem("gp_test_id:" + window.location.pathname);
+    } catch (e) {}
+  });
+})
     .catch(function(err){
       console.error("Tracking Fehler:", err);
     });
