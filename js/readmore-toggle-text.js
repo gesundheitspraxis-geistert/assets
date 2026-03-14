@@ -5,6 +5,7 @@ Read More Toggle
 "Mehr lesen" ↔ "Weniger anzeigen"
 */
 //<![CDATA[
+
 document.addEventListener("click", function (e) {
     const btn = e.target.closest(".gp-toc-acc__head");
     if (!btn) return;
@@ -19,4 +20,3 @@ document.addEventListener("click", function (e) {
     }
 });
 //]]>
-
