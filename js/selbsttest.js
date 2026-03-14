@@ -16,38 +16,7 @@ const GP_FORM_VER = "2026-03-14-6";
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbzAOVnk_LQGe4jzLlJfy6OQxA795xsvd0aSwHu9CSExpDHwqqXpYahbHRWkb_pxEoiGTQ/exec";
 
-  function getQueryParam(name) {
-  const url = new URL(window.location.href);
-  return url.searchParams.get(name) || "";
-}
 
-function getSource() {
-  const utmSource = getQueryParam("utm_source");
-  if (utmSource) return utmSource;
-
-  const ref = document.referrer || "";
-  if (!ref) return "direct";
-
-  try {
-    const refHost = new URL(ref).hostname.replace(/^www\./, "");
-    const ownHost = window.location.hostname.replace(/^www\./, "");
-    return refHost === ownHost ? "internal" : refHost;
-  } catch (e) {
-    return "direct";
-  }
-}
-
-function sendTestCompleted(payload) {
-  fetch(APPS_SCRIPT_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "text/plain;charset=utf-8"
-    },
-    body: JSON.stringify(payload)
-  }).catch(err => {
-    console.error("Selbsttest-Tracking Fehler:", err);
-  });
-}
 if (!sessionStorage.getItem("gp_entry_page")) {
   sessionStorage.setItem("gp_entry_page", window.location.pathname);
 }
