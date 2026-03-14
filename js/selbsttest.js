@@ -66,6 +66,17 @@ function gpGetUTM(){
   }
 }
 
+function gpGetTestDuration(){
+  try {
+    var startedAt = parseInt(sessionStorage.getItem("test_started_at") || "0", 10);
+    if (!startedAt) return "";
+
+    return Math.round((Date.now() - startedAt) / 1000);
+  } catch(e){
+    return "";
+  }
+}
+  
 function gpSendTestEvent(result, score){
   try {
     const utm = gpGetUTM();
