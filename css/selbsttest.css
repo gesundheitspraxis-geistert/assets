@@ -1,0 +1,1249 @@
+/* =============================
+  CSS Selbsttest
+   ============================= */
+
+/* <![CDATA[ */
+.gp-intent-test {
+  background: #eef5f1 !important;
+  border-radius: 16px !important;
+  padding: 32px 28px !important;
+  margin-bottom: 10px !important;
+}
+
+
+
+.gp-intent-test h2,
+.gp-intent-wrap .gp-intent-test h2 {
+  font-family: "Roboto Slab", Georgia, serif !important;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: #486C5E !important;
+  margin: 0 0 12px 0 !important;
+  line-height: 1.3 !important;
+}
+
+.gp-intent-test p {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  color: #4a5e55 !important;
+  margin: 0 0 22px 0 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+.gp-intent-benefits {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 6px 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+.gp-intent-benefits li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #2a2a2a !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+.gp-intent-benefits li::before { content: none !important; }
+
+.gp-intent-check {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  background: #486C5E !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  color: white !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.gp-intent-testbtn {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  background-color: #c17f3e !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: "Roboto Slab", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: 17px !important;
+  padding: 18px 20px !important;
+  border-radius: 14px !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: background-color 0.2s ease !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  line-height: 1.2 !important;
+  opacity: 1 !important;
+}
+.gp-intent-testbtn:hover {
+  background-color: #a86d30 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.gp-intent-testmeta {
+  text-align: center !important;
+  font-size: 13px !important;
+  color: #8a9e96 !important;
+  margin: 10px 0 0 0 !important;
+  font-style: italic !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+/* ---- TRUST ---- */
+.gp-intent-trust {
+  text-align: center !important;
+  padding: 0 8px !important;
+}
+.gp-intent-trust p {
+  font-size: 14px !important;
+  color: #8a9e96 !important;
+  font-style: italic !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+.gp-intent-trust strong {
+  color: #486C5E !important;
+  font-style: normal !important;
+}
+
+/* Mobile: Hero + Test-Card volle Bildschirmbreite */
+@media (max-width: 768px) {
+  .gp-intent-wrap {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .gp-intent-hero {
+    border-radius: 0 !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    padding: 36px 22px 32px !important;
+  }
+.gp-intent-pain,
+.gp-intent-bridge,
+.gp-intent-trust {
+  padding-left: 0 !important;  /* war: 18px */
+  padding-right: 0 !important;
+}
+  .gp-intent-test {
+    border-radius: 0 !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    padding: 28px 22px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .gp-intent-hero h1,
+  .gp-intent-wrap .gp-intent-hero h1 { font-size: 28px !important; }
+}
+
+/* ---- SEO-CONTENT DARUNTER ---- */
+/* Überschriften im Jimdo-Content nach dem HTML-Modul ruhiger & passend */
+.jtpl-section-main .j-module h2 {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 26px !important;
+  font-weight: 400 !important;
+  color: #824e71 !important;
+  font-style: italic !important;
+  margin-top: 40px !important;
+  margin-bottom: 16px !important;
+  line-height: 1.35 !important;
+}
+
+.jtpl-section-main .j-module h3 {
+  font-family: "Roboto Slab", Georgia, serif !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  color: #486C5E !important;
+  margin-top: 28px !important;
+  margin-bottom: 10px !important;
+  line-height: 1.4 !important;
+}
+
+.jtpl-section-main .j-module p {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+  color: #2a2a2a !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+.jtpl-section-main .j-module li {
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+
+/* =========================================================
+   Ab hier Inhalte ORIGINAL TESTSEITE
+   ========================================================= */
+
+
+/* Dezentere Beschriftung unter dem Video */
+.gp-hero-media .gp-video-footer-text {
+    display: block !important;
+    margin-top: 7px !important;
+    margin-bottom: 5px !important;
+    font-size: 12.5px !important;      /* Schön klein */
+    line-height: 1.4 !important;
+    color: #78998a !important;      /* Helles, dezentes Graugrün */
+    font-weight: 400 !important;    /* Definitiv nicht fett */
+    text-align: left !important;
+    letter-spacing: 0.01em !important;
+}
+.gp-hero-v2 .gp-hero-media{
+  border: none !important;
+}
+/* Wenn das Video läuft, wird die Fußzeile radikal ausgeblendet */
+.gp-hero-media.video-is-playing .gp-video-footer-text {
+    display: none !important;
+}
+@media (max-width:900px){
+
+  .gp-intent-media{
+    margin-top:10px;
+  }
+
+}
+
+
+/* =========================================================
+   VIDEO – global (16:9) + Play-Button
+   Gilt für .gp-video-teaser überall (Hero + Intent)
+   ========================================================= */
+
+.gp-video-teaser{
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(82,102,94,0.15) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08) !important;
+}
+
+/* 16:9 Fläche */
+.gp-video-teaser::before{
+  content:"" !important;
+  display:block !important;
+  padding-top: 56.25% !important; /* 16:9 */
+}
+
+/* Thumbnail füllt 16:9 */
+.gp-video-teaser img{
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border: 0 !important;
+ /* box-shadow: none !important; */
+}
+
+/* Play-Button */
+.gp-video-play{
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 65px !important;
+  height: 65px !important;
+  background: rgba(255,255,255,0.15) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  border: 1.5px solid rgba(255,255,255,0.3) !important;
+  border-radius: 50% !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: none !important;
+}
+
+.gp-video-play::after{
+  content:"" !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 20px solid rgba(255,255,255,0.9) !important;
+  border-top: 12px solid transparent !important;
+  border-bottom: 12px solid transparent !important;
+  margin-left: 6px !important;
+}
+
+@media (max-width: 820px){
+  .gp-video-play{ width:50px !important; height:50px !important; }
+  .gp-video-play::after{
+    border-left-width:15px !important;
+    border-top-width:10px !important;
+    border-bottom-width:10px !important;
+    margin-left:4px !important;
+  }
+}
+.gp-intent-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:42px;
+  align-items:center;
+  margin-top:28px;
+}
+
+@media (max-width:900px){
+  .gp-intent-grid{
+    grid-template-columns:1fr;
+    gap:20px;        /* statt 28px */
+    margin-top:18px; /* optional: etwas kompakter */
+  }
+}
+@media (min-width: 900px){
+  .gp-intent-right{
+    transform: translateY(-22px);
+  }
+}
+/* ============================================================
+   GP TEST-INTRO-KASTEN – Standalone CSS
+   Verwendung: Einfach in den Jimdo Custom CSS einfügen.
+   Voraussetzung: Lora + Roboto Slab müssen geladen sein.
+   ============================================================ */
+.gp-intent-wrap {
+    margin-top: 30px; /* ggf. 50px testen */
+}
+@media (max-width: 520px) {
+.gp-intent-wrap {
+    margin-top: 20px; /* ggf. 50px testen */
+}
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* ---- Äußerer Kasten ---- */
+.gp-intent-test {
+  background: #eef5f1 !important;
+  border-radius: 22px !important;
+  padding: 28px 28px !important;
+  margin-bottom: 5px !important;
+    box-shadow:
+    0 1px 0 rgba(255,255,255,0.65) inset,
+    0 10px 28px rgba(0,0,0,0.04);
+}
+
+/* ---- Badge oben ---- */
+.gp-intent-testbadge {
+  display: inline-block !important;
+  background: #78998a !important;
+  color: #fff !important;
+ font-family: "Lora", Georgia, "Times New Roman", serif !important; 
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.07em !important;
+  /* text-transform: uppercase !important; */
+  padding: 4px 12px !important;
+  border-radius: 10px !important;
+  margin-bottom: 4px !important;
+}
+
+/* ---- Layout: Text links, Portrait rechts ---- */
+.gp-intent-test__head {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+}
+
+.gp-intent-test__text {
+  flex: 1 1 auto !important;
+}
+
+/* ---- Überschrift ---- */
+
+
+/* ---- Einleitungstext ---- */
+.gp-intent-test p {
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+  color: #4a5e55 !important;
+  margin: 0 0 20px 0 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+/* ---- Benefits-Liste ---- */
+.gp-intent-benefits {
+  list-style: none !important;
+  padding: 0 !important;
+  margin-bottom: 5px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.gp-intent-benefits li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #3f4a45 !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+.gp-intent-benefits li::before { content: none !important; }
+
+.gp-intent-check {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  background: #78998a !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  color: white !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+/* ---- Portrait rechts ---- */
+.gp-intent-test__portrait {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-align: center !important;
+}
+
+.gp-intent-test__avatar {
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 0 0 2px rgba(130,169,143,.35) !important;
+  display: block !important;
+}
+
+.gp-intent-test__name {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #4a5e55 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+.gp-intent-test__name strong {
+  display: block !important;
+  color: #486C5E !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-size: 13px !important;
+}
+@media (min-width: 992px) {
+  .gp-intent-test__head {
+    gap: 60px !important;
+  }
+}
+/* ---- Mobile: Portrait klappt nach unten ---- */
+@media (max-width: 520px) {
+
+  .gp-intent-test {
+    border-radius: 0 !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    padding: 28px 22px !important;
+  }
+
+  .gp-intent-test__head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .gp-intent-test__portrait {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    margin-top: 4px !important;
+  }
+
+  .gp-intent-test__avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+/* =============================
+   GP Longevity Test – CLEAN CSS (ONE VERSION)
+   ============================= */
+
+#gpLongevityRoot,
+#gpLongevityRoot *{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#gpLongevityRoot{
+  --gp-ink:#1f2a2e;
+  --gp-muted:#5f6f66;
+  --gp-border:#dbe3e0;
+  --gp-card:#ffffff;
+  --gp-radius:18px;
+
+  /*--gp-accent:#82A98F;  */ /* Button "Zum Ergebnis" alt bis 05.03. */
+   --gp-accent:#78998a;   /* Button "Zum Ergebnis" */
+  --gp-cta:#5f7f73;      /* Kurs-Button im Ergebnis */
+
+  max-width:980px;
+  margin:10px auto 0;
+  background:var(--gp-card);
+  color:var(--gp-ink);
+  font-family:"Roboto Slab","Lora",Georgia,serif;
+  font-size:16px !important;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Jimdo überschreibt gern Einzelelemente → alles erbt */
+#gpLongevityRoot p,
+#gpLongevityRoot small,
+#gpLongevityRoot label,
+#gpLongevityRoot span,
+#gpLongevityRoot b,
+#gpLongevityRoot button{
+  font-size:inherit !important;
+}
+
+/* Container-Rahmen Desktop / Mobil */
+@media (min-width: 980px){
+  #gpLongevityRoot{
+    border:1px solid #e2e8e4;
+    border-radius:26px;
+    padding:26px 28px 30px;
+  }
+}
+@media (max-width: 979px){
+  #gpLongevityRoot{
+    border:0;
+    border-radius:0;
+    padding:0;
+    background:transparent;
+  }
+}
+
+/* =============================
+   H1 / H2
+   ============================= */
+#gpLongevityRoot .gp-h1{
+  font-family:"Lora",Georgia,serif;
+  font-weight:700;
+  font-size:3.5rem;
+  line-height:1.22;
+  margin:0 0 6px 0 !important;
+}
+
+/* Intent-Headline unabhängig von #gpLongevityRoot */
+.gp-intent-test h2.gp-intent-h2{
+  font-family: "Lora", Georgia, "Times New Roman", serif !important;
+  font-size: 34px !important;
+  font-weight: 600 !important;
+  color: #486C5E !important;
+  line-height: 1.35 !important;
+  margin: 0 0 12px 0 !important;
+}
+
+
+@media (max-width: 640px){
+  .gp-intent-test h2.gp-intent-h2{
+    font-size: 2.55rem !important;
+  }
+}
+
+/* =============================
+   TOP-KASTEN (Meta + Hinweis + Ampel)
+   ============================= */
+#gpLongevityRoot .gp-top{
+  padding:18px 20px 12px 20px !important;
+  margin:0 0 40px 0;
+  border-radius:18px;
+  background:#f6f9f7;
+ border:1px solid #e2ebe6;
+  box-shadow: 
+0 1px 2px rgba(0,0,0,0.04),
+0 6px 14px rgba(0,0,0,0.06);
+}
+
+/* Meta (ohne Pill) */
+#gpLongevityRoot .gp-meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin:0 0 10px 0;
+  color:#3f4a45;
+  font-weight:600;
+  font-size:1rem;
+}
+
+/* Trenner (•) – mobil ausblenden, damit er nicht allein steht */
+#gpLongevityRoot .gp-sep{ opacity:.55; }
+@media (max-width: 640px){
+  #gpLongevityRoot .gp-sep{ display:none !important; }
+}
+
+/* Hinweis klein & leise */
+#gpLongevityRoot .gp-box-note-small{
+  margin:0 0 12px 0 !important;
+  font-size:0.90rem;
+  line-height:1.4;
+  color:#5F6F68;
+  opacity:0.65;
+}
+
+/* Ampel */
+#gpLongevityRoot .gp-ampel-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:18px;
+  margin:8px 0 0 0;
+  font-size:1rem;
+  font-weight:600;
+  color:#3f4a45;
+}
+
+/* Ampel-Item: Punkt per ::before (Jimdo-sicher) */
+#gpLongevityRoot .gp-ampel-item{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+#gpLongevityRoot .gp-ampel-item::before{
+  content:"";
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  display:inline-block;
+  flex-shrink:0;
+  background:#999;
+}
+#gpLongevityRoot .gp-ampel-item.gp-green::before{ background:#6f9f85; }
+#gpLongevityRoot .gp-ampel-item.gp-yellow::before{ background:#c8a64a; }
+#gpLongevityRoot .gp-ampel-item.gp-red::before{ background:#b55353; }
+
+/* Mobil: Ampel darf umbrechen, aber bleibt ruhig */
+@media (max-width: 640px){
+  #gpLongevityRoot .gp-ampel-row{ gap:10px 16px; }
+}
+
+/* Pill komplett raus (falls noch im HTML) */
+#gpLongevityRoot .gp-pill{ display:none !important; }
+
+/* =============================
+   Fragen-Layout
+   ============================= */
+#gpLongevityRoot .gp-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:44px;
+}
+@media (max-width: 780px){
+  #gpLongevityRoot .gp-grid{ gap:46px !important; }
+}
+
+#gpLongevityRoot fieldset.gp-q{
+  margin:0;
+  padding:0;
+  border:0;
+  min-inline-size:0;
+}
+
+#gpLongevityRoot fieldset.gp-q legend{
+  display:block;
+  margin:0 0 14px 0;
+  font-weight:800;
+  letter-spacing:.01em;
+  line-height:1.25;
+  font-size:20px !important;
+  color:var(--gp-ink) !important;
+}
+
+#gpLongevityRoot fieldset.gp-q small{
+  display:block;
+  margin:0 0 20px 0;
+  line-height:1.6;
+  color:var(--gp-muted);
+  font-size:16px !important;
+}
+
+#gpLongevityRoot .gp-opts{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+@media (max-width: 780px){
+  #gpLongevityRoot .gp-opts{
+    grid-template-columns:1fr;
+    gap:12px !important;
+  }
+}
+
+/* Antwortkacheln */
+#gpLongevityRoot .gp-optwrap{
+  border:1px solid #dfe6e2;
+  border-radius:var(--gp-radius);
+  background:#fcfdfc;
+  padding:16px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  box-shadow:0 1px 0 rgba(0,0,0,.015);
+  user-select:none;
+}
+@media (max-width: 780px){
+  #gpLongevityRoot .gp-optwrap{ padding:12px 14px !important; }
+}
+#gpLongevityRoot .gp-optwrap input[type="radio"]{ margin-top:5px; }
+
+#gpLongevityRoot .gp-opttext b{
+  display:block;
+  font-weight:700;
+  margin:0 0 6px 0;
+}
+#gpLongevityRoot .gp-opttext span{
+  display:block;
+  line-height:1.55;
+  color:var(--gp-muted);
+}
+
+#gpLongevityRoot .gp-optwrap.gp-selected{
+  border-color:var(--gp-accent);
+  background:#f7fbf8;
+  box-shadow:0 0 0 2px rgba(130,169,143,.18);
+}
+
+/* =============================
+   Buttons
+   ============================= */
+#gpLongevityRoot .gp-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:40px;
+  align-items:center;
+}
+
+#gpLongevityRoot .gp-btn{
+  appearance:none;
+  border:1px solid #2a3b3f;
+  background:#2a3b3f;
+  color:#fff;
+  padding:12px 16px;
+  border-radius:14px;
+  font-weight:700;
+  font-family:"Roboto Slab","Lora",Georgia,serif;
+  cursor:pointer;
+}
+
+#gpLongevityRoot .gp-btn[type="submit"]{
+  background:var(--gp-accent) !important;
+  border-color:var(--gp-accent) !important;
+  color:#fff !important;
+  box-shadow:0 10px 24px rgba(130,169,143,.18);
+}
+#gpLongevityRoot .gp-btn[type="submit"]:hover{ filter:brightness(.97); }
+#gpLongevityRoot .gp-btn[type="submit"]:active{ transform:translateY(1px); }
+
+#gpLongevityRoot .gp-btn.secondary{
+  background:#fff !important;
+  color:#2a3b3f !important;
+  border-color:var(--gp-border) !important;
+}
+
+#gpLongevityRoot .gp-msg{ color:var(--gp-muted); min-height:1.3em; }
+
+/* =============================
+   Ergebnis
+   ============================= */
+#gpLongevityRoot #gpResult{
+  display:none;
+  background:#f6f8f7 !important;
+  border:1px solid #e2ebe6 !important;
+  border-radius:18px !important;
+  padding:28px 28px !important;
+  padding-bottom: 18px !important;
+  margin-top:26px !important;
+  font-size:18px !important;
+  line-height:1.55 !important;
+  color:var(--gp-ink) !important;
+}
+
+/* Jimdo-proof: alles im Ergebnis erbt */
+#gpLongevityRoot #gpResult,
+#gpLongevityRoot #gpResult *{
+  font-size:inherit !important;
+  line-height:inherit !important;
+}
+
+/* 1. Den Header als stabilen Block ohne Padding-Tricks */
+#gpLongevityRoot #gpResult .gp-result-head {
+  position: relative !important;
+  display: block !important;
+ /* padding-left: 44px !important; */ /* Platz für Punkt + Abstand */
+ padding-left: 0px !important;
+  margin: 0 0 16px 0 !important;
+}
+
+#gpLongevityRoot #gpResult .gp-result-head h3{
+  margin:0 !important;
+  line-height:1.15 !important;
+}
+
+/* 2. Den Punkt wie ein bündiges Icon integrieren */
+#gpLongevityRoot #gpResult .gp-dot {
+  display: inline-block !important;
+  position: relative !important;
+  margin-left: 0 !important;
+  margin-right: 12px !important;
+  
+  /* Punkt-Größe: 17px – präsent, aber nicht zu wuchtig */
+  width: 17px !important;
+  height: 17px !important;
+  border-radius: 50% !important;
+
+  /* FEINJUSTIERUNG für die Bündigkeit */
+  vertical-align: baseline !important; /* Nutzt die Grundlinie der Schrift */
+  top: -2px !important;               /* Schiebt ihn präzise nach oben auf die Zeile */
+  margin-right: 14px !important;       /* Abstand zum Text */
+  
+  flex-shrink: 0 !important;
+  background: #999;
+  box-shadow: 0 0 0 6px rgba(0,0,0,.06);
+}
+
+#gpLongevityRoot #gpResultTitle{
+  font-family:"Lora",Georgia,serif !important;
+  font-weight:700 !important;
+  font-size:24px !important;
+  line-height:1.5 !important;
+  margin:0 !important;
+display: inline !important;      /* Fließt direkt neben dem Punkt weiter */
+}
+
+
+#gpLongevityRoot #gpResultBody p{ 
+  margin: 0 0 10px 0 !important;
+}
+
+/* letzter Absatz direkt vor dem Formular: fast kein Abstand */
+#gpLongevityRoot #gpResultBody p:last-of-type{
+  margin-bottom: 0px !important;
+}
+/* Kurs-Button im Ergebnis */
+#gpLongevityRoot #gpResultBody a.gp-cta,
+#gpLongevityRoot #gpResultBody a.gp-cta:link,
+#gpLongevityRoot #gpResultBody a.gp-cta:visited{
+  display:inline-block !important;
+  margin-top:10px !important;
+  padding:12px 16px !important;
+  border-radius:14px !important;
+  background:var(--gp-cta) !important;
+  border:1px solid var(--gp-cta) !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+#gpLongevityRoot #gpResultBody a.gp-cta:hover{ filter:brightness(.95) !important; }
+#gpLongevityRoot #gpResultBody a.gp-cta:active{ transform:translateY(1px) !important; }
+
+/* Mobil: Ergebnis etwas kleiner */
+@media (min-width: 521px) and (max-width: 640px){
+  #gpLongevityRoot #gpResult{
+    font-size:16px !important;
+    line-height:1.45 !important;
+    padding:18px !important;
+  }
+
+  #gpLongevityRoot #gpResultTitle{
+    font-size:20px !important;
+    line-height:1.15 !important;
+  }
+}
+
+/* =============================
+   Fehlerzustand
+   ============================= */
+#gpLongevityRoot fieldset.gp-q.gp-error{
+  position:relative;
+  padding:16px 14px 12px;
+  border-radius:18px;
+}
+#gpLongevityRoot fieldset.gp-q.gp-error::before{
+  content:"";
+  position:absolute; inset:0;
+  border-radius:18px;
+  background:rgba(180,59,59,.040);
+  box-shadow:0 0 0 2px rgba(180,59,59,.14);
+  pointer-events:none;
+}
+#gpLongevityRoot fieldset.gp-q.gp-error > *{ position:relative; }
+#gpLongevityRoot fieldset.gp-q.gp-error legend{ color:#9b3434 !important; }
+
+#gpLongevityRoot .gp-errorhint{
+  margin-top:16px;
+  padding:9px 12px;
+  border-radius:12px;
+  background:rgba(180,59,59,.06);
+  color:#8f2f2f;
+  font-weight:600;
+}
+
+/* ===== FIX: TOP-KASTEN darf nicht "mini" werden (Jimdo-Override) ===== */
+#gpLongevityRoot .gp-top{
+  font-size: 16px !important;              /* Basis zurück auf normal */
+  line-height: 1.45 !important;
+}
+
+/* Meta oben */
+#gpLongevityRoot .gp-top .gp-meta-row,
+#gpLongevityRoot .gp-top .gp-meta-row span{
+  font-size: 1.5rem !important;           /* leicht größer, gut lesbar */
+  line-height: 1.45 !important;
+  font-weight: 600 !important;
+}
+
+/* Hinweiszeile */
+#gpLongevityRoot .gp-top .gp-box-note-small{
+  font-size: 1.5rem !important;            /* nicht mini */
+  line-height: 1.45 !important;
+  opacity: .70 !important;
+}
+#gpLongevityRoot .gp-cutline {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Ampel unten */
+#gpLongevityRoot .gp-top .gp-ampel-row{
+  font-size: 1.5rem !important;           /* nicht mini */
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+}
+
+/* Mobil minimal kompakter, aber trotzdem lesbar */
+@media (max-width: 640px){
+  #gpLongevityRoot .gp-top{ font-size: 16px !important; }
+  #gpLongevityRoot .gp-top .gp-meta-row,
+  #gpLongevityRoot .gp-top .gp-ampel-row{ font-size: 1.32rem !important; }
+  #gpLongevityRoot .gp-top .gp-box-note-small{ font-size: 1.2rem !important; }
+} 
+/* ===== Ergebnis-Punkt darf NICHT von .gp-dot (Ampel) überschrieben werden ===== */
+
+
+
+/* ===== Follow-up Block – FINAL (ohne Rechts-Overflow) ===== */
+
+#gpLongevityRoot .gp-followup{
+  margin-top: 6px !important;
+  padding: 0 !important;
+  text-align: left !important;
+  width: 100% !important;
+  display: block !important; /* Für besseren Fluss auf Mobilgeräten */
+}
+
+/* WICHTIG: verhindert „nach rechts weg“ */
+#gpLongevityRoot #gpResult{
+  overflow: hidden !important;
+}
+
+
+
+
+/* Trennlinie */
+#gpLongevityRoot .gp-divider{
+  height: 1px;
+  width: 60px;                 /* Länge des Strichs */
+  background: rgba(0,0,0,0.15);
+  margin: 24px 0 18px 0;       /* KEIN auto */
+  display:block;
+  margin-left: 0 !important;
+}
+
+
+/* Followup kompakter */
+#gpLongevityRoot .gp-followup{
+  margin-top: 10px !important;
+  padding: 0 !important;
+}
+
+/* Lead-Text enger */
+#gpLongevityRoot .gp-followup-lead{
+margin-bottom: 0 !important; /* Kein Abstand nach unten */
+position: relative;
+    z-index: 10; /* Text bleibt obenauf */
+}
+
+
+/* Kurs-Link: edel, ruhig, klar */
+#gpLongevityRoot .gp-course-link{
+  margin: 10px 0 0 0 !important;
+}
+
+#gpLongevityRoot .gp-course-link a{
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  color: var(--gp-cta) !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(95,127,115,.35);
+}
+
+#gpLongevityRoot .gp-course-link a:hover{
+  border-bottom-color: rgba(95,127,115,.75);
+}
+
+#gpLongevityRoot .gp-course-link a::after{
+  content: "→";
+  font-weight: 800;
+}
+/* === Brevo-Form: oberen Leerraum wegschneiden === */
+#gpLongevityRoot .gp-formclip{
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  /* Höhe an das Formular anpassen, damit nichts abgeschnitten wird */
+  height: 300px !important; 
+  margin: 0 !important; /* Entfernt alle automatischen Zentrierungen */
+}
+
+/* Iframe wird nach oben geschoben, aber ohne Overlay-Risiko */
+#gpLongevityRoot .gp-formclip iframe{
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 420px !important;    /* höher als Clip-Box */
+  border: none !important;
+  display: block !important;
+  background: transparent !important;
+  position: relative !important;
+  top: -50px !important;         /* <-- DAS ist der „Leerraum-Killer“ */
+  margin: 0 !important; 
+  left: 0 !important;
+}
+/* DIE KLASSE AUS DEINEM SCRIPT */
+.gp-brevo {
+    width: 100% !important;
+    min-width: 100% !important;
+    /* optionaler Fallback – aber nicht als Hauptsteuerung */
+    /* height: 620px; /* Großzügig, damit der "Senden"-Button nicht verschwindet */
+    border: none !important;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Radikaler Mobile-Fix gegen Rechts-Versatz */
+@media screen and (max-width: 480px) {
+/* Full-bleed Container */
+  #gpLongevityRoot .gp-formclip{
+    height: 300px !important;
+    overflow: hidden !important;
+
+    /* Full-bleed */
+    width: calc(100% + 30px) !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+
+    /* wichtig gegen Jimdo */
+    max-width: none !important;
+  }
+    
+  /*.gp-brevo {
+   Verhindert, dass der Iframe breiter als das Handy-Display wird 
+  max-width: 100% !important;
+}*/
+
+
+  /* Iframe: exakt so breit wie der Clip – nicht nochmal anders rechnen */
+  #gpLongevityRoot .gp-formclip iframe{
+    width: 100% !important;
+    height: 500px !important;
+    top: -62px !important;
+
+    margin: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+    border: 0 !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 360px){
+
+  #gpLongevityRoot .gp-formclip{
+    height: 350px !important;
+  }
+
+  #gpLongevityRoot .gp-formclip iframe{
+    height: 600px !important;
+    top: -58px !important;
+  }
+}
+/* --- Mobile Optimierung --- */
+@media screen and (max-width: 520px) {
+  #gpLongevityRoot #gpResult {
+    font-size: 16px !important;
+    padding: 18px !important;
+  }
+  #gpLongevityRoot #gpResultTitle {
+    font-size: 20px !important;
+  }
+  #gpLongevityRoot .gp-brevo form,
+  #gpLongevityRoot .gp-brevo .sib-form,
+  #gpLongevityRoot .gp-brevo .entry__field,
+  #gpLongevityRoot .gp-brevo input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  #gpLongevityRoot .gp-brevo .sib-form-block {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  #gpLongevityRoot .gp-brevo input {
+    font-size: 16px !important;
+  }
+}
+
+.gp-result-checklist{
+  margin: 20px 0 10px 0 !important;
+  padding-left: 0;
+}
+
+.gp-result-checklist li{
+  list-style: none;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.gp-result-checklist li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-weight: 700;
+  color:#6f9f85;
+}
+
+/* Wenn du data-status setzt (empfohlen) */
+#gpLongevityRoot #gpResult[data-status="gelb"] .gp-result-checklist li::before{ color:#c8a64a; }
+#gpLongevityRoot #gpResult[data-status="rot"]  .gp-result-checklist li::before{ color:#b55353; }
+
+.gp-result-checklist li:first-child{
+  font-weight: 600;
+}
+
+/* verhindert schriftsprünge des Browsers */
+html, body {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+/* Ergebnis-Loader */
+.gp-test-loader{
+  display:none;
+  margin:24px 0 8px;
+  padding:14px 16px 10px;
+  border:1px solid #dce8e2;
+  border-radius:18px;
+  background:#f7fbf8;
+  text-align:center;
+}
+
+.gp-loader-text{
+  font-size:15px;
+  line-height:1.5;
+  color:#5f6f67;
+  margin-bottom:12px;
+}
+
+.gp-loader-bar{
+  width:100%;
+  max-width:360px;
+  height:10px;
+  margin:0 auto;
+  background:#e4eee8;
+  border-radius:999px;
+  overflow:hidden;
+  position:relative;
+}
+
+.gp-loader-progress{
+  width:0%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg, #82a98f 0%, #6f9480 100%);
+  transition:width .18s ease;
+}
+.gp-loader-progress{
+  position: relative;
+  overflow: hidden;
+}
+
+.gp-loader-progress::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-40%;
+  width:40%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  animation:gp-loader-shimmer 1.6s linear infinite;
+}
+
+@keyframes gp-loader-shimmer{
+  0%{
+    left:-40%;
+  }
+  100%{
+    left:120%;
+  }
+}
+
+
+/* ]]> */
+/* ]]> */
