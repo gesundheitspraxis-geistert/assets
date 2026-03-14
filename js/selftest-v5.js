@@ -110,6 +110,24 @@ function gpSendTestEvent(result, score){
       timestampStart = new Date(startedAt).toISOString();
     }
 
+console.log("TRACKING URL", TRACKING_URL);
+console.log("Payload wird gesendet", {
+  event_type: "test_completed",
+  timestamp_start: timestampStart,
+  timestamp_end: timestampEnd,
+  test_duration_seconds: duration,
+  test_page: window.location.pathname,
+  entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
+  last_page_before_conversion: sessionStorage.getItem("last_page_before_conversion") || "",
+  utm_source: utm.utm_source,
+  utm_medium: utm.utm_medium,
+  utm_campaign: utm.utm_campaign,
+  source: gpGetSource(),
+  result: result,
+  score: score
+});
+
+    
     fetch(TRACKING_URL, {
       method: "POST",
       headers: {
