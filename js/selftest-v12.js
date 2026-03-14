@@ -154,31 +154,31 @@ console.log("Payload wird gesendet", {
 });
 
     
-    fetch(TRACKING_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-      },
-     body: JSON.stringify({
-        test_id: gpGetOrCreateTestId(),
-        visitor_id: gpGetVisitorId(),
-        event_type: "test_completed",
-        timestamp_start: timestampStart,
-        timestamp_end: timestampEnd,
-        test_duration_seconds: duration,
-        test_page: window.location.pathname,
-        entry_page: gpGetPreviousPath() || window.location.pathname,
-        last_page_before_conversion: gpGetPreviousPath() || "",
-        utm_source: utm.utm_source,
-        utm_medium: utm.utm_medium,
-        utm_campaign: utm.utm_campaign,
-        source: gpGetSource(),
-        result: result,
-        score: score
-      })
-    }).catch(function(err){
-      console.error("Tracking Fehler:", err);
-    });
+fetch(TRACKING_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify({
+    test_id: gpGetOrCreateTestId(),
+    visitor_id: gpGetVisitorId(),
+    event_type: "test_completed",
+    timestamp_start: timestampStart,
+    timestamp_end: timestampEnd,
+    test_duration_seconds: duration,
+    test_page: window.location.pathname,
+    entry_page: gpGetPreviousPath() || window.location.pathname,
+    last_page_before_conversion: gpGetPreviousPath() || "",
+    utm_source: utm.utm_source,
+    utm_medium: utm.utm_medium,
+    utm_campaign: utm.utm_campaign,
+    source: gpGetSource(),
+    result: result,
+    score: score
+  })
+}).catch(function(err){
+  console.error("Tracking Fehler:", err);
+});
 
   } catch(e) {
     console.error("gpSendTestEvent Fehler:", e);
