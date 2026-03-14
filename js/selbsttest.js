@@ -113,12 +113,16 @@ function gpSendTestEvent(result, score){
     var root = document.getElementById("gpLongevityRoot");
     if(!root) return;
 
-    if (!sessionStorage.getItem("test_started_at")) {
-  sessionStorage.setItem("test_started_at", Date.now().toString());
+var currentTestPage = window.location.pathname;
+var startedKey = "test_started_at:" + currentTestPage;
+var sentKey = "test_started_sent:" + currentTestPage;
+
+if (!sessionStorage.getItem(startedKey)) {
+  sessionStorage.setItem(startedKey, Date.now().toString());
 }
 
-if (!sessionStorage.getItem("test_started_sent")) {
-  sessionStorage.setItem("test_started_sent", "1");
+if (!sessionStorage.getItem(sentKey)) {
+  sessionStorage.setItem(sentKey, "1");
 
   fetch(TRACKING_URL, {
     method: "POST",
@@ -127,7 +131,7 @@ if (!sessionStorage.getItem("test_started_sent")) {
       event_type: "test_started",
       entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
       last_page_before_conversion: sessionStorage.getItem("last_page") || "",
-      test_page: window.location.pathname,
+      test_page: currentTestPage,
       source: gpGetSource()
     })
   }).catch(function(){});
