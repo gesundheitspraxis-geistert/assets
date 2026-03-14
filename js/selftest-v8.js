@@ -103,11 +103,11 @@ function gpSendTestEvent(result, score){
 
     var duration = "";
     var timestampStart = "";
-    var timestampEnd = new Date(endedAt).toISOString();
+    var timestampEnd = new Date(endedAt).toLocaleString("sv-SE");
 
     if (startedAt) {
       duration = Math.max(1, Math.round((endedAt - startedAt) / 1000));
-      timestampStart = new Date(startedAt).toISOString();
+      timestampStart = new Date(startedAt).toLocaleString("sv-SE");
     }
 
 console.log("TRACKING URL", TRACKING_URL);
