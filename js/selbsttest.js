@@ -105,30 +105,7 @@ function gpSendTestEvent(result, score){
   } catch(e) {}
 }
 
-function trackTestCompleted(result, score, startedAt) {
-  const endedAt = Date.now();
-  const durationSeconds = Math.max(1, Math.round((endedAt - startedAt) / 1000));
 
-  const payload = {
-    event_id: crypto.randomUUID(),
-    event_type: "test_completed",
-    test_duration_seconds: durationSeconds,
-    test_page: window.location.pathname,
-    entry_page: sessionStorage.getItem("gp_entry_page") || window.location.pathname,
-    last_page_before_conversion: window.location.pathname,
-    utm_source: getQueryParam("utm_source"),
-    utm_medium: getQueryParam("utm_medium"),
-    utm_campaign: getQueryParam("utm_campaign"),
-    source: getSource(),
-    result: result,
-    score: score
-  };
-
-  console.log("Selbsttest Payload:", payload);
-  sendTestCompleted(payload);
-}
-
-  
 (function(){
   function ready(fn){
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
