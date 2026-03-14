@@ -15,7 +15,7 @@
 const GP_FORM_VER = "2026-03-14-11";
 console.log("SELBSTTEST AKTIV 2026-03-14-11");
 
-const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxFHWFuaVuduTr5H3Mpo_h_O9OXvbD7Fovk5_3lEDQZlE2DjoZfWLfEbsFnk65vUhMbkg/exec";
+const TRACKING_URL = "https://script.google.com/macros/s/AKfycbytCwuQ21N-1kqc9wl5LcGXv_xjoEuEYRrrRx628iV7-NK8W2ZIVVn_YhaGmKV0oLLYWQ/exec";
 
 function gpGetPreviousPath() {
   try {
