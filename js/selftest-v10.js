@@ -167,8 +167,10 @@ console.log("Payload wird gesendet", {
       headers: {
         "Content-Type": "text/plain;charset=utf-8"
       },
-      body: JSON.stringify({
+     body: JSON.stringify({
         event_id: crypto.randomUUID(),
+        test_id: gpGetOrCreateTestId(),
+        visitor_id: gpGetVisitorId(),
         event_type: "test_completed",
         timestamp_start: timestampStart,
         timestamp_end: timestampEnd,
