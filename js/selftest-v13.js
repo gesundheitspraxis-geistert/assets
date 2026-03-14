@@ -119,6 +119,7 @@ function gpGetUTM(){
   
 function gpSendTestEvent(result, score){
   console.log("SEND TEST EVENT", result, score);
+
   try {
     const utm = gpGetUTM();
 
@@ -136,49 +137,43 @@ function gpSendTestEvent(result, score){
       timestampStart = new Date(startedAt).toLocaleString("sv-SE");
     }
 
-console.log("TRACKING URL", TRACKING_URL);
-console.log("Payload wird gesendet", {
-  event_type: "test_completed",
-  timestamp_start: timestampStart,
-  timestamp_end: timestampEnd,
-  test_duration_seconds: duration,
-  test_page: window.location.pathname,
-  entry_page: gpGetPreviousPath() || window.location.pathname,
-  last_page_before_conversion: gpGetPreviousPath() || "",
-  utm_source: utm.utm_source,
-  utm_medium: utm.utm_medium,
-  utm_campaign: utm.utm_campaign,
-  source: gpGetSource(),
-  result: result,
-  score: score
-});
+    const payload = {
+      test_id: gpGetOrCreateTestId(),
+      visitor_id: gpGetVisitorId(),
+      event_type: "test_completed",
+      timestamp_start: timestampStart,
+      timestamp_end: timestampEnd,
+      test_duration_seconds: duration,
+      test_page: window.location.pathname,
+      entry_page: gpGetPreviousPath() || window.location.pathname,
+      last_page_before_conversion: gpGetPreviousPath() || "",
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      source: gpGetSource(),
+      result: result,
+      score: score
+    };
 
-    
-fetch(TRACKING_URL, {
-  method: "POST",
-  headers: {
-    "Content-Type": "text/plain;charset=utf-8"
-  },
-  body: JSON.stringify({
-    test_id: gpGetOrCreateTestId(),
-    visitor_id: gpGetVisitorId(),
-    event_type: "test_completed",
-    timestamp_start: timestampStart,
-    timestamp_end: timestampEnd,
-    test_duration_seconds: duration,
-    test_page: window.location.pathname,
-    entry_page: gpGetPreviousPath() || window.location.pathname,
-    last_page_before_conversion: gpGetPreviousPath() || "",
-    utm_source: utm.utm_source,
-    utm_medium: utm.utm_medium,
-    utm_campaign: utm.utm_campaign,
-    source: gpGetSource(),
-    result: result,
-    score: score
-  })
-}).catch(function(err){
-  console.error("Tracking Fehler:", err);
-});
+    console.log("TRACKING URL", TRACKING_URL);
+    console.log("Payload wird gesendet", payload);
+
+    fetch(TRACKING_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res){
+      console.log("Tracking Antwort:", res.status);
+      try {
+        sessionStorage.removeItem("gp_test_id:" + window.location.pathname);
+      } catch (e) {}
+    })
+    .catch(function(err){
+      console.error("Tracking Fehler:", err);
+    });
 
   } catch(e) {
     console.error("gpSendTestEvent Fehler:", e);
