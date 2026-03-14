@@ -16,6 +16,39 @@ const GP_FORM_VER = "2026-03-14-6";
   console.log("Posting to:", APPS_SCRIPT_URL);
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbzAOVnk_LQGe4jzLlJfy6OQxA795xsvd0aSwHu9CSExpDHwqqXpYahbHRWkb_pxEoiGTQ/exec";
 
+  function getQueryParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name) || "";
+}
+
+function getSource() {
+  const utmSource = getQueryParam("utm_source");
+  if (utmSource) return utmSource;
+
+  const ref = document.referrer || "";
+  if (!ref) return "direct";
+
+  try {
+    const refHost = new URL(ref).hostname.replace(/^www\./, "");
+    const ownHost = window.location.hostname.replace(/^www\./, "");
+    return refHost === ownHost ? "internal" : refHost;
+  } catch (e) {
+    return "direct";
+  }
+}
+
+function sendTestCompleted(payload) {
+  fetch(APPS_SCRIPT_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify(payload)
+  }).catch(err => {
+    console.error("Selbsttest-Tracking Fehler:", err);
+  });
+}
+
 const GP_FORM_GRUEN = "https://401e9539.sibforms.com/serve/MUIFAB7xEJimOTWDIuRru-zsKDUuFXdIorgj7u8slBnxZl654eKfRdvXPl0lZMPi2cXZWbKy4PkmCJ0pXReKo3A1RFAAP1wdVqjCZZnWCwHyz9EJ7X13EVywq06tSJv3yxcKtthv81PdPFNHR7kn04qD3o2PU8gnvzp3EjkYqt7v6iczUWcFrUoIlSZgDT9VtF0sqWSSa_YOgsRsSg==?v=" + GP_FORM_VER;
 
 const GP_FORM_GELB = "https://401e9539.sibforms.com/serve/MUIFABhoIJM37VBTosoxmFVElHBfSLSiE_53ub9w84L-VQsQfMffdqDozvVZPbnnDKprgEOIqSMaXg3OEHwCVcOxz8mcq9wtStO1vgFdpc-9BHrS7fOWFQgWugMYRdv2904s_hbnM-XGza1bZBAJZrDVRte1Wf2gRDdogRcD1L5_EFssxqzbdohDog8UldlJVyCPUAqiWBs7wnJVnQ==?v=" + GP_FORM_VER;
