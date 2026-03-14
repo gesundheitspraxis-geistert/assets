@@ -1,5 +1,17 @@
 /* <![CDATA[ */
 
+(function () {
+  const allowedHosts = [
+    "gesundheitspraxis-geistert.de",
+    "www.gesundheitspraxis-geistert.de"
+  ];
+
+  if (!allowedHosts.includes(window.location.hostname)) {
+    return;
+  }
+
+  // ab hier restlicher Code
+
 const GP_FORM_VER = "2026-03-13-26";
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbwi0vq4JhCeu1mdZaR33rLNn4hBjwO4GTDgTZQdqtMS6SVnCejLrOe19k0B58J1JwaH/exec";
 
@@ -317,4 +329,6 @@ gpSendTestEvent(status, pct);
 
   });
 })();
+
+  })();
 /* ]]> */
