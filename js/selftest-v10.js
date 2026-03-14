@@ -96,6 +96,34 @@ function gpGetUTM(){
   }
 }
 
+  function gpGetVisitorId() {
+  try {
+    let visitorId = localStorage.getItem("gp_visitor_id");
+    if (!visitorId) {
+      visitorId = crypto.randomUUID();
+      localStorage.setItem("gp_visitor_id", visitorId);
+    }
+    return visitorId;
+  } catch (e) {
+    return "";
+  }
+}
+
+  function gpGetOrCreateTestId() {
+  try {
+    const key = "gp_test_id:" + window.location.pathname;
+    let testId = sessionStorage.getItem(key);
+
+    if (!testId) {
+      testId = crypto.randomUUID();
+      sessionStorage.setItem(key, testId);
+    }
+
+    return testId;
+  } catch (e) {
+    return "";
+  }
+}
   
 function gpSendTestEvent(result, score){
   console.log("SEND TEST EVENT", result, score);
