@@ -132,7 +132,6 @@ function gpSendTestEvent(result, score){
 
 var currentTestPage = window.location.pathname;
 var startedKey = "test_started_at:" + currentTestPage;
-var sentKey = "test_started_sent:" + currentTestPage;
 
 if (!sessionStorage.getItem(startedKey)) {
   sessionStorage.setItem(startedKey, Date.now().toString());
