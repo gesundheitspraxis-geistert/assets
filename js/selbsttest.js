@@ -12,7 +12,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-14-6";
+const GP_FORM_VER = "2026-03-14-7";
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbzAOVnk_LQGe4jzLlJfy6OQxA795xsvd0aSwHu9CSExpDHwqqXpYahbHRWkb_pxEoiGTQ/exec";
 
