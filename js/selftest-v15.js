@@ -160,7 +160,7 @@ function gpSendTestEvent(result, score){
       timestamp_end: timestampEnd,
       test_duration_seconds: duration,
       test_page: window.location.pathname,
-      entry_page: gpGetPreviousPath() || window.location.pathname,
+      entry_page: sessionStorage.getItem("entry_page") || gpGetPreviousPath() || window.location.pathname,
       last_page_before_conversion: gpGetPreviousPath() || "",
       utm_source: utm.utm_source,
       utm_medium: utm.utm_medium,
