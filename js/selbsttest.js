@@ -12,9 +12,9 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-14-4";
+const GP_FORM_VER = "2026-03-14-5";
   console.log("Posting to:", APPS_SCRIPT_URL);
-const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxazboUj4FbJzyyt1E0HxZIGTTWDi6kfXdXZMINZgCIjFmopBOCXJ9gnwVtq_evMdIp/exec";
+const TRACKING_URL = "https://script.google.com/macros/s/AKfycbw8SZdywNOF2gh_io6ey4t39Bnhm2tSEBaNFgoowTZaLDbaqvoK1DcQ9DgPmcGPxSch/exec";
 
 const GP_FORM_GRUEN = "https://401e9539.sibforms.com/serve/MUIFAB7xEJimOTWDIuRru-zsKDUuFXdIorgj7u8slBnxZl654eKfRdvXPl0lZMPi2cXZWbKy4PkmCJ0pXReKo3A1RFAAP1wdVqjCZZnWCwHyz9EJ7X13EVywq06tSJv3yxcKtthv81PdPFNHR7kn04qD3o2PU8gnvzp3EjkYqt7v6iczUWcFrUoIlSZgDT9VtF0sqWSSa_YOgsRsSg==?v=" + GP_FORM_VER;
 
