@@ -136,7 +136,7 @@ console.log("Payload wird gesendet", {
       },
       body: JSON.stringify({
         event_id: crypto.randomUUID(),
-      // visitor_id: gpGetVisitorId(),        event_type: "test_completed",
+        event_type: "test_completed",
         timestamp_start: timestampStart,
         timestamp_end: timestampEnd,
         test_duration_seconds: duration,
