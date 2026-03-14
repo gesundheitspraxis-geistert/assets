@@ -102,8 +102,6 @@ gpRememberPreviousInternalPage();
 ================================ */
 
 function gpGetUTM(){
-  
-function gpGetUTM(){
   try{
     const url = new URL(window.location.href);
     return {
