@@ -94,7 +94,6 @@ function gpGetUTM(){
   }
 }
 
-
   
 function gpSendTestEvent(result, score){
   console.log("SEND TEST EVENT", result, score);
