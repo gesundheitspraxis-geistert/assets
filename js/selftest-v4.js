@@ -90,7 +90,7 @@ function gpSendTestEvent(result, score){
     var timestampEnd = new Date(endedAt).toISOString();
 
     if (startedAt) {
-      duration = Math.round((endedAt - startedAt) / 1000);
+      duration = Math.max(1, Math.round((endedAt - startedAt) / 1000));
       timestampStart = new Date(startedAt).toISOString();
     }
 
