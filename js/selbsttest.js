@@ -80,20 +80,25 @@ function gpGetTestDuration(){
 function gpSendTestEvent(result, score){
   try {
     const utm = gpGetUTM();
+    const duration = gpGetTestDuration();
+
     fetch(TRACKING_URL, {
       method: "POST",
       body: JSON.stringify({
         event_id: crypto.randomUUID(),
         event_type: "test_completed",
         entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
+        last_page_before_conversion: sessionStorage.getItem("last_page") || "",
+        test_page: window.location.pathname,
         source: gpGetSource(),
         result: result,
         score: score,
+        test_duration_seconds: duration,
 
         utm_source: utm.utm_source,
         utm_medium: utm.utm_medium,
         utm_campaign: utm.utm_campaign
-        })
+      })
     }).catch(function(){});
   } catch(e) {}
 }
