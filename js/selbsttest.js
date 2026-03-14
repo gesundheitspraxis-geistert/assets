@@ -68,7 +68,8 @@ function gpGetUTM(){
 
 function gpGetTestDuration(){
   try {
-    var startedAt = parseInt(sessionStorage.getItem("test_started_at") || "0", 10);
+    var startedKey = "test_started_at:" + window.location.pathname;
+    var startedAt = parseInt(sessionStorage.getItem(startedKey) || "0", 10);
     if (!startedAt) return "";
 
     return Math.round((Date.now() - startedAt) / 1000);
