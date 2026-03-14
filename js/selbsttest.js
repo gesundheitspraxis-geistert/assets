@@ -210,8 +210,6 @@ if (!sessionStorage.getItem(sentKey)) {
       return;
     }
 
-    trackTestCompleted(result, score, startedAt);
-
 function gpFollowupBlock(status) {
   return `
     <div class="gp-followup">
