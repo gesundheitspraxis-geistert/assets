@@ -185,10 +185,6 @@ console.log("Payload wird gesendet", {
   }
 }
 
-  try {
-  sessionStorage.removeItem("gp_test_id:" + window.location.pathname);
-} catch (e) {}
-
 (function(){
   function ready(fn){
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
