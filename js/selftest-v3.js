@@ -87,10 +87,22 @@ function gpGetTestDuration(){
 }
   
 function gpSendTestEvent(result, score){
-  console.log("gpSendTestEvent feuert", result, score);
   try {
     const utm = gpGetUTM();
-    const duration = gpGetTestDuration();
+
+    var startedKey = "test_started_at:" + window.location.pathname;
+    var startedAtRaw = sessionStorage.getItem(startedKey) || "";
+    var startedAt = startedAtRaw ? parseInt(startedAtRaw, 10) : 0;
+    var endedAt = Date.now();
+
+    var duration = "";
+    var timestampStart = "";
+    var timestampEnd = new Date(endedAt).toISOString();
+
+    if (startedAt) {
+      duration = Math.round((endedAt - startedAt) / 1000);
+      timestampStart = new Date(startedAt).toISOString();
+    }
 
     fetch(TRACKING_URL, {
       method: "POST",
@@ -100,6 +112,8 @@ function gpSendTestEvent(result, score){
       body: JSON.stringify({
         event_id: crypto.randomUUID(),
         event_type: "test_completed",
+        timestamp_start: timestampStart,
+        timestamp_end: timestampEnd,
         test_duration_seconds: duration,
         test_page: window.location.pathname,
         entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
@@ -114,6 +128,7 @@ function gpSendTestEvent(result, score){
     }).catch(function(err){
       console.error("Tracking Fehler:", err);
     });
+
   } catch(e) {
     console.error("gpSendTestEvent Fehler:", e);
   }
