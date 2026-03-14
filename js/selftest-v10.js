@@ -32,8 +32,13 @@ function gpGetPreviousPath() {
   }
 }
 
-sessionStorage.setItem("entry_page", gpGetPreviousPath() || window.location.pathname);
-sessionStorage.setItem("last_page_before_conversion", gpGetPreviousPath() || "");
+if (!sessionStorage.getItem("entry_page")) {
+  sessionStorage.setItem("entry_page", gpGetPreviousPath() || window.location.pathname);
+}
+
+if (!sessionStorage.getItem("last_page_before_conversion")) {
+  sessionStorage.setItem("last_page_before_conversion", gpGetPreviousPath() || "");
+}
 
 const GP_FORM_GRUEN = "https://401e9539.sibforms.com/serve/MUIFAB7xEJimOTWDIuRru-zsKDUuFXdIorgj7u8slBnxZl654eKfRdvXPl0lZMPi2cXZWbKy4PkmCJ0pXReKo3A1RFAAP1wdVqjCZZnWCwHyz9EJ7X13EVywq06tSJv3yxcKtthv81PdPFNHR7kn04qD3o2PU8gnvzp3EjkYqt7v6iczUWcFrUoIlSZgDT9VtF0sqWSSa_YOgsRsSg==?v=" + GP_FORM_VER;
 
