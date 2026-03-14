@@ -16,10 +16,6 @@ const GP_FORM_VER = "2026-03-14-6";
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbzAOVnk_LQGe4jzLlJfy6OQxA795xsvd0aSwHu9CSExpDHwqqXpYahbHRWkb_pxEoiGTQ/exec";
 
-
-if (!sessionStorage.getItem("gp_entry_page")) {
-  sessionStorage.setItem("gp_entry_page", window.location.pathname);
-}
 const GP_FORM_GRUEN = "https://401e9539.sibforms.com/serve/MUIFAB7xEJimOTWDIuRru-zsKDUuFXdIorgj7u8slBnxZl654eKfRdvXPl0lZMPi2cXZWbKy4PkmCJ0pXReKo3A1RFAAP1wdVqjCZZnWCwHyz9EJ7X13EVywq06tSJv3yxcKtthv81PdPFNHR7kn04qD3o2PU8gnvzp3EjkYqt7v6iczUWcFrUoIlSZgDT9VtF0sqWSSa_YOgsRsSg==?v=" + GP_FORM_VER;
 
 const GP_FORM_GELB = "https://401e9539.sibforms.com/serve/MUIFABhoIJM37VBTosoxmFVElHBfSLSiE_53ub9w84L-VQsQfMffdqDozvVZPbnnDKprgEOIqSMaXg3OEHwCVcOxz8mcq9wtStO1vgFdpc-9BHrS7fOWFQgWugMYRdv2904s_hbnM-XGza1bZBAJZrDVRte1Wf2gRDdogRcD1L5_EFssxqzbdohDog8UldlJVyCPUAqiWBs7wnJVnQ==?v=" + GP_FORM_VER;
