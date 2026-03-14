@@ -1,4 +1,9 @@
-<script type="text/javascript">
+/*
+Read More Toggle
+
+ändert den Buttontext bei ausgeblendeten Textabschnitten
+"Mehr lesen" ↔ "Weniger anzeigen"
+*/
 //<![CDATA[
 document.addEventListener("click", function (e) {
     const btn = e.target.closest(".gp-toc-acc__head");
@@ -14,4 +19,4 @@ document.addEventListener("click", function (e) {
     }
 });
 //]]>
-</script>
+
