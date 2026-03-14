@@ -86,23 +86,29 @@ function gpSendTestEvent(result, score){
 
     fetch(TRACKING_URL, {
       method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
       body: JSON.stringify({
         event_id: crypto.randomUUID(),
         event_type: "test_completed",
-        entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
-        last_page_before_conversion: sessionStorage.getItem("last_page") || "",
-        test_page: window.location.pathname,
-        source: gpGetSource(),
-        result: result,
-        score: score,
         test_duration_seconds: duration,
-
+        test_page: window.location.pathname,
+        entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
+        last_page_before_conversion: sessionStorage.getItem("last_page") || window.location.pathname,
         utm_source: utm.utm_source,
         utm_medium: utm.utm_medium,
-        utm_campaign: utm.utm_campaign
+        utm_campaign: utm.utm_campaign,
+        source: gpGetSource(),
+        result: result,
+        score: score
       })
-    }).catch(function(){});
-  } catch(e) {}
+    }).catch(function(err){
+      console.error("Tracking Fehler:", err);
+    });
+  } catch(e) {
+    console.error("gpSendTestEvent Fehler:", e);
+  }
 }
 
 
