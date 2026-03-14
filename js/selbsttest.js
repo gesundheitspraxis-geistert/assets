@@ -77,8 +77,12 @@ function gpSendTestEvent(result, score){
         entry_page: sessionStorage.getItem("entry_page") || window.location.pathname,
         source: gpGetSource(),
         result: result,
-        score: score
-      })
+        score: score,
+
+        utm_source: utm.utm_source,
+        utm_medium: utm.utm_medium,
+        utm_campaign: utm.utm_campaign
+        })
     }).catch(function(){});
   } catch(e) {}
 }
