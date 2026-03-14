@@ -59,10 +59,6 @@ function gpGetSource(){
 
 function gpSendTestEvent(result, score){
   try {
-    if (!sessionStorage.getItem("entry_page")) {
-      sessionStorage.setItem("entry_page", window.location.pathname);
-    }
-
     fetch(TRACKING_URL, {
       method: "POST",
       body: JSON.stringify({
