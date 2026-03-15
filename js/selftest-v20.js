@@ -18,7 +18,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-15-2";
+const GP_FORM_VER = "2026-03-15-3";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbylVzP56vvTMeSXFY6Nt7WspkgL6UMyMmpHaRVcoEZuLby_vPKGuIusMJwnq2sakjrnsw/exec";
@@ -57,6 +57,16 @@ function gpIsTestPage(path) {
     // und die Vorseite keine Testseite ist
     if (!existing && prevPath && !gpIsTestPage(prevPath)) {
       sessionStorage.setItem("entry_page", prevPath);
+    }
+  } catch (e) {}
+})();
+
+  (function gpRememberLastContentPage() {
+  try {
+    const currentPath = window.location.pathname;
+
+    if (!gpIsTestPage(currentPath)) {
+      sessionStorage.setItem("last_content_page", currentPath);
     }
   } catch (e) {}
 })();
