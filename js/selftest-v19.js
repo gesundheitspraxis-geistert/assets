@@ -12,8 +12,8 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-15-1";
-console.log("SELBSTTEST AKTIV 2026-03-14-11");
+const GP_FORM_VER = "2026-03-15-2";
+console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbylVzP56vvTMeSXFY6Nt7WspkgL6UMyMmpHaRVcoEZuLby_vPKGuIusMJwnq2sakjrnsw/exec";
 
