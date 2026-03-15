@@ -69,9 +69,7 @@ function gpFormUrl(status){
     status === "rot"   ? GP_FORM_ROT  :
     GP_FORM_GRUEN;
 
-  const sep = base.includes("?") ? "&" : "?";
-
-  return base + sep + "v=" + encodeURIComponent(GP_FORM_VER);
+  return base + "?v=" + encodeURIComponent(GP_FORM_VER);
 }
 
 function gpGetSource(){
