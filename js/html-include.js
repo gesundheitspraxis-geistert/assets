@@ -7,8 +7,11 @@ data-include="pfad/zur/datei.html".
 Zweck:
 Der Selbsttest-HTML-Block liegt zentral in
 /assets/html/selbsttest.html und wird so auf mehreren
-Seiten eingebunden, damit Änderungen nur einmal
+Testseiten eingebunden, damit Änderungen nur einmal
 gepflegt werden müssen.
+
+Verwendung:
+<div data-include="/assets/html/selbsttest.html"></div>
 
 Wichtig:
 Dieses Script hat nichts mit dem eigentlichen
