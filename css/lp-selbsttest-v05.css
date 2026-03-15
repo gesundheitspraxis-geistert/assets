@@ -85,6 +85,10 @@
   }
 }
 
+.qmark{
+  margin-left:0.05em;
+}
+
 .gp-intent-hero-btn {
   display: inline-flex !important;
   align-items: center !important;
