@@ -32,8 +32,14 @@ function gpGetPreviousPath() {
   }
 }
 
-  function gpIsTestPage(path) {
-  return path && path.indexOf("/selbsttest/") === 0;
+function gpIsTestPage(path) {
+  if (!path) return false;
+
+  return (
+    path.indexOf("/selbsttest/") === 0 ||
+    path === "/testscript" ||
+    path.indexOf("/testscript/") === 0
+  );
 }
 
 (function gpRememberEntryPage() {
