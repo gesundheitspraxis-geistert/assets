@@ -17,6 +17,7 @@
    jsDelivr-Cache manuell löschen:
    https://www.jsdelivr.com/tools/purge
    ========================================================= */
+
 (function () {
   try {
     var path = window.location.pathname || "";
@@ -34,6 +35,14 @@
     if (!isTestPage) {
       sessionStorage.setItem("journey_last_non_test_page", path);
     }
-  } catch (e) {}
+
+    console.log("JOURNEY GLOBAL", {
+      path: path,
+      isTestPage: isTestPage,
+      entry: sessionStorage.getItem("journey_entry_page"),
+      lastNonTest: sessionStorage.getItem("journey_last_non_test_page")
+    });
+  } catch (e) {
+    console.error("Journey global Fehler:", e);
+  }
 })();
-</script>
