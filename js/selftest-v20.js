@@ -190,7 +190,7 @@ function gpSendTestEvent(result, score){
   if (prev && !gpIsTestPage(prev)) return prev;
   return "";
 })(),
-      last_page_before_conversion: gpGetPreviousPath() || "",
+      last_page_before_conversion: sessionStorage.getItem("last_content_page") || "",
       utm_source: utm.utm_source,
       utm_medium: utm.utm_medium,
       utm_campaign: utm.utm_campaign,
