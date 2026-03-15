@@ -20,17 +20,21 @@
 
 (function () {
   try {
-
     var path = window.location.pathname || "";
     if (!path) return;
 
-    /* Erste Seite der Sitzung merken */
+    var isTestPage =
+      path.indexOf("/selbsttest/") === 0 ||
+      path === "/testscript" ||
+      path.indexOf("/testscript/") === 0;
+
     if (!sessionStorage.getItem("journey_entry_page")) {
       sessionStorage.setItem("journey_entry_page", path);
     }
 
-    /* Immer letzte Seite aktualisieren */
-    sessionStorage.setItem("journey_last_page", path);
-
+    /* last page nur auf Nicht-Testseiten aktualisieren */
+    if (!isTestPage) {
+      sessionStorage.setItem("journey_last_page", path);
+    }
   } catch (e) {}
 })();
