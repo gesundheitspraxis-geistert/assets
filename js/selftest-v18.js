@@ -168,7 +168,14 @@ function gpSendTestEvent(result, score){
       timestamp_end: timestampEnd,
       test_duration_seconds: duration,
       test_page: window.location.pathname,
-      entry_page: sessionStorage.getItem("entry_page") || gpGetPreviousPath() || window.location.pathname,
+      entry_page: (function () {
+  var stored = sessionStorage.getItem("entry_page") || "";
+  var prev = gpGetPreviousPath() || "";
+
+  if (stored) return stored;
+  if (prev && !gpIsTestPage(prev)) return prev;
+  return "";
+})(),
       last_page_before_conversion: gpGetPreviousPath() || "",
       utm_source: utm.utm_source,
       utm_medium: utm.utm_medium,
