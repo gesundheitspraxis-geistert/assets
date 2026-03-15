@@ -1,0 +1,182 @@
+/* <![CDATA[ */
+
+/* ---- Lokale Overrides nur für diese Seite ---- */
+.gp-intent-wrap {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 0 15px;
+  font-family: "Lora", Georgia, serif;
+}
+
+/* ---- HERO ---- */
+.gp-intent-hero {
+  background: #1e3a34;
+  border-radius: 16px;
+  padding: 44px 32px 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .gp-intent-hero {
+    background: linear-gradient(
+      135deg,
+      #2e5b4e 0%,
+      #2b5448 40%,
+      #314e4b 100%
+    ) !important;
+  }
+}
+.gp-intent-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(130,169,143,0.20) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 110%, rgba(130,74,113,0.25) 0%, transparent 50%);
+  pointer-events: none;
+}
+.gp-intent-hero > * { position: relative; }
+
+.gp-intent-eyebrow {
+  display: block !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  color: #82A98F !important;
+  margin: 0 0 16px 0 !important;
+  font-family: "Roboto Slab", Georgia, serif !important;
+  line-height: 1.5 !important;
+}
+
+.gp-intent-hero h1,
+.gp-intent-wrap .gp-intent-hero h1 {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 36px !important;
+  line-height: 1.22 !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 20px 0 !important;
+}
+.gp-intent-hero h1 em {
+  font-style: italic !important;
+  color: #b8d4c0 !important;
+}
+
+.gp-intent-hero-sub {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: rgba(255,255,255,0.78) !important;
+  margin-bottom: 18px !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+@media (max-width: 768px) {
+  .gp-intent-hero-sub {
+    color: rgba(255,255,255,0.9) !important;
+  }
+}
+
+.gp-intent-hero-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 16px 30px !important;
+  border-radius: 14px !important;
+  background-color: #c17f3e !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: "Roboto Slab", Georgia, serif !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: background-color 0.2s ease, transform 0.1s ease !important;
+  margin-top: 24px !important;
+    margin-bottom: 14px !important;
+  line-height: 1.2 !important;
+  opacity: 1 !important;
+}
+.gp-intent-hero-btn:hover {
+  background-color: #a86d30 !important;
+  transform: translateY(-1px) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.gp-intent-note {
+  display: block !important;
+  margin: 12px 0 0 0 !important;
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.38) !important;
+  font-style: italic !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+
+/* ---- PAIN ---- */
+.gp-intent-pain {
+  margin-bottom: 36px;
+  padding: 0 4px !important;  /* war: 0 4px */
+}
+
+.gp-intent-pain h2,
+.gp-intent-wrap .gp-intent-pain h2 {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  color: #824e71 !important;
+  margin: 0 0 20px 0 !important;
+  line-height: 1.35 !important;
+}
+
+.gp-intent-painlist {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+.gp-intent-painlist li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  font-size: 17px !important;
+  line-height: 1.6 !important;
+  color: #2a2a2a !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+.gp-intent-painlist li::before { content: none !important; }
+
+.gp-intent-arrow {
+  color: #486C5E !important;
+  font-weight: 700 !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+  font-style: normal !important;
+  font-size: 17px !important;
+}
+
+/* ---- BRIDGE ---- */
+.gp-intent-bridge {
+  border-left: 3px solid #82A98F !important;
+  padding: 4px 0 4px 22px !important;
+  margin-bottom: 40px !important;
+}
+.gp-intent-bridge p {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  color: #3a5a4e !important;
+  margin: 0 0 8px 0 !important;
+  font-family: "Lora", Georgia, serif !important;
+}
+.gp-intent-bridge p:last-child { margin: 0 !important; }
+.gp-intent-bridge strong {
+  font-style: italic !important;
+  font-size: 18px !important;
+  color: #486C5E !important;
+}
+
+/* ]]> */
