@@ -24,21 +24,6 @@ console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbylVzP56vvTMeSXFY6Nt7WspkgL6UMyMmpHaRVcoEZuLby_vPKGuIusMJwnq2sakjrnsw/exec";
 
-function gpGetPreviousPath() {
-  try {
-    if (!document.referrer) return "";
-
-    const refUrl = new URL(document.referrer);
-    const ownHost = window.location.hostname.replace(/^www\./, "");
-    const refHost = refUrl.hostname.replace(/^www\./, "");
-
-    if (refHost !== ownHost) return "";
-    return refUrl.pathname || "";
-  } catch (e) {
-    return "";
-  }
-}
-
 function gpIsTestPage(path) {
   if (!path) return false;
 
@@ -49,29 +34,6 @@ function gpIsTestPage(path) {
   );
 }
 
-(function gpRememberEntryPage() {
-  try {
-    const prevPath = gpGetPreviousPath();
-    const existing = sessionStorage.getItem("entry_page") || "";
-
-    // Nur setzen, wenn noch nichts vorhanden ist
-    // und die Vorseite keine Testseite ist
-    if (!existing && prevPath && !gpIsTestPage(prevPath)) {
-      sessionStorage.setItem("entry_page", prevPath);
-    }
-  } catch (e) {}
-})();
-
-  (function gpRememberLastContentPage() {
-  try {
-    const currentPath = window.location.pathname;
-
-    if (!gpIsTestPage(currentPath)) {
-      sessionStorage.setItem("last_content_page", currentPath);
-    }
-  } catch (e) {}
-})();
-  
 const GP_FORM_GRUEN = "https://401e9539.sibforms.com/serve/MUIFAB7xEJimOTWDIuRru-zsKDUuFXdIorgj7u8slBnxZl654eKfRdvXPl0lZMPi2cXZWbKy4PkmCJ0pXReKo3A1RFAAP1wdVqjCZZnWCwHyz9EJ7X13EVywq06tSJv3yxcKtthv81PdPFNHR7kn04qD3o2PU8gnvzp3EjkYqt7v6iczUWcFrUoIlSZgDT9VtF0sqWSSa_YOgsRsSg==";
 
 const GP_FORM_GELB = "https://401e9539.sibforms.com/serve/MUIFABhoIJM37VBTosoxmFVElHBfSLSiE_53ub9w84L-VQsQfMffdqDozvVZPbnnDKprgEOIqSMaXg3OEHwCVcOxz8mcq9wtStO1vgFdpc-9BHrS7fOWFQgWugMYRdv2904s_hbnM-XGza1bZBAJZrDVRte1Wf2gRDdogRcD1L5_EFssxqzbdohDog8UldlJVyCPUAqiWBs7wnJVnQ==";
