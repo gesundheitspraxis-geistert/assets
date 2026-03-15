@@ -16,6 +16,9 @@ Selbsttest-JavaScript zu tun und verändert dessen
 Logik nicht.
 */
 
+// Quelle des Testblocks:
+// /assets/html/selbsttest.html
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-include]").forEach(function (el) {
     var file = el.getAttribute("data-include");
