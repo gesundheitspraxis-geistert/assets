@@ -1,5 +1,11 @@
 /* <![CDATA[ */
 
+/*
+ * WICHTIG – jsDelivr-Cache nach jeder Änderung manuell löschen!
+ * Geh auf: https://www.jsdelivr.com/tools/purge und trag die URL ein: https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/js/selftest-vXXX.js (Versionsnummer beachten)
+ * Sonst zeigt die Live-Seite bis zu 24h den alten Stand.
+ */
+
 (function () {
   const allowedHosts = [
     "gesundheitspraxis-geistert.de",
