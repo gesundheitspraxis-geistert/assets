@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-16";
+const GP_FORM_VER = "2026-03-16-17";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -56,6 +56,9 @@ function gpFormUrl(status){
 
 function gpGetSource(utm){
   try {
+    var storedSource = sessionStorage.getItem("gp_attr_source") || "";
+    if (storedSource) return storedSource;
+
     var utmSource = (utm && utm.utm_source ? String(utm.utm_source).toLowerCase() : "");
     var utmMedium = (utm && utm.utm_medium ? String(utm.utm_medium).toLowerCase() : "");
 
