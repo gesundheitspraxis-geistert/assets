@@ -51,18 +51,32 @@ function gpFormUrl(status){
   return base + "?v=" + encodeURIComponent(GP_FORM_VER);
 }
 
-function gpGetSource(){
+function gpGetSource(utm){
   try {
-    const ref = document.referrer || "";
+    var utmSource = (utm && utm.utm_source ? String(utm.utm_source).toLowerCase() : "");
+    var utmMedium = (utm && utm.utm_medium ? String(utm.utm_medium).toLowerCase() : "");
+
+    // 1) UTMs haben Vorrang
+    if (utmSource || utmMedium) {
+      if (utmSource === "google" && utmMedium === "cpc") return "Google Ads";
+      if ((utmSource === "facebook" || utmSource === "instagram") && utmMedium === "cpc") return "Meta Ads";
+      if (utmSource === "google" && utmMedium === "organic") return "google";
+      if (utmSource) return utmSource;
+      if (utmMedium) return utmMedium;
+    }
+
+    // 2) Fallback: Referrer
+    var ref = document.referrer || "";
     if (!ref) return "direct";
 
-    const host = new URL(ref).hostname.toLowerCase();
+    var host = new URL(ref).hostname.toLowerCase();
 
     if (host.includes("google.")) return "google";
     if (host.includes("bing.")) return "bing";
-    if (host.includes("facebook.")) return "facebook";
+    if (host.includes("facebook.") || host.includes("fb.com")) return "facebook";
     if (host.includes("instagram.")) return "instagram";
     if (host.includes("youtube.")) return "youtube";
+    if (host.includes("gesundheitspraxis-geistert.de")) return "gesundheitspraxis-geistert.de";
 
     return host;
   } catch(e) {
