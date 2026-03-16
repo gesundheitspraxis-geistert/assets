@@ -4,7 +4,6 @@
    Dieses Script merkt sich pro Browser-Sitzung:
 
    journey_entry_page = erste Seite der Sitzung
-   journey_last_page  = zuletzt besuchte Nicht-Test-Seite
 
    Zusätzlich speichert es kanalbezogene Attribution
    im localStorage, damit sie später im Selbsttest
