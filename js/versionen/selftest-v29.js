@@ -19,10 +19,10 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-5";
+const GP_FORM_VER = "2026-03-16-6";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
-const TRACKING_URL = "https://script.google.com/macros/s/AKfycbyNxqjq_Q3ww-YXtcH4h8GlXccdlDtfAJffxBnkpIMo47b_pinTH_bR5hZB1Qr2MmVp5g/exec";
+const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxUdClD2csFRGCuPWi9WqX_5kLm5G2K-2nyZpTrZirnHtGtEHuNPWCVnunwtWRi9S6k7Q/exec";
 
 function gpIsTestPage(path) {
   if (!path) return false;
