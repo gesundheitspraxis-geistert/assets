@@ -51,7 +51,10 @@
         /* 2) Nur wenn noch nichts gespeichert ist → Referrer prüfen */
         if (!hasStored) {
           var ref = document.referrer || "";
-          if (!ref) return;
+          if (!ref) {
+  // kein Referrer → vermutlich direct
+  return;
+}
 
           var host = "";
           try {
