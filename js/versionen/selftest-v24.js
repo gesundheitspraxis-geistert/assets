@@ -180,6 +180,8 @@ function gpSendTestEvent(result, score){
     const payload = {
       test_id: gpGetOrCreateTestId(),
       visitor_id: gpGetVisitorId(),
+      session_id: gpGetOrCreateSessionId(),
+      device: gpGetDeviceType(),
       event_type: "test_completed",
       timestamp_start: timestampStart,
       timestamp_end: timestampEnd,
