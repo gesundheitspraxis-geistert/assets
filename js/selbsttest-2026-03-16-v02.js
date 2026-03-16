@@ -607,7 +607,7 @@ window.addEventListener("sib:form-submitted", function () {
     const testId    = sessionStorage.getItem("gp_test_id") || "";
 
     const payload = {
-      event: "email_entered",
+      event_type: "email_entered",
       visitor_id: visitorId,
       session_id: sessionId,
       test_id: testId,
