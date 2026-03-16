@@ -52,7 +52,7 @@
         });
 
         /* 1) UTMs haben Vorrang */
-        if (utm_source || utm_medium || utm_campaign || utm_content) {
+        if (utm_source || utm_medium || utm_campaign || utm_content || utm_term) {
           sessionStorage.setItem("gp_attr_utm_source", utm_source);
           sessionStorage.setItem("gp_attr_utm_medium", utm_medium);
           sessionStorage.setItem("gp_attr_utm_campaign", utm_campaign);
