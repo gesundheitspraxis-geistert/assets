@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-21";
+const GP_FORM_VER = "2026-03-16-22";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -597,8 +597,37 @@ window.addEventListener("pagehide", function () {
 });
 
 
-  
-})();
+/* Email-Eintragung tracken */
+window.addEventListener("sib:form-submitted", function () {
 
-  })();
+  try {
+
+    const visitorId = localStorage.getItem("gp_visitor_id") || "";
+    const sessionId = sessionStorage.getItem("gp_session_id") || "";
+    const testId    = sessionStorage.getItem("gp_test_id") || "";
+
+    const payload = {
+      event: "email_entered",
+      visitor_id: visitorId,
+      session_id: sessionId,
+      test_id: testId,
+      timestamp: new Date().toISOString()
+    };
+
+    const blob = new Blob(
+      [JSON.stringify(payload)],
+      { type: "text/plain;charset=utf-8" }
+    );
+
+    navigator.sendBeacon(TRACKING_URL, blob);
+
+  } catch(e) {
+    console.log("email tracking error", e);
+  }
+
+});
+
+
+})();
+})();
 /* ]]> */
