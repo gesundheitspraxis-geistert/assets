@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-18";
+const GP_FORM_VER = "2026-03-16-19";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -547,12 +547,14 @@ function gpSendAbandonEvent(trigger) {
 
     var utm = gpGetUTM();
 
+    var eventType = answered > 0 ? "test_abandoned" : "test_open_no_start";
+
     var payload = {
       test_id: gpGetOrCreateTestId(),
       visitor_id: gpGetVisitorId(),
       session_id: gpGetOrCreateSessionId(),
       device: gpGetDeviceType(),
-      event_type: "test_abandoned",
+      event_type: eventType,
       question_last_seen: answered,
       question_count_abandoned: answered,
       question_count_answered: answered,
