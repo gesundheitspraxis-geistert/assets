@@ -528,8 +528,7 @@ function gpSendAbandonEvent(trigger) {
     if (!form) return;
 
     var answered = form.querySelectorAll('input[type="radio"]:checked').length;
-    if (answered === 0) return;
-
+    
     gpAbandonSent = true;
 
     var startedKey = "test_started_at:" + window.location.pathname;
