@@ -550,6 +550,7 @@ function gpSendAbandonEvent(trigger) {
       event_type: "test_abandoned",
       question_last_seen: answered,
       question_count_abandoned: answered,
+      question_count_answered: answered,
       trigger: trigger || "",
       timestamp_start: timestampStart,
       timestamp_end: timestampEnd,
