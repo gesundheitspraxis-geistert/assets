@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-12";
+const GP_FORM_VER = "2026-03-16-13";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -512,15 +512,34 @@ root.scrollIntoView({behavior:"smooth", block:"start"});
    TEST ABBRECHER TRACKING
 ================================ */
 
-function gpSendAbandonEvent() {
+function gpSendAbandonEvent(trigger) {
   try {
     if (gpTestCompleted) return;
+    if (gpAbandonSent) return;
 
     var form = document.getElementById("gpLongevityForm");
     if (!form) return;
 
     var answered = form.querySelectorAll('input[type="radio"]:checked').length;
     if (answered === 0) return;
+
+    gpAbandonSent = true;
+
+    var startedKey = "test_started_at:" + window.location.pathname;
+    var startedAtRaw = sessionStorage.getItem(startedKey) || "";
+    var startedAt = startedAtRaw ? parseInt(startedAtRaw, 10) : 0;
+    var endedAt = Date.now();
+
+    var duration = "";
+    var timestampStart = "";
+    var timestampEnd = new Date(endedAt).toLocaleString("sv-SE");
+
+    if (startedAt) {
+      duration = Math.max(1, Math.round((endedAt - startedAt) / 1000));
+      timestampStart = new Date(startedAt).toLocaleString("sv-SE");
+    }
+
+    var utm = gpGetUTM();
 
     var payload = {
       test_id: gpGetOrCreateTestId(),
@@ -529,24 +548,55 @@ function gpSendAbandonEvent() {
       device: gpGetDeviceType(),
       event_type: "test_abandoned",
       question: answered,
+      trigger: trigger || "",
+      timestamp_start: timestampStart,
+      timestamp_end: timestampEnd,
+      test_duration_seconds: duration,
       test_page: window.location.pathname,
       entry_page: sessionStorage.getItem("journey_entry_page") || "",
-      last_page_before_conversion: sessionStorage.getItem("journey_last_non_test_page") || ""
+      last_page_before_conversion: sessionStorage.getItem("journey_last_non_test_page") || "",
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      utm_content: utm.utm_content,
+      source: gpGetSource(utm)
     };
 
-    var blob = new Blob(
-      [JSON.stringify(payload)],
-      { type: "text/plain;charset=utf-8" }
-    );
+    console.log("TEST ABBRUCH WIRD GESENDET", payload);
 
-    navigator.sendBeacon(TRACKING_URL, blob);
+    try {
+      var blob = new Blob(
+        [JSON.stringify(payload)],
+        { type: "text/plain;charset=utf-8" }
+      );
+      navigator.sendBeacon(TRACKING_URL, blob);
+    } catch (e) {}
 
-  } catch (e) {}
+    fetch(TRACKING_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function(err){
+      console.error("Abbrecher-Tracking Fehler:", err);
+    });
+
+  } catch (e) {
+    console.error("gpSendAbandonEvent Fehler:", e);
+  }
 }
 
-window.addEventListener("pagehide", gpSendAbandonEvent);
+window.addEventListener("pagehide", function () {
+  gpSendAbandonEvent("pagehide");
+});
 
-})();
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden") {
+    gpSendAbandonEvent("hidden");
+  }
+});
 
   
 })();
