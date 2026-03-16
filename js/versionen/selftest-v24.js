@@ -116,6 +116,34 @@ function gpGetUTM(){
     return "";
   }
 }
+
+function gpGetOrCreateSessionId() {
+  try {
+    const key = "gp_session_id";
+    let sessionId = sessionStorage.getItem(key);
+
+    if (!sessionId) {
+      sessionId = crypto.randomUUID();
+      sessionStorage.setItem(key, sessionId);
+    }
+
+    return sessionId;
+  } catch (e) {
+    return "";
+  }
+}
+
+function gpGetDeviceType() {
+  try {
+    var ua = navigator.userAgent || "";
+
+    if (/ipad|tablet/i.test(ua)) return "tablet";
+    if (/mobi|android|iphone|ipod/i.test(ua)) return "mobile";
+    return "desktop";
+  } catch (e) {
+    return "";
+  }
+}
   
 function gpSendTestEvent(result, score){
   console.log("SEND TEST EVENT", result, score);
