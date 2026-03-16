@@ -265,8 +265,8 @@ function gpSendTestEvent(result, score){
 var currentTestPage = window.location.pathname;
 var startedKey = "test_started_at:" + currentTestPage;
 
-// Für jeden neuen Seitenaufruf frische Startzeit setzen
-sessionStorage.setItem(startedKey, Date.now().toString());
+gpTestStartedAt = Date.now();
+sessionStorage.setItem(startedKey, gpTestStartedAt.toString());
 
     var form = document.getElementById("gpLongevityForm");
     var msg  = document.getElementById("gpMsg");
