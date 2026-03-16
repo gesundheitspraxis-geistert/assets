@@ -22,7 +22,7 @@
 const GP_FORM_VER = "2026-03-15-3";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
-const TRACKING_URL = "https://script.google.com/macros/s/AKfycbylVzP56vvTMeSXFY6Nt7WspkgL6UMyMmpHaRVcoEZuLby_vPKGuIusMJwnq2sakjrnsw/exec";
+const TRACKING_URL = "https://script.google.com/macros/s/AKfycbzsyjSQlmtGi_gxJcxdKV-WDktkWRrM_FVQg0341qfdP-oY4rMJ8byAp9UOErXgcUs3PA/exec";
 
 function gpIsTestPage(path) {
   if (!path) return false;
