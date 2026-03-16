@@ -194,6 +194,8 @@ function gpSendTestEvent(result, score){
       duration = Math.max(1, Math.round((endedAt - startedAt) / 1000));
       timestampStart = new Date(startedAt).toLocaleString("sv-SE");
     }
+    var formEl = document.getElementById("gpLongevityForm");
+    var answeredCount = formEl ? formEl.querySelectorAll('input[type="radio"]:checked').length : "";
 
     const payload = {
       test_id: gpGetOrCreateTestId(),
