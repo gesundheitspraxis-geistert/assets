@@ -96,9 +96,15 @@ function gpGetUTM(){
       utm_source: url.searchParams.get("utm_source") || "",
       utm_medium: url.searchParams.get("utm_medium") || "",
       utm_campaign: url.searchParams.get("utm_campaign") || ""
+      utm_content: url.searchParams.get("utm_content") || ""
     };
   } catch(e){
-    return {utm_source:"", utm_medium:"", utm_campaign:""};
+    return {
+      utm_source:"",
+      utm_medium:"",
+      utm_campaign:"",
+      utm_content:""
+    };
   }
 }
 
