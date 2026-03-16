@@ -54,7 +54,10 @@
           var ref = document.referrer || "";
           if (!ref) return;
 
-          var host = new URL(ref).hostname.toLowerCase();
+          var host = "";
+try {
+  host = new URL(ref).hostname.toLowerCase();
+} catch(e) {}
 
           if (host.indexOf("google.") !== -1) {
             localStorage.setItem("gp_attr_utm_source", "google");
