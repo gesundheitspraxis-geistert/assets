@@ -48,64 +48,64 @@
           return;
         }
 
-    /* 2) Nur wenn noch nichts gespeichert ist → Referrer prüfen */
-if (!hasStored) {
-  var ref = document.referrer || "";
-  if (!ref) return;
+        /* 2) Nur wenn noch nichts gespeichert ist → Referrer prüfen */
+        if (!hasStored) {
+          var ref = document.referrer || "";
+          if (!ref) return;
 
-  var host = "";
-  try {
-    host = new URL(ref).hostname.toLowerCase();
-  } catch (e) {}
+          var host = "";
+          try {
+            host = new URL(ref).hostname.toLowerCase();
+          } catch (e) {}
 
-  if (host.indexOf("google.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "Google Search");
-    localStorage.setItem("gp_attr_utm_medium", "organic");
-    return;
-  }
+          if (host.indexOf("google.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "google");
+            localStorage.setItem("gp_attr_utm_medium", "organic");
+            return;
+          }
 
-  if (host.indexOf("bing.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "Bing Search");
-    localStorage.setItem("gp_attr_utm_medium", "organic");
-    return;
-  }
+          if (host.indexOf("bing.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "bing");
+            localStorage.setItem("gp_attr_utm_medium", "organic");
+            return;
+          }
 
-  if (host.indexOf("duckduckgo.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "DuckDuckGo");
-    localStorage.setItem("gp_attr_utm_medium", "organic");
-    return;
-  }
+          if (host.indexOf("duckduckgo.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "duckduckgo");
+            localStorage.setItem("gp_attr_utm_medium", "organic");
+            return;
+          }
 
-  if (host.indexOf("yahoo.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "Yahoo Search");
-    localStorage.setItem("gp_attr_utm_medium", "organic");
-    return;
-  }
+          if (host.indexOf("yahoo.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "yahoo");
+            localStorage.setItem("gp_attr_utm_medium", "organic");
+            return;
+          }
 
-  if (host.indexOf("ecosia.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "Ecosia");
-    localStorage.setItem("gp_attr_utm_medium", "organic");
-    return;
-  }
+          if (host.indexOf("ecosia.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "ecosia");
+            localStorage.setItem("gp_attr_utm_medium", "organic");
+            return;
+          }
 
-  if (host.indexOf("facebook.") !== -1 || host.indexOf("fb.com") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "Facebook");
-    localStorage.setItem("gp_attr_utm_medium", "social");
-    return;
-  }
+          if (host.indexOf("facebook.") !== -1 || host.indexOf("fb.com") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "facebook");
+            localStorage.setItem("gp_attr_utm_medium", "social");
+            return;
+          }
 
-  if (host.indexOf("instagram.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "Instagram");
-    localStorage.setItem("gp_attr_utm_medium", "social");
-    return;
-  }
+          if (host.indexOf("instagram.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "instagram");
+            localStorage.setItem("gp_attr_utm_medium", "social");
+            return;
+          }
 
-  if (host.indexOf("youtube.") !== -1) {
-    localStorage.setItem("gp_attr_utm_source", "YouTube");
-    localStorage.setItem("gp_attr_utm_medium", "social");
-    return;
-  }
-}
+          if (host.indexOf("youtube.") !== -1) {
+            localStorage.setItem("gp_attr_utm_source", "youtube");
+            localStorage.setItem("gp_attr_utm_medium", "social");
+            return;
+          }
+        }
 
       } catch (e) {}
     }
