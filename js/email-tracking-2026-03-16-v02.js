@@ -29,13 +29,30 @@ function gpGetTestId(){
   }
 }
 
+function gpGetDeviceType(){
+  try{
+    var ua = navigator.userAgent || "";
+    if (/ipad|tablet/i.test(ua)) return "tablet";
+    if (/mobi|android|iphone|ipod/i.test(ua)) return "mobile";
+    return "desktop";
+  }catch(e){
+    return "";
+  }
+}
+
 try {
 
+  const testId = gpGetTestId();
+  const emailTrackKey = "gp_email_entered_tracked:" + testId;
+
+  if (!testId) return;
+  if (sessionStorage.getItem(emailTrackKey) === "1") return;
+
   const payload = {
-    test_id: gpGetTestId(),
+    test_id: testId,
     visitor_id: gpGetVisitorId(),
     session_id: gpGetSessionId(),
-    device: /mobi|android|iphone/i.test(navigator.userAgent) ? "mobile" : "desktop",
+    device: gpGetDeviceType(),
     event_type: "email_entered",
     timestamp_end: new Date().toLocaleString("sv-SE"),
     test_page: "/selbsttest/gesundheit/"
@@ -46,7 +63,11 @@ try {
     { type: "text/plain;charset=utf-8" }
   );
 
-  navigator.sendBeacon(TRACKING_URL, blob);
+  const sent = navigator.sendBeacon(TRACKING_URL, blob);
+
+  if (sent) {
+    sessionStorage.setItem(emailTrackKey, "1");
+  }
 
 } catch(e){
   console.log("email tracking error", e);
