@@ -37,6 +37,7 @@
         var utm_medium   = url.searchParams.get("utm_medium") || "";
         var utm_campaign = url.searchParams.get("utm_campaign") || "";
         var utm_content  = url.searchParams.get("utm_content") || "";
+        var utm_term = url.searchParams.get("utm_term") || "";
 
         var hasStored = !!sessionStorage.getItem("gp_attr_utm_source");
 
