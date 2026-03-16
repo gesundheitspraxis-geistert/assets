@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-13";
+const GP_FORM_VER = "2026-03-16-14";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -582,11 +582,6 @@ window.addEventListener("pagehide", function () {
   gpSendAbandonEvent("pagehide");
 });
 
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "hidden") {
-    gpSendAbandonEvent("hidden");
-  }
-});
 
   
 })();
