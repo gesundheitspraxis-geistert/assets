@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-10";
+const GP_FORM_VER = "2026-03-16-11";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -468,6 +468,7 @@ runLoader(function(){
   resBody.innerHTML = body;
   res.style.display = "block";
 
+gpTestCompleted = true;
 gpSendTestEvent(status, pct);
 
   /* === TRACKING: Longevity-Selbsttest Ergebnis angezeigt (GA4 Event) === */
