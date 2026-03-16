@@ -110,16 +110,16 @@ function gpGetUTM(){
       utm_source: url.searchParams.get("utm_source") || sessionStorage.getItem("gp_attr_utm_source") || "",
       utm_medium: url.searchParams.get("utm_medium") || sessionStorage.getItem("gp_attr_utm_medium") || "",
       utm_campaign: url.searchParams.get("utm_campaign") || sessionStorage.getItem("gp_attr_utm_campaign") || "",
-      utm_content: url.searchParams.get("utm_content") || sessionStorage.getItem("gp_attr_utm_content") || ""
-      utm_term: url.searchParams.get("utm_term") || sessionStorage.getItem("gp_attr_utm_term") || "",
-    };
-  } catch(e){
-    return {
-      utm_source: url.searchParams.get("utm_source") || sessionStorage.getItem("gp_attr_utm_source") || "",
-      utm_medium: url.searchParams.get("utm_medium") || sessionStorage.getItem("gp_attr_utm_medium") || "",
-      utm_campaign: url.searchParams.get("utm_campaign") || sessionStorage.getItem("gp_attr_utm_campaign") || "",
       utm_content: url.searchParams.get("utm_content") || sessionStorage.getItem("gp_attr_utm_content") || "",
       utm_term: url.searchParams.get("utm_term") || sessionStorage.getItem("gp_attr_utm_term") || ""
+    };
+  } catch(e){
+   return {
+      utm_source: sessionStorage.getItem("gp_attr_utm_source") || "",
+      utm_medium: sessionStorage.getItem("gp_attr_utm_medium") || "",
+      utm_campaign: sessionStorage.getItem("gp_attr_utm_campaign") || "",
+      utm_content: sessionStorage.getItem("gp_attr_utm_content") || "",
+      utm_term: sessionStorage.getItem("gp_attr_utm_term") || ""
     };
   }
 }
