@@ -219,6 +219,7 @@ function gpSendTestEvent(result, score){
       utm_medium: utm.utm_medium,
       utm_campaign: utm.utm_campaign,
       utm_content: utm.utm_content,
+      utm_term: utm.utm_term,
       source: gpGetSource(utm),
       question_count_answered: answeredCount,
       result: result,
