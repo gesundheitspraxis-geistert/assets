@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-3";
+const GP_FORM_VER = "2026-03-16-4";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbyNxqjq_Q3ww-YXtcH4h8GlXccdlDtfAJffxBnkpIMo47b_pinTH_bR5hZB1Qr2MmVp5g/exec";
