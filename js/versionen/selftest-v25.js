@@ -194,7 +194,7 @@ function gpSendTestEvent(result, score){
       utm_source: utm.utm_source,
       utm_medium: utm.utm_medium,
       utm_campaign: utm.utm_campaign,
-      source: gpGetSource(),
+      source: gpGetSource(utm),
       result: result,
       score: score
     };
