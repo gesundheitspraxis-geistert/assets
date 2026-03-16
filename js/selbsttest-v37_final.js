@@ -212,6 +212,7 @@ function gpSendTestEvent(result, score){
       utm_campaign: utm.utm_campaign,
       utm_content: utm.utm_content,
       source: gpGetSource(utm),
+      question_count_answered: form.querySelectorAll('input[type="radio"]:checked').length,
       result: result,
       score: score
     };
