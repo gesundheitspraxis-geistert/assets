@@ -187,7 +187,7 @@ function gpSendTestEvent(result, score){
 
     var startedKey = "test_started_at:" + window.location.pathname;
     var startedAtRaw = sessionStorage.getItem(startedKey) || "";
-    var startedAt = startedAtRaw ? parseInt(startedAtRaw, 10) : 0;
+    var startedAt = startedAtRaw ? parseInt(startedAtRaw, 10) : gpTestStartedAt;
     var endedAt = Date.now();
 
     var duration = "";
