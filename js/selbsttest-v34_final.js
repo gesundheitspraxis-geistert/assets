@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-16-11";
+const GP_FORM_VER = "2026-03-16-12";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -502,10 +502,52 @@ gpSendTestEvent(status, pct);
         if(hint) hint.remove();
       });
 
-      root.scrollIntoView({behavior:"smooth", block:"start"});
-    });
+root.scrollIntoView({behavior:"smooth", block:"start"});
+});
 
-  });
+});
+
+/* ================================
+   TEST ABBRECHER TRACKING
+================================ */
+
+function gpSendAbandonEvent() {
+  try {
+    if (gpTestCompleted) return;
+
+    var form = document.getElementById("gpLongevityForm");
+    if (!form) return;
+
+    var answered = form.querySelectorAll('input[type="radio"]:checked').length;
+    if (answered === 0) return;
+
+    var payload = {
+      test_id: gpGetOrCreateTestId(),
+      visitor_id: gpGetVisitorId(),
+      session_id: gpGetOrCreateSessionId(),
+      device: gpGetDeviceType(),
+      event_type: "test_abandoned",
+      question: answered,
+      test_page: window.location.pathname,
+      entry_page: sessionStorage.getItem("journey_entry_page") || "",
+      last_page_before_conversion: sessionStorage.getItem("journey_last_non_test_page") || ""
+    };
+
+    var blob = new Blob(
+      [JSON.stringify(payload)],
+      { type: "text/plain;charset=utf-8" }
+    );
+
+    navigator.sendBeacon(TRACKING_URL, blob);
+
+  } catch (e) {}
+}
+
+window.addEventListener("pagehide", gpSendAbandonEvent);
+
+})();
+
+  
 })();
 
   })();
