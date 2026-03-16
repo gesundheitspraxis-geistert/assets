@@ -56,6 +56,7 @@
           sessionStorage.setItem("gp_attr_utm_medium", utm_medium);
           sessionStorage.setItem("gp_attr_utm_campaign", utm_campaign);
           sessionStorage.setItem("gp_attr_utm_content", utm_content);
+          sessionStorage.setItem("gp_attr_utm_term", utm_term);
 
           var utmSourceLc = String(utm_source).toLowerCase();
           var utmMediumLc = String(utm_medium).toLowerCase();
