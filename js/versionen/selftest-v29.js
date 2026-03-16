@@ -146,18 +146,19 @@ function gpStoreAttributionIfMissing() {
 function gpGetUTM(){
   try{
     const url = new URL(window.location.href);
+
     return {
-      utm_source: url.searchParams.get("utm_source") || "",
-      utm_medium: url.searchParams.get("utm_medium") || "",
-      utm_campaign: url.searchParams.get("utm_campaign") || "",
-      utm_content: url.searchParams.get("utm_content") || ""
+      utm_source: url.searchParams.get("utm_source") || localStorage.getItem("gp_attr_utm_source") || "",
+      utm_medium: url.searchParams.get("utm_medium") || localStorage.getItem("gp_attr_utm_medium") || "",
+      utm_campaign: url.searchParams.get("utm_campaign") || localStorage.getItem("gp_attr_utm_campaign") || "",
+      utm_content: url.searchParams.get("utm_content") || localStorage.getItem("gp_attr_utm_content") || ""
     };
   } catch(e){
     return {
-      utm_source:"",
-      utm_medium:"",
-      utm_campaign:"",
-      utm_content:""
+      utm_source: localStorage.getItem("gp_attr_utm_source") || "",
+      utm_medium: localStorage.getItem("gp_attr_utm_medium") || "",
+      utm_campaign: localStorage.getItem("gp_attr_utm_campaign") || "",
+      utm_content: localStorage.getItem("gp_attr_utm_content") || ""
     };
   }
 }
