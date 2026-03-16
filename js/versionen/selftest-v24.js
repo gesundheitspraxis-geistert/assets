@@ -144,6 +144,18 @@ function gpGetDeviceType() {
     return "";
   }
 }
+
+function gpGetDeviceType() {
+  try {
+    var ua = navigator.userAgent || "";
+
+    if (/ipad|tablet/i.test(ua)) return "tablet";
+    if (/mobi|android|iphone|ipod/i.test(ua)) return "mobile";
+    return "desktop";
+  } catch (e) {
+    return "";
+  }
+}
   
 function gpSendTestEvent(result, score){
   console.log("SEND TEST EVENT", result, score);
