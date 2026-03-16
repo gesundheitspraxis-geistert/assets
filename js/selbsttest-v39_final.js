@@ -24,6 +24,7 @@ console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
 var gpAbandonSent = false;
+var gpTestStartedAt = Date.now();
 
 const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxUdClD2csFRGCuPWi9WqX_5kLm5G2K-2nyZpTrZirnHtGtEHuNPWCVnunwtWRi9S6k7Q/exec";
 
