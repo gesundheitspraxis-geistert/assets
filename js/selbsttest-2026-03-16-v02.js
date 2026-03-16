@@ -592,26 +592,27 @@ function gpSendAbandonEvent(trigger) {
   }
 }
 
-window.addEventListener("pagehide", function () {
-  gpSendAbandonEvent("pagehide");
-});
-
-
 /* Email-Eintragung tracken */
 window.addEventListener("sib:form-submitted", function () {
-
   try {
-
-    const visitorId = localStorage.getItem("gp_visitor_id") || "";
-    const sessionId = sessionStorage.getItem("gp_session_id") || "";
-    const testId    = sessionStorage.getItem("gp_test_id") || "";
+    const utm = gpGetUTM();
 
     const payload = {
+      test_id: gpGetOrCreateTestId(),
+      visitor_id: gpGetVisitorId(),
+      session_id: gpGetOrCreateSessionId(),
+      device: gpGetDeviceType(),
       event_type: "email_entered",
-      visitor_id: visitorId,
-      session_id: sessionId,
-      test_id: testId,
-      timestamp: new Date().toISOString()
+      timestamp_end: new Date().toLocaleString("sv-SE"),
+      test_page: window.location.pathname,
+      entry_page: sessionStorage.getItem("journey_entry_page") || "",
+      last_page_before_conversion: sessionStorage.getItem("journey_last_non_test_page") || "",
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      utm_content: utm.utm_content,
+      utm_term: utm.utm_term,
+      source: gpGetSource(utm)
     };
 
     const blob = new Blob(
@@ -624,7 +625,6 @@ window.addEventListener("sib:form-submitted", function () {
   } catch(e) {
     console.log("email tracking error", e);
   }
-
 });
 
 
