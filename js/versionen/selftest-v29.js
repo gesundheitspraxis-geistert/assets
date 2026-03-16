@@ -84,6 +84,60 @@ function gpGetSource(utm){
   }
 }
 
+function gpStoreAttributionIfMissing() {
+  try {
+    const url = new URL(window.location.href);
+
+    const currentUtmSource = url.searchParams.get("utm_source") || "";
+    const currentUtmMedium = url.searchParams.get("utm_medium") || "";
+    const currentUtmCampaign = url.searchParams.get("utm_campaign") || "";
+    const currentUtmContent = url.searchParams.get("utm_content") || "";
+
+    const hasStoredSource = !!localStorage.getItem("gp_attr_utm_source");
+
+    // Wenn UTMs vorhanden sind → speichern
+    if (currentUtmSource || currentUtmMedium || currentUtmCampaign || currentUtmContent) {
+      localStorage.setItem("gp_attr_utm_source", currentUtmSource);
+      localStorage.setItem("gp_attr_utm_medium", currentUtmMedium);
+      localStorage.setItem("gp_attr_utm_campaign", currentUtmCampaign);
+      localStorage.setItem("gp_attr_utm_content", currentUtmContent);
+      return;
+    }
+
+    // Wenn noch nichts gespeichert ist → Referrer auswerten
+    if (!hasStoredSource) {
+      const ref = document.referrer || "";
+      if (!ref) return;
+
+      const host = new URL(ref).hostname.toLowerCase();
+
+      if (host.includes("google.")) {
+        localStorage.setItem("gp_attr_utm_source", "google");
+        localStorage.setItem("gp_attr_utm_medium", "organic");
+        return;
+      }
+
+      if (host.includes("bing.")) {
+        localStorage.setItem("gp_attr_utm_source", "bing");
+        localStorage.setItem("gp_attr_utm_medium", "organic");
+        return;
+      }
+
+      if (host.includes("facebook.") || host.includes("fb.com")) {
+        localStorage.setItem("gp_attr_utm_source", "facebook");
+        localStorage.setItem("gp_attr_utm_medium", "social");
+        return;
+      }
+
+      if (host.includes("instagram.")) {
+        localStorage.setItem("gp_attr_utm_source", "instagram");
+        localStorage.setItem("gp_attr_utm_medium", "social");
+        return;
+      }
+    }
+
+  } catch(e) {}
+}
 
 /* ================================
    UTM auslesen
