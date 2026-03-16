@@ -241,9 +241,6 @@ function gpSendTestEvent(result, score){
     console.log("Tracking Antwort Status:", res.status);
     console.log("Tracking Antwort Body:", text);
 
-    try {
-      sessionStorage.removeItem("gp_test_id:" + window.location.pathname);
-    } catch (e) {}
   });
 })
     .catch(function(err){
