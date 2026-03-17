@@ -124,12 +124,12 @@ function gpGetUTM(){
   }
 }
 
-  function gpGetVisitorId() {
+function gpGetVisitorId() {
   try {
-    let visitorId = localStorage.getItem("gp_visitor_id");
+    let visitorId = sessionStorage.getItem("gp_visitor_id");
     if (!visitorId) {
       visitorId = crypto.randomUUID();
-      localStorage.setItem("gp_visitor_id", visitorId);
+      sessionStorage.setItem("gp_visitor_id", visitorId);
     }
     return visitorId;
   } catch (e) {
