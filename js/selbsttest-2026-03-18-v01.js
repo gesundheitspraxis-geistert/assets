@@ -433,6 +433,9 @@ Viele Bereiche sind aktuell gut im Gleich&shy;gewicht.<\/p>
   <li>Was Ihre Vitalität langfristig nährt<\/li>
   <li>Wie Sie Ihr bio&shy;logisches Alter positiv beeinflussen<\/li>
 <\/ul>
+<div class="gp-email-hint">
+  Wohin dürfen wir Ihre Auswertung senden?
+</div>
 ${gpFollowupBlock("gruen")}
 `;
 }
@@ -448,6 +451,9 @@ else if (pct <= 55) {
   <li>Wo Ihre größten Kraft&shy;räuber liegen<\/li>
   <li>Was jetzt am wichtigsten ist<\/li>
 <\/ul>
+<div class="gp-email-hint">
+  Wohin dürfen wir Ihre Auswertung senden?
+</div>
 ${gpFollowupBlock("gelb")}
 `;
 }
@@ -463,6 +469,9 @@ else {
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
   <li>Was zuerst wirklich entlastet<\/li>
 <\/ul>
+<div class="gp-email-hint">
+  Wohin dürfen wir Ihre Auswertung senden?
+</div>
 ${gpFollowupBlock("rot")}
 `;
 }
