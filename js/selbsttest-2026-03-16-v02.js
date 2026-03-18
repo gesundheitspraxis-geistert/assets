@@ -455,10 +455,10 @@ ${gpFollowupBlock("gelb")}
 else {
   status = "rot";
   color  = "#b55353";
-  title  = "Entlasten";
+  title  = "ROT – Entlasten";
   body = `
-<p><strong>Ihr Ergebnis deutet auf eine deut&shy;liche Über&shy;lastung hin.<\/strong> In solchen Phasen ist es wichtig, zuerst Entlastung zu schaffen.<\/p>
-<p>In der <b>individuellen Auswertung<\/b> per E&#8209;Mail zeige ich Ihnen, wo Sie beginnen können:<\/p>
+<p><strong>Ihr Ergebnis zeigt aktuell klare Zeichen von Über&shy;lastung. <\/strong> In dieser Phase geht es darum, gezielt Druck herauszunehmen und Stabilität aufzubauen.<\/p>
+<p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
 <ul class="gp-result-checklist">
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
   <li>Was zuerst wirklich entlastet<\/li>
