@@ -1245,12 +1245,13 @@ html, body {
   }
 }
 
-.gp-email-hint {
-  margin-top: 20px;
-  margin-bottom: 12px;
-  font-size: 17px;
-  font-weight: 500;
+
+.gp-email-hint{
+  margin: 18px 0 14px;
   color: #6f9f85;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
 }
 
 /* ]]> */
