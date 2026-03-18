@@ -434,7 +434,7 @@ Viele Bereiche sind aktuell gut im Gleich&shy;gewicht.<\/p>
   <li>Wie Sie Ihr bio&shy;logisches Alter positiv beeinflussen<\/li>
 <\/ul>
 <div class="gp-email-hint">
-  Ihre Auswertung per E-Mail:
+  Wohin dürfen wir Ihre Auswertung senden?
 </div>
 ${gpFollowupBlock("gruen")}
 `;
@@ -452,7 +452,7 @@ else if (pct <= 55) {
   <li>Was jetzt am wichtigsten ist<\/li>
 <\/ul>
 <div class="gp-email-hint">
- Ihre Auswertung per E-Mail:
+Wohin dürfen wir Ihre Auswertung senden?
 </div>
 ${gpFollowupBlock("gelb")}
 `;
@@ -470,7 +470,7 @@ else {
   <li>Was zuerst wirklich entlastet<\/li>
 <\/ul>
 <div class="gp-email-hint">
-  Ihre Auswertung per E-Mail:
+  Wohin dürfen wir Ihre Auswertung senden?
 </div>
 ${gpFollowupBlock("rot")}
 `;
