@@ -972,7 +972,7 @@ display: inline !important;      /* Fließt direkt neben dem Punkt weiter */
 /* ===== Follow-up Block – FINAL (ohne Rechts-Overflow) ===== */
 
 #gpLongevityRoot .gp-followup{
-  margin-top: 6px !important;
+  margin-top: 2px !important;
   padding: 0 !important;
   text-align: left !important;
   width: 100% !important;
@@ -1000,7 +1000,7 @@ display: inline !important;      /* Fließt direkt neben dem Punkt weiter */
 
 /* Followup kompakter */
 #gpLongevityRoot .gp-followup{
-  margin-top: 10px !important;
+  margin-top: 4px !important;
   padding: 0 !important;
 }
 
@@ -1251,7 +1251,7 @@ html, body {
    ============================================================ */
 .gp-email-hint {
   /* Abstand nach oben zum Ergebnistext, wenig Abstand zum Formular */
-  margin: 24px 0 4px 0 !important; 
+  margin: 26px 0 4px 0 !important; 
   
   /* Farbe: Dunkles Anthrazit (wie dein restlicher Text, kein knalliges Grün) */
   color: ##4E6F63 !important;
@@ -1274,7 +1274,7 @@ html, body {
 @media (max-width: 480px) {
   .gp-email-hint {
     font-size: 16px !important;
-    margin-top: 20px !important;
+    margin-top: 23px !important;
   }
 }
 /* ]]> */
