@@ -1246,12 +1246,35 @@ html, body {
 }
 
 
-.gp-email-hint{
-  margin: 20px 0 0px;
-  color: #2f3a40;
-  font-size: 16px;
-  line-height: 1.35;
-  font-weight: 600;
+/* ============================================================
+   GP EMAIL HINT – Finaler Lead-Text über dem Formular
+   ============================================================ */
+.gp-email-hint {
+  /* Abstand nach oben zum Ergebnistext, wenig Abstand zum Formular */
+  margin: 24px 0 4px 0 !important; 
+  
+  /* Farbe: Dunkles Anthrazit (wie dein restlicher Text, kein knalliges Grün) */
+  color: #2f3a40 !important;
+  
+  /* Schriftgröße: 17px für gute Lesbarkeit, ohne zu schreien */
+  font-size: 17px !important;
+  line-height: 1.4 !important;
+  
+  /* Gewicht: 600 (Semibold) für klare Führung */
+  font-weight: 600 !important;
+  
+  /* Schriftart: Roboto Slab für den Überschriften-Charakter */
+  font-family: "Roboto Slab", Georgia, serif !important;
+  
+  display: block !important;
+  text-align: left !important;
 }
 
+/* Kleiner Mobile-Fix, damit es auf schmalen Handys nicht zu wuchtig wirkt */
+@media (max-width: 480px) {
+  .gp-email-hint {
+    font-size: 16px !important;
+    margin-top: 20px !important;
+  }
+}
 /* ]]> */
