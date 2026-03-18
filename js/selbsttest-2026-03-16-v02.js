@@ -424,11 +424,11 @@ var status, color, title, body;
 if (pct <= 25) {
   status = "gruen";
   color  = "#6f9f85";
-  title  = "Stabil";
+  title  = "GRÜN – Stabil";
   body = `
 <p><strong>Ihr Ergebnis zeigt eine gute gesund&shy;heitliche Basis.<\/strong> 
 Viele Bereiche sind aktuell gut im Gleich&shy;gewicht.<\/p>
-<p>In der <b>individuellen Auswertung<\/b> per E&#8209;Mail zeige ich Ihnen, wie Sie diese Stabi&shy;lität weiter stärken:<\/p>
+<p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
 <ul class="gp-result-checklist">
   <li>Was Ihre Vitalität langfristig nährt<\/li>
   <li>Wie Sie Ihr bio&shy;logisches Alter positiv beeinflussen<\/li>
@@ -440,10 +440,10 @@ ${gpFollowupBlock("gruen")}
 else if (pct <= 55) {
   status = "gelb";
   color  = "#c8a64a";
-  title  = "Aufbauen";
+  title  = "GELB – Aufbauen";
   body = `
-<p><strong>Ihr Ergebnis zeigt erhöhten Unter&shy;stützungs&shy;bedarf.<\/strong> Einige Bereiche brauchen jetzt gezielten Aufbau.<\/p>
-<p>In der <b>individuellen Auswertung<\/b> per E&#8209;Mail zeige ich Ihnen, wo Sie ansetzen können:<\/p>
+<p><strong>Ihr Ergebnis zeigt erhöhten Unter&shy;stützungs&shy;bedarf.<\/strong> Jetzt ist gezielter Energieaufbau sinnvoll.<\/p>
+<p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
 <ul class="gp-result-checklist">
   <li>Wo Ihre größten Kraft&shy;räuber liegen<\/li>
   <li>Was jetzt am wichtigsten ist<\/li>
@@ -457,7 +457,7 @@ else {
   color  = "#b55353";
   title  = "ROT – Entlasten";
   body = `
-<p><strong>Ihr Ergebnis zeigt aktuell klare Zeichen von Über&shy;lastung. <\/strong> In dieser Phase geht es darum, gezielt Druck herauszunehmen und Stabilität aufzubauen.<\/p>
+<p><strong>Ihr Ergebnis zeigt aktuell klare Zeichen von Über&shy;lastung. <\/strong> Jetzt geht es darum, gezielt Druck herauszunehmen und Stabilität aufzubauen.<\/p>
 <p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
 <ul class="gp-result-checklist">
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
