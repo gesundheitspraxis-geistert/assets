@@ -1245,5 +1245,12 @@ html, body {
   }
 }
 
+.gp-email-hint {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #6f9f85;
+}
 
 /* ]]> */
