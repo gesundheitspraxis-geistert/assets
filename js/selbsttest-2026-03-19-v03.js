@@ -426,8 +426,8 @@ if (pct <= 25) {
   color  = "#6f9f85";
   title  = "GRÜN – Stabil";
   body = `
-<p><strong>Ihr Körper wirkt stabil und gut reguliert.</strong> 
-Viele Prozesse greifen aktuell sinnvoll ineinander.<\/p>
+<p><strong>Ihr Ergebnis zeigt eine stabile, gut regulierte Basis.</strong> 
+Viele Bereiche greifen aktuell sinnvoll ineinander.<\/p>
 
 <p>Wie Sie diese Basis gezielt erhalten – das erhalten Sie per E&#8209;Mail.<\/p>
 
@@ -451,7 +451,7 @@ else if (pct <= 55) {
   color  = "#c8a64a";
   title  = "GELB – Aufbauen";
   body = `
-<p><strong>Ihr Körper zeigt erste Anzeichen von Ungleichgewicht.</strong> 
+<p><strong>Ihr Ergebnis zeigt erste Anzeichen von Ungleichgewicht.</strong> 
 Einige Bereiche brauchen jetzt gezielte Unterstützung.<\/p>
 
 <p>Was das konkret für Sie bedeutet – das erhalten Sie per E&#8209;Mail.<\/p>
@@ -476,7 +476,7 @@ else {
   color  = "#b55353";
   title  = "ROT – Entlasten";
   body = `
-<p><strong>Ihr Körper steht aktuell unter spürbarer Belastung.</strong> 
+<p><strong>Ihr Ergebnis zeigt aktuell eine spürbare Belastung.</strong> 
 Mehrere Faktoren wirken gleichzeitig und kosten Kraft.<\/p>
 
 <p>Was jetzt wirklich entlasten kann – das erhalten Sie per E&#8209;Mail.<\/p>
