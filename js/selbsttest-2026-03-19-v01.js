@@ -426,16 +426,21 @@ if (pct <= 25) {
   color  = "#6f9f85";
   title  = "GRÜN – Stabil";
   body = `
-<p><strong>Ihr Ergebnis zeigt eine gute gesund&shy;heitliche Basis.<\/strong> 
-Viele Bereiche sind aktuell gut im Gleich&shy;gewicht.<\/p>
-<p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
+<p><strong>Ihr Körper wirkt insgesamt stabil und gut reguliert.</strong> Viele Prozesse greifen aktuell sinnvoll ineinander.<\/p>
+
+<p>Was das für Ihren Alltag bedeutet und wie Sie diese stabile Basis gezielt erhalten können – das erhalten Sie per E&#8209;Mail.<\/p>
+
+<p>Ihre <b>individuelle Auswertung<\/b> zeigt Ihnen:<\/p>
+
 <ul class="gp-result-checklist">
   <li>Was Ihre Vitalität langfristig nährt<\/li>
   <li>Wie Sie Ihr bio&shy;logisches Alter positiv beeinflussen<\/li>
 <\/ul>
+
 <div class="gp-email-hint">
   Wohin dürfen wir Ihre Auswertung senden?
 </div>
+
 ${gpFollowupBlock("gruen")}
 `;
 }
@@ -445,15 +450,21 @@ else if (pct <= 55) {
   color  = "#c8a64a";
   title  = "GELB – Aufbauen";
   body = `
-<p><strong>Ihr Ergebnis zeigt erhöhten Unter&shy;stützungs&shy;bedarf.<\/strong> Jetzt ist gezielter Energieaufbau sinnvoll.<\/p>
-<p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
+<p><strong>Ihr Körper zeigt erste Anzeichen von Ungleichgewicht.</strong> Einige Bereiche brauchen jetzt gezielte Unterstützung.<\/p>
+
+<p>Was das konkret für Sie bedeutet und wo Sie jetzt gezielt ansetzen können – das erhalten Sie per E&#8209;Mail.<\/p>
+
+<p>Ihre <b>individuelle Auswertung<\/b> zeigt Ihnen:<\/p>
+
 <ul class="gp-result-checklist">
   <li>Wo Ihre größten Kraft&shy;räuber liegen<\/li>
   <li>Was jetzt am wichtigsten ist<\/li>
 <\/ul>
+
 <div class="gp-email-hint">
-Wohin dürfen wir Ihre Auswertung senden?
+  Wohin dürfen wir Ihre Auswertung senden?
 </div>
+
 ${gpFollowupBlock("gelb")}
 `;
 }
@@ -463,15 +474,21 @@ else {
   color  = "#b55353";
   title  = "ROT – Entlasten";
   body = `
-<p><strong>Ihr Ergebnis zeigt aktuell klare Zeichen von Über&shy;lastung. <\/strong> Jetzt geht es darum, gezielt Druck herauszunehmen und Stabilität aufzubauen.<\/p>
-<p>In Ihrer <b>individuellen Auswertung<\/b> per E&#8209;Mail sehen Sie konkret:<\/p>
+<p><strong>Ihr Körper steht aktuell unter spürbarer Belastung.</strong> Mehrere Faktoren wirken gleichzeitig und kosten Kraft.<\/p>
+
+<p>Was das für Sie bedeutet und welche Schritte jetzt wirklich entlasten können – das erhalten Sie per E&#8209;Mail.<\/p>
+
+<p>Ihre <b>individuelle Auswertung<\/b> zeigt Ihnen:<\/p>
+
 <ul class="gp-result-checklist">
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
   <li>Was zuerst wirklich entlastet<\/li>
 <\/ul>
+
 <div class="gp-email-hint">
   Wohin dürfen wir Ihre Auswertung senden?
 </div>
+
 ${gpFollowupBlock("rot")}
 `;
 }
