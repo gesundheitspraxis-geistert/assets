@@ -5,6 +5,12 @@
    AB HIER VIDEO IM HEROOOOOOOOOOOOOOOOOOOOOO
    ========================================================= */
 /* <![CDATA[ */
+
+/* Breadcrumb nur auf dieser Seite ausblenden */
+.jtpl-breadcrumbs {
+  display: none !important;
+}
+
 /* Dezentere Beschriftung unter dem Video */
 .gp-hero-media .gp-video-footer-text {
     display: block !important;
