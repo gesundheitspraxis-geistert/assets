@@ -112,6 +112,7 @@
     margin-bottom: 14px !important;
   line-height: 1.2 !important;
   opacity: 1 !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 .gp-intent-hero-btn:hover {
   background-color: #a86d30 !important;
