@@ -426,19 +426,20 @@ if (pct <= 25) {
   color  = "#6f9f85";
   title  = "GRÜN – Stabil";
   body = `
-<p><strong>Ihr Körper wirkt insgesamt stabil und gut reguliert.</strong> Viele Prozesse greifen aktuell sinnvoll ineinander.<\/p>
+<p><strong>Ihr Körper wirkt stabil und gut reguliert.</strong> 
+Viele Prozesse greifen aktuell sinnvoll ineinander.<\/p>
 
-<p>Was das für Ihren Alltag bedeutet und wie Sie diese stabile Basis gezielt erhalten können – das erhalten Sie per E&#8209;Mail.<\/p>
+<p>Wie Sie diese Basis gezielt erhalten – das erhalten Sie per E&#8209;Mail.<\/p>
 
-<p>Ihre <b>individuelle Auswertung<\/b> zeigt Ihnen:<\/p>
+<p><b>Ihre Auswertung zeigt Ihnen:<\/b><\/p>
 
 <ul class="gp-result-checklist">
   <li>Was Ihre Vitalität langfristig nährt<\/li>
-  <li>Wie Sie Ihr bio&shy;logisches Alter positiv beeinflussen<\/li>
+  <li>Wie Sie Ihr biologisches Alter positiv beeinflussen<\/li>
 <\/ul>
 
 <div class="gp-email-hint">
-  Wohin dürfen wir Ihre Auswertung senden?
+  Wohin dürfen wir Ihnen Ihre Auswertung senden?
 </div>
 
 ${gpFollowupBlock("gruen")}
@@ -450,11 +451,12 @@ else if (pct <= 55) {
   color  = "#c8a64a";
   title  = "GELB – Aufbauen";
   body = `
-<p><strong>Ihr Körper zeigt erste Anzeichen von Ungleichgewicht.</strong> Einige Bereiche brauchen jetzt gezielte Unterstützung.<\/p>
+<p><strong>Ihr Körper zeigt erste Anzeichen von Ungleichgewicht.</strong> 
+Einige Bereiche brauchen jetzt gezielte Unterstützung.<\/p>
 
-<p>Was das konkret für Sie bedeutet und wo Sie jetzt gezielt ansetzen können – das erhalten Sie per E&#8209;Mail.<\/p>
+<p>Was das konkret für Sie bedeutet – das erhalten Sie per E&#8209;Mail.<\/p>
 
-<p>Ihre <b>individuelle Auswertung<\/b> zeigt Ihnen:<\/p>
+<p><b>Ihre Auswertung zeigt Ihnen:<\/b><\/p>
 
 <ul class="gp-result-checklist">
   <li>Wo Ihre größten Kraft&shy;räuber liegen<\/li>
@@ -462,7 +464,7 @@ else if (pct <= 55) {
 <\/ul>
 
 <div class="gp-email-hint">
-  Wohin dürfen wir Ihre Auswertung senden?
+  Wohin dürfen wir Ihnen Ihre Auswertung senden?
 </div>
 
 ${gpFollowupBlock("gelb")}
@@ -474,19 +476,20 @@ else {
   color  = "#b55353";
   title  = "ROT – Entlasten";
   body = `
-<p><strong>Ihr Körper steht aktuell unter spürbarer Belastung.</strong> Mehrere Faktoren wirken gleichzeitig und kosten Kraft.<\/p>
+<p><strong>Ihr Körper steht aktuell unter spürbarer Belastung.</strong> 
+Mehrere Faktoren wirken gleichzeitig und kosten Kraft.<\/p>
 
-<p>Was das für Sie bedeutet und welche Schritte jetzt wirklich entlasten können – das erhalten Sie per E&#8209;Mail.<\/p>
+<p>Was jetzt wirklich entlasten kann – das erhalten Sie per E&#8209;Mail.<\/p>
 
-<p>Ihre <b>individuelle Auswertung<\/b> zeigt Ihnen:<\/p>
+<p><b>Ihre Auswertung zeigt Ihnen:<\/b><\/p>
 
 <ul class="gp-result-checklist">
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
-  <li>Was zuerst wirklich entlastet<\/li>
+  <li>Was als erstes wieder Stabilität bringt<\/li>
 <\/ul>
 
 <div class="gp-email-hint">
-  Wohin dürfen wir Ihre Auswertung senden?
+  Wohin dürfen wir Ihnen Ihre Auswertung senden?
 </div>
 
 ${gpFollowupBlock("rot")}
