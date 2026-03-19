@@ -288,6 +288,9 @@
 @media (max-width: 520px) {
   .gp-intent-hero h1,
   .gp-intent-wrap .gp-intent-hero h1 { font-size: 28px !important; }
+
+.gp-intent-wrap {
+    margin-top: -25px; /* ggf. 50px testen */}
 }
 
 /* ---- SEO-CONTENT DARUNTER ---- */
