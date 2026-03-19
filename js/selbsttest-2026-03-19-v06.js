@@ -19,7 +19,7 @@
 
   // ab hier restlicher Code
 
-const GP_FORM_VER = "2026-03-19-2";
+const GP_FORM_VER = "2026-03-19-3";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
@@ -433,6 +433,7 @@ if (pct <= 25) {
 <ul class="gp-result-checklist">
   <li>Was Ihre Vitalität langfristig nährt<\/li>
   <li>Wie Sie Ihr biologisches Alter positiv beeinflussen<\/li>
+  <li>Impulse für stabile Gesundheit</li>
 <\/ul>
 
 <div class="gp-email-hint">
@@ -455,6 +456,7 @@ else if (pct <= 55) {
 <ul class="gp-result-checklist">
   <li>Wo Ihre größten Kraft&shy;räuber liegen<\/li>
   <li>Was jetzt am wichtigsten ist<\/li>
+  <li>Nächste konkrete Schritte</li>
 <\/ul>
 
 <div class="gp-email-hint">
@@ -476,8 +478,8 @@ else {
 
 <ul class="gp-result-checklist">
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
-  <li>Was als erstes wieder Stabilität bringt<\/li>
-<\/ul>
+  <li>Was wieder Stabilität bringt<\/li>
+  <li>Erste Schritte zur Entlastung</li><\/ul>
 
 <div class="gp-email-hint">
   Wohin dürfen wir Ihnen Ihre Auswertung senden?
