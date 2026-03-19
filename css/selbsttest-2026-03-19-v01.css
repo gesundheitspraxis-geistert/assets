@@ -347,11 +347,11 @@
    Voraussetzung: Lora + Roboto Slab müssen geladen sein.
    ============================================================ */
 .gp-intent-wrap {
-    margin-top: 30px; /* ggf. 50px testen */
+    margin-top: 0px; /* ggf. 50px testen */
 }
 @media (max-width: 520px) {
 .gp-intent-wrap {
-    margin-top: 20px; /* ggf. 50px testen */
+    margin-top: -25px; /* ggf. 50px testen */
 }
 }
 
