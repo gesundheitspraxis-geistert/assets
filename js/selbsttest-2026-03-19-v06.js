@@ -437,7 +437,7 @@ if (pct <= 25) {
 <\/ul>
 
 <div class="gp-email-hint">
-  Wohin dürfen wir Ihnen Ihre Auswertung senden?
+  Wohin dürfen wir Ihre Auswertung senden?
 </div>
 
 ${gpFollowupBlock("gruen")}
@@ -460,7 +460,7 @@ else if (pct <= 55) {
 <\/ul>
 
 <div class="gp-email-hint">
-  Wohin dürfen wir Ihnen Ihre Auswertung senden?
+  Wohin dürfen wir Ihre Auswertung senden?
 </div>
 
 ${gpFollowupBlock("gelb")}
@@ -482,7 +482,7 @@ else {
   <li>Erste Schritte zur Entlastung</li><\/ul>
 
 <div class="gp-email-hint">
-  Wohin dürfen wir Ihnen Ihre Auswertung senden?
+  Wohin dürfen wir Ihre Auswertung senden?
 </div>
 
 ${gpFollowupBlock("rot")}
