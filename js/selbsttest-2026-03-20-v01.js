@@ -6,7 +6,6 @@
  * Geh auf: https://www.jsdelivr.com/tools/purge und trag die URL ein: https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/js/selbsttest-vXX.js (Versionsnummer beachten)
  * Sonst zeigt die Live-Seite bis zu 24h den alten Stand.
  */
-
 (function () {
   const allowedHosts = [
     "gesundheitspraxis-geistert.de",
@@ -17,9 +16,22 @@
     return;
   }
 
-  // ab hier restlicher Code
+  function gpIsTestPage(path) {
+    if (!path) return false;
 
-const GP_FORM_VER = "2026-03-20-1";
+    return (
+      path.indexOf("/selbsttest/") === 0 ||
+      path === "/testscript" ||
+      path.indexOf("/testscript/") === 0
+    );
+  }
+
+  const currentPath = window.location.pathname;
+  if (!gpIsTestPage(currentPath)) {
+    return;
+  }
+
+  const GP_FORM_VER = "2026-03-20-1";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
