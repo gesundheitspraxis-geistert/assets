@@ -141,7 +141,7 @@ function gpGetVisitorId() {
 
   function gpGetOrCreateTestId() {
   try {
-    const path = window.location.pathname.replace(/\/+$/, "");
+    const path = window.location.pathname.replace(/\/+$/, "") || "/";
     const key = "gp_test_id:" + path;
     let testId = sessionStorage.getItem(key);
 
