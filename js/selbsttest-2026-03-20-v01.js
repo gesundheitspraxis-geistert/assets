@@ -625,7 +625,8 @@ function gpSendAbandonEvent(trigger) {
 }
 
 window.addEventListener("pagehide", function () {
-  if (gpIsTestPage(window.location.pathname)) {
+ var normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+if (gpIsTestPage(normalizedPath)) {
     gpSendAbandonEvent("pagehide");
   }
 });
