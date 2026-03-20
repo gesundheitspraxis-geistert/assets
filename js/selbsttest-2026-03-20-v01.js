@@ -344,10 +344,14 @@ function runLoader(callback){
   var loader = document.getElementById("gp-test-loader");
   var bar = document.querySelector(".gp-loader-progress");
 
+  if (!loader || !bar) {
+    callback();
+    return;
+  }
+
   loader.style.display = "block";
   bar.style.width = "0%";
 
-  /* sanft zum Ladebereich scrollen */
   var y = loader.getBoundingClientRect().top + window.pageYOffset - 90;
   window.scrollTo({ top: y, behavior: "smooth" });
 
