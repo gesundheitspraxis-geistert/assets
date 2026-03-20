@@ -32,7 +32,7 @@ const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxUdClD2csFRGCuPWi
 
 function gpGetVisitorId(){
   try{
-    return localStorage.getItem("gp_visitor_id") || sessionStorage.getItem("gp_visitor_id") || "";
+    return sessionStorage.getItem("gp_visitor_id") || "";
   }catch(e){
     return "";
   }
@@ -48,7 +48,7 @@ function gpGetSessionId(){
 
 function gpGetTestPage(){
   try{
-    return sessionStorage.getItem("gp_last_test_page") || "";
+    return (sessionStorage.getItem("gp_last_test_page") || "").replace(/\/+$/, "") || "/";
   }catch(e){
     return "";
   }
@@ -77,7 +77,6 @@ function gpGetDeviceType(){
 }
 
 try {
-
   const testPage = gpGetTestPage();
   const testId = gpGetTestId();
   const emailTrackKey = "gp_email_entered_tracked:" + testId;
@@ -114,3 +113,4 @@ try {
 })();
 
 /* ]]> */
+
