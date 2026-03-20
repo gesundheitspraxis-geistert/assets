@@ -265,7 +265,7 @@ function gpSendTestEvent(result, score){
     var root = document.getElementById("gpLongevityRoot");
     if(!root) return;
 
-var currentTestPage = window.location.pathname;
+var currentTestPage = window.location.pathname.replace(/\/+$/, "") || "/";
 var startedKey = "test_started_at:" + currentTestPage;
 
 gpTestStartedAt = Date.now();
