@@ -26,7 +26,7 @@
     );
   }
 
-  const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
   if (!gpIsTestPage(currentPath)) {
     return;
   }
