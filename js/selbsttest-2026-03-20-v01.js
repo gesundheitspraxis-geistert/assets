@@ -619,7 +619,9 @@ function gpSendAbandonEvent(trigger) {
 }
 
 window.addEventListener("pagehide", function () {
-  gpSendAbandonEvent("pagehide");
+  if (gpIsTestPage(window.location.pathname)) {
+    gpSendAbandonEvent("pagehide");
+  }
 });
 
 })();
