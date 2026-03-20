@@ -621,5 +621,5 @@ window.addEventListener("pagehide", function () {
 });
 
 })();
-})();
+
 /* ]]> */
