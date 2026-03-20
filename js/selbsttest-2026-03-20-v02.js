@@ -31,7 +31,7 @@
     return;
   }
 
-  const GP_FORM_VER = "2026-03-20-1";
+  const GP_FORM_VER = "2026-03-20-2";
 console.log("SELBSTTEST AKTIV", GP_FORM_VER);
 
 var gpTestCompleted = false;
