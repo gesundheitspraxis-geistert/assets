@@ -190,7 +190,8 @@ function gpSendTestEvent(result, score){
   try {
     const utm = gpGetUTM();
 
-    var startedKey = "test_started_at:" + window.location.pathname;
+    var normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+    var startedKey = "test_started_at:" + normalizedPath;
     var startedAtRaw = sessionStorage.getItem(startedKey) || "";
     var startedAt = startedAtRaw ? parseInt(startedAtRaw, 10) : gpTestStartedAt;
     var endedAt = Date.now();
