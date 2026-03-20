@@ -216,7 +216,7 @@ function gpSendTestEvent(result, score){
       timestamp_start: timestampStart,
       timestamp_end: timestampEnd,
       test_duration_seconds: duration,
-      test_page: window.location.pathname,
+      test_page: normalizedPath,
       entry_page: sessionStorage.getItem("journey_entry_page") || "",
       last_page_before_conversion: sessionStorage.getItem("journey_last_non_test_page") || "",
       utm_source: utm.utm_source,
