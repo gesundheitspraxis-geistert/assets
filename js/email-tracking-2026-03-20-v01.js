@@ -1,3 +1,27 @@
+/*
+=========================================================
+EMAIL TRACKING – DANKESEITE (Brevo / Selbsttest)
+---------------------------------------------------------
+Dieses Script sendet ein "email_entered"-Event an das
+Google Sheet (Apps Script), sobald ein Nutzer seine
+E-Mail im Selbsttest hinterlassen hat.
+
+WICHTIG:
+– Läuft auf der Danke-Seite nach Formular-Eintragung (Optin)
+– Greift auf test_id aus sessionStorage zu
+– Funktioniert nur innerhalb derselben Browser-Session
+– Verhindert Doppel-Tracking pro Testlauf
+
+Ziel:
+Saubere Zuordnung von E-Mail-Eintragungen zu
+Test, Quelle (UTM) und Nutzerverlauf
+
+Bei Änderungen:
+– Pfad /sessionStorage-Key prüfen (gp_test_id:...)
+– Apps Script URL prüfen
+=========================================================
+*/
+
 /* <![CDATA[ */
 
 (function () {
