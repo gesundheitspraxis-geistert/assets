@@ -255,8 +255,7 @@ function gpSendTestEvent(result, score){
   }
 }
 
-(function(){
-  function ready(fn){
+function ready(fn){
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
     else fn();
   }
