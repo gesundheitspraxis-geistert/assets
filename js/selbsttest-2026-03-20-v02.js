@@ -440,7 +440,7 @@ if (pct <= 25) {
   body = `
 <p><strong>Ihr Ergebnis zeigt eine stabile, gut regulierte Basis</strong> – Einordnung aus langjähriger Erfahrung in der Gesundheitspraxis.<\/p>
 
-<p>Wie Sie diese Basis gezielt erhalten, zeigen wir Ihnen in Ihrer Auswertung peE&#8209;Mail.<\/p>
+<p>Wie Sie diese Basis gezielt erhalten, zeigen wir Ihnen in Ihrer Auswertung per E&#8209;Mail.<\/p>
 
 <ul class="gp-result-checklist">
   <li>Was Ihre Vitalität langfristig nährt<\/li>
@@ -463,7 +463,7 @@ else if (pct <= 55) {
   body = `
 <p><strong>Ihr Ergebnis zeigt erste Anzeichen von Ungleichgewicht</strong> – Einordnung aus langjähriger Erfahrung in der Gesundheitspraxis.<\/p>
 
-<p>Was das konkret für Sie bedeutet, zeigen wir Ihnen in Ihrer Auswertung peE&#8209;Mail.<\/p>
+<p>Was das konkret für Sie bedeutet, zeigen wir Ihnen in Ihrer Auswertung per E&#8209;Mail.<\/p>
 
 <ul class="gp-result-checklist">
   <li>Wo Ihre größten Kraft&shy;räuber liegen<\/li>
@@ -486,7 +486,7 @@ else {
   body = `
 <p><strong>Ihr Ergebnis zeigt aktuell eine spürbare Belastung</strong> – Einordnung aus langjähriger Erfahrung in der Gesundheitspraxis.<\/p>
 
-<p>Was jetzt wirklich entlastet, zeigen wir Ihnen in Ihrer Auswertung peE&#8209;Mail.<\/p>
+<p>Was jetzt wirklich entlastet, zeigen wir Ihnen in Ihrer Auswertung per E&#8209;Mail.<\/p>
 
 <ul class="gp-result-checklist">
   <li>Wie Sie Ihre Kraft&shy;räuber erkennen<\/li>
