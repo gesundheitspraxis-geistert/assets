@@ -1,0 +1,27 @@
+/*
+=========================================================
+SELBSTTEST EMAIL SPEICHERN
+---------------------------------------------------------
+Speichert die eingegebene E-Mail im sessionStorage,
+damit sie auf der Danke-Seite für Tracking & Brevo
+weiterverwendet werden kann.
+=========================================================
+*/
+
+/* <![CDATA[ */
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector('form');
+
+  if (!form) return;
+
+  form.addEventListener("submit", function () {
+    const emailInput = form.querySelector('input[type="email"]');
+
+    if (emailInput && emailInput.value) {
+      sessionStorage.setItem("gp_email", emailInput.value.trim());
+    }
+  });
+
+});
+/* <![CDATA[ */
