@@ -1,0 +1,657 @@
+<meta property="og:title" content="Empfehlungen aus der Praxis – Gesundheitspraxis Yvonne Geistert" />
+<meta property="og:description" content="Sorgfältig ausgewählte Produktempfehlungen aus unserem Praxisalltag – mit kurzen Erfahrungen zur Anwendung, Einordnung und passenden Rubriken (Leber, Darm, Immunsystem, Nerven, Kinder u. a.)." />
+<meta property="og:url" content="https://www.gesundheitspraxis-geistert.de/empfehlungen/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Gesundheitspraxis Yvonne Geistert" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/empfehlungen/gesundheitsprodukte_share.jpg" />
+<meta property="og:image:secure_url" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/empfehlungen/gesundheitsprodukte_share.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Empfehlungen aus der Gesundheitspraxis Yvonne Geistert" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Empfehlungen aus der Praxis – Gesundheitspraxis Yvonne Geistert" />
+<meta name="twitter:description" content="Produktempfehlungen aus dem Praxisalltag – mit Erfahrungen, Rubriken und klarer Einordnung." />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/empfehlungen/gesundheitsprodukte_share2.jpg" />
+<meta name="twitter:image:src" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/empfehlungen/gesundheitsprodukte_share2.jpg" />
+<meta name="twitter:image:alt" content="Empfehlungen aus der Gesundheitspraxis Yvonne Geistert" />
+
+<script type="application/ld+json">
+/* <![CDATA[ */
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/",
+  "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/",
+  "name": "Gesundheitsprodukte & Empfehlungen",
+  "description": "Kuratierte Empfehlungen aus der naturheilkundlichen Praxis – thematisch gegliedert.",
+  "inLanguage": "de-DE",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gesundheitspraxis Yvonne Geistert",
+    "url": "https://www.gesundheitspraxis-geistert.de/"
+  },
+  "hasPart": [
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#leber",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#leber",
+      "name": "Leber & Entgiftung",
+      "description": "Empfehlungen zur Unterstützung von Leberfunktion und Ausleitung."
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#darm",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#darm",
+      "name": "Darm & Verdauung",
+      "description": "Produkte und Anwendungen zur Unterstützung von Verdauung und Darmmilieu."
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#gefaesse",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#gefaesse",
+      "name": "Gefäße & Durchblutung",
+      "description": "Empfehlungen rund um Gefäße, Durchblutung und Fließeigenschaften."
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#immun",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#immun",
+      "name": "Mikronährstoffe & Immunsystem",
+      "description": "Auswahl an Mikronährstoffen und begleitenden Empfehlungen."
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#nerven",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#nerven",
+      "name": "Nerven & Stressregulation",
+      "description": "Empfehlungen zur Unterstützung von Nerven, Schlaf und Stressregulation."
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#koerper",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#koerper",
+      "name": "Körperanwendungen & Sinnesreize",
+      "description": "Äußere Anwendungen und praktische Hilfsmittel für den Alltag."
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#kinder",
+      "url": "https://www.gesundheitspraxis-geistert.de/empfehlungen/#kinder",
+      "name": "Kinder & Schwangere",
+      "description": "Empfehlungen für sensible Lebensphasen und besondere Bedürfnisse."
+    }
+  ]
+}
+/*]]>*/
+</script>
+
+<style>
+/* <![CDATA[ */
+
+/* =========================
+   1) Scroll / Offset
+   ========================= */
+html{ scroll-behavior:smooth; }
+h2.gp-section[id], h3.gp-section[id]{ scroll-margin-top: 130px; }
+
+/* =========================
+   2) Dropdown (Filter)
+   ========================= */
+.gp-filter{
+  max-width: 400px;
+  margin: 10px 0 8px 0;
+  position: relative;
+}
+.gp-select{
+  width: 100%;
+  padding: 14px 44px 14px 16px;
+  font-family: inherit !important;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--gp-textfarbe, #5f6f66);
+  border-radius: 14px;
+  border: 1px solid var(--gp-border, #d6e2db);
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.gp-filter::after{
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gp-gruen, #486C5E);
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+.gp-select:focus{
+  outline: none;
+  border-color: var(--gp-gruen, #486C5E);
+  box-shadow: 0 0 0 3px rgba(72,108,94,0.18);
+}
+.gp-select:hover{ border-color: var(--gp-gruen, #486C5E); }
+
+/* =========================
+   3) Kategorie-Überschriften (dezent, ohne Linie/Rand)
+   ========================= */
+h2.gp-section,
+h3.gp-section{
+  font-size: 2.15rem !important;
+  line-height: 1.25 !important;
+  font-weight: 650 !important;
+  color: var(--gp-gruen, #486C5E) !important;
+  letter-spacing: 0.2px !important;
+
+  /* dezenter Look: KEIN Rand, nur weiche Fläche */
+  background: rgba(var(--gp-hellgruen-rgb, 130,169,143), 0.12) !important;
+  border: none !important;
+  border-radius: 14px !important;
+
+  padding: 10px 16px 8px 16px !important;
+  margin: 40px 0 6px 0 !important;
+}
+@media (min-width: 601px){
+  h2.gp-section,
+  h3.gp-section{ margin-bottom: -4px !important; }
+}
+
+/* =========================
+   4) Produktkarten
+   ========================= */
+.gp-card{
+  padding: 20px 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(72,108,94,0.30) !important;
+}
+.gp-card .gp-grid{
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 22px !important;
+}
+
+/* Bild */
+.gp-card .gp-image{
+  margin-top: 12px !important;
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  align-self: flex-start !important;
+}
+.gp-card .gp-image img{
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: contain !important;
+  background: #fff !important;
+
+  border-radius: 16px !important;
+  border: 1px solid rgba(var(--gp-gruen-rgb, 72,108,94), 0.35) !important;
+  box-sizing: border-box !important;
+  display: block !important;
+
+  image-rendering: -webkit-optimize-contrast !important;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Text */
+.gp-card .gp-content{
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+.gp-title{
+  margin: 0 0 10px 0 !important;
+  line-height: 1.25 !important;
+  font-size: 2.6rem !important;
+}
+.gp-card .gp-text{
+  margin: 0 0 14px 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Links-Reihe */
+.gp-card .gp-links{
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 12px !important;
+}
+
+/* =========================
+   5) Buttons: gp-button = Look wie gp-btn-soft (global)
+   (dadurch kein Extra-Style-Patch nötig)
+   ========================= */
+.j-module a.gp-button,
+.j-module a.gp-button:link,
+.j-module a.gp-button:visited{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 12px 22px !important;
+  border-radius: 14px !important;
+
+  font-size: 1.6rem !important;
+  font-weight: 650 !important;
+  line-height: 1.15 !important;
+  white-space: nowrap !important;
+
+  background: rgba(var(--gp-hellgruen-rgb, 130,169,143), 0.14) !important;
+  border: 1px solid rgba(var(--gp-gruen-rgb, 72,108,94), 0.35) !important;
+  color: var(--gp-link, var(--gp-gruen, #486C5E)) !important;
+
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .08s ease !important;
+}
+.j-module a.gp-button:hover,
+.j-module a.gp-button:focus{
+  background: rgba(var(--gp-hellgruen-rgb, 130,169,143), 0.22) !important;
+  border-color: rgba(var(--gp-gruen-rgb, 72,108,94), 0.45) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06) !important;
+}
+.j-module a.gp-button:active{ transform: translateY(1px) !important; }
+
+/* Kinder-Mini-Link (dezent wie Sprungmarken/TOC) */
+.j-module a.gp-child-link,
+.j-module a.gp-child-link:visited{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-left: 8px !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: rgba(var(--gp-gruen-rgb, 72,108,94), 0.78) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+.j-module a.gp-child-link:hover{
+  color: var(--gp-gruen, #486C5E) !important;
+  text-decoration: underline !important;
+  opacity: .95 !important;
+}
+
+/* =========================
+   6) Details / Summary: „Warum wir empfehlen“ (seitenkonform, nicht zu dunkel)
+   ========================= */
+.gp-card .gp-details summary{
+  margin-top: 10px !important;
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  color: rgba(var(--gp-gruen-rgb, 72,108,94), 0.72) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.gp-card .gp-details summary::-webkit-details-marker{ display:none !important; }
+.gp-card .gp-details summary:hover{
+  color: rgba(var(--gp-gruen-rgb, 72,108,94), 0.90) !important;
+}
+.gp-card .gp-details .gp-arrow{
+  font-size: 1.8rem !important;
+  line-height: 1 !important;
+  transition: transform 0.2s ease !important;
+}
+.gp-card .gp-details[open] .gp-arrow{ transform: rotate(180deg) !important; }
+
+/* =========================
+   7) Klickbarer Bild-Link
+   ========================= */
+.gp-imglink{ display:block !important; }
+.gp-imglink:hover img{ filter: brightness(0.97) !important; }
+@media (hover:hover) and (pointer:fine){
+  .gp-imglink{ cursor: zoom-in !important; }
+}
+
+/* =========================
+   8) Lightbox
+   ========================= */
+.gp-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 99999;
+}
+.gp-lightbox.is-open{ display:flex; }
+.gp-lightbox__inner{
+  position: relative;
+  max-width: min(1100px, 96vw);
+  max-height: 90vh;
+}
+.gp-lightbox__img{
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 14px;
+  display: block;  
+  /* filter: drop-shadow(0 22px 60px rgba(255,255,255,.55));*/
+ box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+.gp-lightbox__close{
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 40px;
+}
+.gp-lightbox__close:hover{ filter: brightness(.95); }
+
+/* =========================
+   9) Mobile Layout
+   ========================= */
+@media (max-width: 600px){
+  .gp-card{ padding: 18px 0 !important; }
+
+  .gp-card .gp-grid{
+    display: grid !important;
+    grid-template-columns: 88px 1fr !important;
+    grid-template-areas:
+      "img title"
+      "img links"
+      "text text"
+      "details details" !important;
+    gap: 12px 14px !important;
+    align-items: start !important;
+  }
+  .gp-card .gp-content{ display: contents !important; }
+
+  .gp-card .gp-image{ grid-area: img !important; width: 88px !important; margin: 0 !important; }
+  .gp-card .gp-image img{
+    width: 88px !important;
+    height: auto !important;
+    max-height: 110px !important;
+    object-fit: contain !important;
+  }
+
+  .gp-card .gp-title{
+    grid-area: title !important;
+    margin: 0 !important;
+    font-size: 1.9rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .gp-card .gp-links{
+    grid-area: links !important;
+    margin-top: 6px !important;
+    gap: 10px !important;
+  }
+
+  .j-module a.gp-button{
+    font-size: 1.35rem !important;
+    padding: 10px 16px !important;
+  }
+
+  .gp-card .gp-text{
+    grid-area: text !important;
+    margin: 6px 0 10px 0 !important;
+    font-size: 1.45rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .gp-card .gp-details{ grid-area: details !important; }
+
+  h2.gp-section,
+  h3.gp-section{
+    font-size: 1.7rem !important;
+    margin: 22px 0 6px 0 !important;
+    padding: 7px 14px 6px 14px !important;
+  }
+
+  .gp-select{
+    font-size: 1.5rem !important;
+    padding: 12px 40px 12px 14px !important;
+  }
+  .gp-filter::after{ font-size: 1.6rem !important; }
+  .gp-select option{ font-size: 1.35rem !important; }
+}
+
+/* FIX: gp-imglink als Klasse auf NICHT-klickbaren Elementen -> normaler Cursor */
+.gp-image.gp-imglink,
+.gp-image.gp-imglink img{
+  cursor: default !important;
+}
+
+/* Optional: auch Hover-Effekt ausschalten, falls du ihn noch irgendwo siehst */
+.gp-image.gp-imglink:hover img{
+  filter: none !important;
+}
+
+
+
+/*]]>*/
+</style>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+  function isImageUrl(url){
+    return /\.(png|jpe?g|webp)(\?.*)?$/i.test(url || "");
+  }
+
+  function ensureBox(){
+    let box = document.getElementById('gpLightbox');
+    if(box) return box;
+
+    box = document.createElement('div');
+    box.id = 'gpLightbox';
+    box.className = 'gp-lightbox';
+    box.innerHTML = ''
+      + '<div class="gp-lightbox__inner" role="dialog" aria-modal="true">'
+      + '  <button class="gp-lightbox__close" type="button" aria-label="Schließen">×<\/button>'
+      + '  <img class="gp-lightbox__img" alt="">'
+      + '<\/div>';
+    document.body.appendChild(box);
+
+    function closeBox(){
+      box.classList.remove('is-open');
+      document.documentElement.style.overflow = '';
+      const img = box.querySelector('.gp-lightbox__img');
+      if(img) img.src = '';
+    }
+
+    box.addEventListener('click', (e)=>{ if(e.target === box) closeBox(); });
+    box.querySelector('.gp-lightbox__close').addEventListener('click', closeBox);
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeBox(); });
+
+    return box;
+  }
+
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a.gp-imglink');
+    if(!a) return;
+
+    const href = a.getAttribute('href') || '';
+    if(!isImageUrl(href)) return;
+
+    e.preventDefault();
+    const box = ensureBox();
+    const img = box.querySelector('.gp-lightbox__img');
+
+    img.src = href;
+    img.alt = a.querySelector('img')?.alt || '';
+
+    box.classList.add('is-open');
+    document.documentElement.style.overflow = 'hidden';
+  }, true);
+})();
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+  const DURATION = 300;
+
+  function getContent(details){
+    return details.querySelector('.gp-details-content');
+  }
+
+  function openDetails(details){
+    const c = getContent(details);
+    if(!c){ details.open = true; return; }
+
+    details.open = true;
+
+    c.style.overflow = 'hidden';
+    c.style.height = '0px';
+    c.offsetHeight;
+
+    const end = c.scrollHeight;
+    c.style.transition = `height ${DURATION}ms ease`;
+    c.style.height = end + 'px';
+
+    c.addEventListener('transitionend', function te(){
+      c.removeEventListener('transitionend', te);
+      c.style.transition = '';
+      c.style.height = 'auto';
+    });
+  }
+
+  function closeDetails(details){
+    const c = getContent(details);
+    if(!c){ details.open = false; return; }
+
+    const start = c.getBoundingClientRect().height;
+    c.style.overflow = 'hidden';
+    c.style.height = start + 'px';
+    c.offsetHeight;
+
+    c.style.transition = `height ${DURATION}ms ease`;
+    c.style.height = '0px';
+
+    c.addEventListener('transitionend', function te(){
+      c.removeEventListener('transitionend', te);
+      c.style.transition = '';
+      details.open = false;
+    });
+  }
+
+  document.addEventListener('click', function(e){
+    const summary = e.target.closest('details.gp-details > summary');
+    if(!summary) return;
+
+    const details = summary.parentElement;
+    e.preventDefault();
+
+    if(details.open) closeDetails(details);
+    else openDetails(details);
+  }, true);
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('details.gp-details').forEach(d=>{
+      const c = getContent(d);
+      if(!c) return;
+      c.style.height = d.open ? 'auto' : '0px';
+      c.style.overflow = 'hidden';
+    });
+  });
+})();
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+  const OFFSET = 80;
+  const DELAY  = 60;
+
+  function scrollToId(hash){
+    if(!hash || hash === '#') return;
+    const id = hash.replace('#','');
+    const el = document.getElementById(id);
+    if(!el) return;
+
+    const y = el.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+    setTimeout(()=> window.scrollTo({ top: y, behavior: 'smooth' }), DELAY);
+    history.replaceState(null, '', '#' + id);
+  }
+
+  document.addEventListener('change', function(e){
+    const sel = e.target.closest('#gpJump');
+    if(!sel) return;
+    scrollToId(sel.value);
+  }, true);
+})();
+//]]>
+</script>
+
+<style>
+/* <![CDATA[ */
+/* Jimdo-sicher: höhere Spezifität + !important, getrennt nach Desktop/Mobil */
+
+/* MOBIL: Abstand vor "Warum wir..." deutlich kleiner */
+@media (max-width: 600px){
+
+  /* Text unten etwas weniger, damit "Warum..." näher ran kommt */
+  .j-module .gp-card .gp-text{
+    margin-bottom: 6px !important;
+  }
+
+  /* Details-Block näher ran */
+  .j-module .gp-card details.gp-details{
+    margin-top: 4px !important;
+    padding-top: 0 !important;
+  }
+
+  /* Summary selbst ohne extra Abstand */
+  .j-module .gp-card details.gp-details > summary{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Produktbutton minimal größer (nur in den Karten) */
+  .j-module .gp-card .gp-links a.gp-button{
+    font-size: 1.4rem !important;
+    padding: 10px 18px !important;
+    border-radius: 13px !important;
+  }
+}
+
+/* DESKTOP: "Warum..." wieder etwas weiter runter (mehr Luft) */
+@media (min-width: 601px){
+
+  .j-module .gp-card details.gp-details{
+    margin-top: 14px !important;
+  }
+
+  .j-module .gp-card details.gp-details > summary{
+    margin-top: 0 !important;
+  }
+}
+
+/* Mehr Abstand zwischen einzelnen Produktkarten – bewusst & ruhig */
+
+/* Standard (Desktop zuerst) */
+.j-module .gp-card{
+  padding-bottom: 28px !important;   /* vorher ~20 */
+  margin-bottom: 12px !important;
+}
+
+/* Mobile: etwas kompakter, aber spürbar mehr Luft */
+@media (max-width: 600px){
+  .j-module .gp-card{
+    padding-bottom: 22px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+
+/*]]>*/
+</style>
+
