@@ -1,0 +1,56 @@
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Fibromyalgie Selbsttest – erste Hinweise auf Symptome erkennen" />
+<meta name="twitter:description" content="Fibromyalgie wird oft spät erkannt. Dieser kurze Selbsttest hilft, typische Symptome wie Müdigkeit, Schmerzen und Erschöpfung besser einzuordnen." />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/wissen/gesundheits-selbsttest-share.png" />
+<meta name="twitter:image:alt" content="Fibromyalgie Selbsttest – erste Hinweise erkennen" />
+
+<script type="application/ld+json">
+/* <![CDATA[ */
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HealthApplication",
+      "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/fibromyalgie/#app",
+      "name": "Fibromyalgie Selbsttest – erste Hinweise erkennen",
+      "operatingSystem": "Web",
+      "applicationCategory": "HealthApplication",
+      "url": "https://www.gesundheitspraxis-geistert.de/selbsttest/fibromyalgie/",
+      "description": "Online-Selbsttest (ca. 2 Minuten), der hilft, typische Symptome von Fibromyalgie wie chronische Müdigkeit, Schmerzen oder Konzentrationsprobleme besser einzuordnen.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "10 präzise Fragen",
+        "Sofortergebnis mit Einordnung",
+        "Hinweise auf mögliche Belastungsfaktoren",
+        "Konkrete nächste Schritte zur Stabilisierung"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Erwachsene"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/fibromyalgie/#webpage",
+      "url": "https://www.gesundheitspraxis-geistert.de/selbsttest/fibromyalgie/",
+      "name": "Fibromyalgie Selbsttest – erste Hinweise erkennen",
+      "inLanguage": "de-DE",
+      "mainEntity": {
+        "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/fibromyalgie/#app"
+      }
+    }
+  ]
+}
+/*]]>*/
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/css/selbsttest-2026-03-19-v01.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/css/lp-selbsttest-v09.css" />
+
+<script src="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/js/selbsttest-2026-03-20-v02.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/js/youtube-lazyload.js"></script>
