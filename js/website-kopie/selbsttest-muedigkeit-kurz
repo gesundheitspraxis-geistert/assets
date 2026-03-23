@@ -1,0 +1,78 @@
+<div class="gp-intent-wrap">
+    <div class="gp-intent-test" id="gp-intent-test">
+        <span class="gp-intent-testbadge">Selbsttest bei Müdigkeit</span> <!-- HEADLINE + KURZTEXT (breit) -->
+
+        <div class="gp-intent-test__text">
+            <h2 class="gp-intent-h2">
+                Warum bin ich immer <span style="color:#8B4F7A; font-style:italic; letter-spacing:0.01em; margin-right:4px;">so&#160;müde</span> ?
+            </h2>
+
+            <p>
+                Beantworten Sie 10 gezielte Fragen und erhalten Sie eine erste Einordnung Ihrer Beschwerden. Gerade <a href="https://www.gesundheitspraxis-geistert.de/wissen/muedigkeit/" title=
+                "Ursachen von Müdigkeit verstehen">chronischer Müdigkeit</a> – oft verbunden mit Kraftlosigkeit oder Abgeschlagenheit – erkennen viele Menschen erstmals mögliche Ursachen ihrer
+                Symptome.
+            </p>
+        </div>
+        <!-- GRID: links Video, rechts Häkchen -->
+
+        <div class="gp-intent-grid">
+            <!-- VIDEO -->
+
+            <div class="gp-intent-media gp-hero-media">
+                <button type="button" class="gp-video-teaser" data-video-id="zOYpOTYMmIE" aria-label="Video abspielen: Kurze Erklärung zum Selbsttest"><img src=
+                "https://raw.githubusercontent.com/gesundheitspraxis-geistert/assets/main/wissen/selbsttest/thumbnail-selbsttest-video-final3.webp" loading="eager" decoding="async" fetchpriority=
+                "high" alt="Kurze Erklärung zum Gesundheits-Selbsttest von Heilpraktikerin Yvonne Geistert" /></button>
+                <div class="gp-video-embed" hidden="">
+                </div>
+
+                <div class="gp-video-footer-text">
+                    Kurzes Video von Heilpraktikerin Yvonne Geistert zum Selbsttest Zum Abspielen klicken (lädt Inhalte von YouTube).
+                </div>
+            </div>
+            <!-- HÄKCHEN -->
+
+            <div class="gp-intent-right">
+                <ul class="gp-intent-benefits">
+                    <li>
+                        <span class="gp-intent-check">✓</span> Aus langjähriger Praxiserfahrung
+                    </li>
+
+                    <li>
+                        <span class="gp-intent-check">✓</span> Erste Einordnung Ihrer Beschwerden
+                    </li>
+
+                    <li>
+                        <span class="gp-intent-check">✓</span> Nächste sinnvolle Schritte
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- test -->
+
+
+<div class="gp-intent-wrap">
+    <div class="gp-intent-pain">
+        <p style="margin-bottom: 15px;">
+            Ihr Ergebnis macht sichtbar: Energie ist selten nur ein einzelner Wert. Häufig greifen mehrere Ebenen ineinander.
+        </p>
+
+        <h2 style="margin-bottom: 15px;">
+            Müdigkeit kann viele Gründe haben.
+        </h2>
+
+        <p>
+            Im Praxisalltag zeigen sich wiederkehrende Muster – von Stress und Schlafqualität bis hin zu Mikronährstoffen oder hormonellen Prozessen.
+        </p>
+
+        <p style="margin-top: 12px; margin-bottom: 12px;">
+            Wenn Sie verstehen möchten, was dabei häufig übersehen wird, finden Sie hier weiterführende Hintergründe zur anhaltenden Müdigkeit:
+        </p>
+
+        <p class="gp-textlink">
+            <a href="/wissen/muedigkeit/" title="Lesen Sie die häufigsten Ursachen, typische Zusammenhänge und was oft übersehen wird">Ursachen von Müdigkeit verstehen</a>
+        </p>
+    </div>
+</div>
