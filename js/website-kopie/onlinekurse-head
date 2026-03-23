@@ -1,0 +1,138 @@
+<meta property="og:title" content="Online-Gesundheitskurse – Gesundheitspraxis Yvonne Geistert" />
+<meta property="og:description" content="Begleitete Online-Gesundheitskurse zu ganzheitlicher Gesundheitsbildung, Prävention und alltagstauglicher Selbstfürsorge – wissenschaftlich fundiert und praxisnah." />
+<meta property="og:url" content="https://www.gesundheitspraxis-geistert.de/online-kurse/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Gesundheitspraxis Yvonne Geistert" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/onlinekurse/headerbild-kurse-share.jpg" />
+<meta property="og:image:secure_url" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/onlinekurse/headerbild-kurse-share.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Online-Gesundheitskurse – Gesundheitspraxis Yvonne Geistert" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Online-Gesundheitskurse – Gesundheitspraxis Yvonne Geistert" />
+<meta name="twitter:description" content="Begleitete Online-Gesundheitskurse zu ganzheitlicher Gesundheitsbildung, Prävention und alltagstauglicher Selbstfürsorge – wissenschaftlich fundiert und praxisnah." />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/onlinekurse/headerbild-kurse-share.jpg" />
+<meta name="twitter:image:src" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/onlinekurse/headerbild-kurse-share.jpg" />
+<meta name="twitter:image:alt" content="Online-Gesundheitskurse – Gesundheitspraxis Yvonne Geistert" />
+
+<script type="application/ld+json">
+/* <![CDATA[ */
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.gesundheitspraxis-geistert.de/online-kurse/#collection",
+  "name": "Online-Gesundheitskurse",
+  "description": "Begleitete Online-Gesundheitskurse zu ganzheitlicher Gesundheitsbildung, Prävention und alltagstauglicher Selbstfürsorge.",
+  "url": "https://www.gesundheitspraxis-geistert.de/online-kurse/",
+  "inLanguage": "de-DE",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://www.gesundheitspraxis-geistert.de/#website",
+    "name": "Gesundheitspraxis Yvonne Geistert",
+    "url": "https://www.gesundheitspraxis-geistert.de/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.gesundheitspraxis-geistert.de/#org",
+    "name": "Gesundheitspraxis Yvonne Geistert",
+    "url": "https://www.gesundheitspraxis-geistert.de/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "@id": "https://www.gesundheitspraxis-geistert.de/online-kurse/#kursliste",
+    "name": "Aktuelle Online-Kurse",
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "numberOfItems": 1,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Course",
+          "@id": "https://www.gesundheitspraxis-geistert.de/online-kurse/longevity-fuer-einsteiger/#course",
+          "name": "Longevity für Einsteiger",
+          "description": "Begleiteter Online-Kurs für Menschen, die sich verständlich und alltagstauglich mit gesunder Lebensführung, Prävention und langfristiger Vitalität beschäftigen möchten.",
+          "url": "https://www.gesundheitspraxis-geistert.de/online-kurse/longevity-fuer-einsteiger/",
+          "inLanguage": "de-DE",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://www.gesundheitspraxis-geistert.de/#org",
+            "name": "Gesundheitspraxis Yvonne Geistert",
+            "url": "https://www.gesundheitspraxis-geistert.de/"
+          },
+          "hasCourseInstance": [
+            {
+              "@type": "CourseInstance",
+              "@id": "https://www.gesundheitspraxis-geistert.de/online-kurse/longevity-fuer-einsteiger/#instance-2026-03",
+              "name": "Longevity für Einsteiger – Kursdurchlauf ab 12.03.2026",
+              "courseMode": "online",
+              "startDate": "2026-03-12",
+              "endDate": "2026-06-04",
+              "location": {
+                "@type": "VirtualLocation",
+                "url": "https://www.gesundheitspraxis-geistert.de/online-kurse/longevity-fuer-einsteiger/"
+              },
+              "schedule": {
+                "@type": "Schedule",
+                "repeatFrequency": "P1W",
+                "byDay": "https://schema.org/Thursday",
+                "startTime": "19:00",
+                "endTime": "20:30"
+              },
+              "offers": {
+                "@type": "Offer",
+                "url": "https://www.gesundheitspraxis-geistert.de/online-kurse/longevity-fuer-einsteiger/",
+                "price": "369",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+/*]]>*/
+</script>
+
+<style>
+/* <![CDATA[ */
+.gp-trustbox{
+  background:#e8f1ec;
+  border-radius:14px;
+  padding: 10px 20px;   /* vorher 16–20px */
+  margin: 20px auto 18px auto; /* unten etwas weniger */
+  max-width:900px;
+}
+
+.gp-trustlist{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:10px 22px;
+  color:#5f6f66;
+  font-size:1.0em;
+  line-height:1.4;
+}
+
+.gp-trustlist li{
+  position:relative;
+  padding-left:22px;
+}
+
+.gp-trustlist li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#82a98f;
+  font-weight:600;
+}
+/*]]>*/
+</style>
+
