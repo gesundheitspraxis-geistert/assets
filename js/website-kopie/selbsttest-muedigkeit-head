@@ -1,0 +1,56 @@
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Warum bin ich immer so müde? – Müdigkeit Selbsttest" />
+<meta name="twitter:description" content="Warum bin ich immer so müde? Dieser kurze Selbsttest hilft, anhaltende Müdigkeit, Erschöpfung und mögliche Belastungsfaktoren besser einzuordnen." />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/wissen/gesundheits-selbsttest-share.png" />
+<meta name="twitter:image:alt" content="Müdigkeit Selbsttest – erste Hinweise erkennen" />
+
+<script type="application/ld+json">
+/* <![CDATA[ */
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HealthApplication",
+      "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/muedigkeit/#app",
+      "name": "Müdigkeit Selbsttest – erste Hinweise erkennen",
+      "operatingSystem": "Web",
+      "applicationCategory": "HealthApplication",
+      "url": "https://www.gesundheitspraxis-geistert.de/selbsttest/muedigkeit/",
+      "description": "Online-Selbsttest (ca. 2 Minuten), der hilft, anhaltende Müdigkeit, Erschöpfung und mögliche Belastungsfaktoren besser einzuordnen.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "10 präzise Fragen",
+        "Sofortergebnis mit Einordnung",
+        "Hinweise auf mögliche Belastungsfaktoren",
+        "Konkrete nächste Schritte zur Stabilisierung"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Erwachsene"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/muedigkeit/#webpage",
+      "url": "https://www.gesundheitspraxis-geistert.de/selbsttest/muedigkeit/",
+      "name": "Müdigkeit Selbsttest – erste Hinweise erkennen",
+      "inLanguage": "de-DE",
+      "mainEntity": {
+        "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/muedigkeit/#app"
+      }
+    }
+  ]
+}
+/*]]>*/
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/css/selbsttest-2026-03-19-v01.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/css/lp-selbsttest-v09.css" />
+
+<script src="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/js/selbsttest-2026-03-20-v02.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/js/youtube-lazyload.js"></script>
