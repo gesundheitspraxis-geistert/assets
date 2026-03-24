@@ -1,0 +1,50 @@
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gesundheits-Selbsttest – Standortbestimmung &amp; Stabilisierungsplan" />
+<meta name="twitter:description" content="In 2–3 Minuten erkennen Sie, wo Ihr System steht. Sie erhalten eine klare Standortbestimmung und – auf Wunsch – einen strukturierten Stabilisierungsplan mit konkreten nächsten Schritten." />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gesundheitspraxis-geistert/assets@main/wissen/gesundheits-selbsttest-share.png" />
+<meta name="twitter:image:alt" content="Gesundheits-Selbsttest – klare Standortbestimmung &amp; nächste Schritte" />
+
+<script type="application/ld+json">
+/* <![CDATA[ */
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HealthApplication",
+      "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/gesundheit/#app",
+      "name": "Gesundheits-Selbsttest – Standortbestimmung & Stabilisierungsplan",
+      "operatingSystem": "Web",
+      "applicationCategory": "HealthApplication",
+      "url": "https://www.gesundheitspraxis-geistert.de/selbsttest/gesundheit/",
+      "description": "Online-Selbsttest (2–3 Minuten) zur klaren Standortbestimmung zentraler Gesundheitsbereiche. Sofortergebnis direkt im Browser. Auf Wunsch erhalten Sie einen strukturierten Stabilisierungsplan mit konkreten nächsten Schritten.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "10 präzise Fragen",
+        "Sofortergebnis mit Einordnung",
+        "Strukturierter Stabilisierungsplan",
+        "Konkrete nächste Schritte passend zum Ergebnis"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Erwachsene"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/gesundheit/#webpage",
+      "url": "https://www.gesundheitspraxis-geistert.de/selbsttest/gesundheit/",
+      "name": "Gesundheits-Selbsttest – Standortbestimmung & Stabilisierungsplan",
+      "inLanguage": "de-DE",
+      "mainEntity": {
+        "@id": "https://www.gesundheitspraxis-geistert.de/selbsttest/gesundheit/#app"
+      }
+    }
+  ]
+}
+/*]]>*/
+</script>
