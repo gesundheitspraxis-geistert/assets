@@ -1,0 +1,2995 @@
+<meta name="color-scheme" content="light" />
+<link rel="preconnect" href="https://fonts.jimstatic.com" crossorigin="" />
+<link rel="preconnect" href="https://assets.jimstatic.com" crossorigin="" />
+<link rel="dns-prefetch" href="//fonts.jimstatic.com" />
+<link rel="dns-prefetch" href="//assets.jimstatic.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/gesundheitspraxis-geistert/assets/main/favicons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="96x96" href="https://raw.githubusercontent.com/gesundheitspraxis-geistert/assets/main/favicons/favicon-96x96.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/gesundheitspraxis-geistert/assets/main/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="https://raw.githubusercontent.com/gesundheitspraxis-geistert/assets/main/favicons/site.webmanifest" />
+<meta name="theme-color" content="#82A98F" />
+<meta name="msapplication-TileColor" content="#82A98F" />
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6NMML1B96W"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+/* =========================
+   1) Consent Mode v2 DEFAULT (vor js/config)
+   ========================= */
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  functionality_storage:'granted',
+  security_storage:'granted',
+  wait_for_update: 500
+});
+
+gtag('js', new Date());
+
+/* =========================
+   2) Google Tag konfigurieren (läuft auch cookieless)
+   ========================= */
+gtag('config','G-6NMML1B96W', { anonymize_ip: true });
+gtag('config','AW-11548447587'); // wichtig für Ads / Enhanced Conversions später
+
+/* =========================
+   3) Jimdo/CKIES Cookie-Banner auslesen
+   =========================
+   Erwartung (bei dir sichtbar):
+   ckies_performance = allow/deny
+   ckies_powr_marketing oder ckies_marketing_third_party = allow/deny
+   (Namen können leicht variieren → wir prüfen mehrere)
+*/
+(function(){
+
+  function readCookie(name){
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g,'\\$1') + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  function isAllow(val){
+  if(!val) return false;
+  val = String(val).toLowerCase().trim();
+  return (val === 'allow' || val === 'true' || val === '1' || val === 'granted' || val === 'yes');
+}
+
+
+  function hasPerformance(){
+    // bei dir im Screenshot: ckies_performance
+    var v = readCookie('ckies_performance');
+    if (isAllow(v)) return true;
+
+    // fallback: manche Banner schreiben ckies_ga / ckies_analytics
+    if (document.cookie.indexOf('ckies_ga') > -1 && document.cookie.indexOf('allow') > -1) return true;
+    if (isAllow(readCookie('ckies_analytics'))) return true;
+
+    return false;
+  }
+
+  function hasMarketing(){
+    // bei dir im Screenshot: ckies_powr_marketing und ckies_powr-v2
+    if (isAllow(readCookie('ckies_powr_marketing'))) return true;
+    if (isAllow(readCookie('ckies_marketing'))) return true;
+    if (isAllow(readCookie('ckies_marketing_third_party'))) return true;
+    if (isAllow(readCookie('ckies_third_party'))) return true;
+
+    // fallback: "google_maps" / "youtu" sind oft third party – aber wir nehmen die NICHT als Marketing-Signal,
+    // weil das sonst zu großzügig wäre.
+    return false;
+  }
+
+  var lastState = '';
+
+  function applyConsentFromBanner(){
+    var perf = hasPerformance();
+    var mkt  = hasMarketing();
+
+    var newState = (perf?'P':'p') + (mkt?'M':'m');
+    if (newState === lastState) return;
+    lastState = newState;
+
+    // Performance -> Analytics freigeben
+    // Marketing -> Ads + User Data + Personalization freigeben
+    gtag('consent','update',{
+      analytics_storage: perf ? 'granted' : 'denied',
+      ad_storage:        mkt  ? 'granted' : 'denied',
+      ad_user_data:      mkt  ? 'granted' : 'denied',
+      ad_personalization:mkt  ? 'granted' : 'denied'
+    });
+  }
+
+  // Initial + wiederholt (Banner-Interaktion / asynchrone Cookie-Setzung)
+  applyConsentFromBanner();
+  document.addEventListener('click', function(){ setTimeout(applyConsentFromBanner, 200); }, {passive:true});
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) setTimeout(applyConsentFromBanner, 200); });
+
+  // Extra: Polling kurz nach dem Laden (falls Banner erst später Cookies setzt)
+  var tries = 0;
+  var iv = setInterval(function(){
+    applyConsentFromBanner();
+    tries++;
+    if (tries > 20) clearInterval(iv); // ~10 Sekunden
+  }, 500);
+
+})();
+//]]>
+</script>
+
+<style type="text/css">
+/*<![CDATA[*/
+
+
+.author-info-break { display: none; }
+@media (max-width: 600px) {
+    .author-info-break { display: block; }
+    .author-meta { white-space: nowrap; }
+}
+
+
+/* mini critical */
+body{margin:0}
+.gp-hero-desktop{background-color:#e8f1ec}
+
+/* Mobile default */
+.gp-hero-desktop{ display:none !important; }
+.gp-hero-mobile{ display:block !important; max-width:180px; margin:-25px auto 20px; text-align:center; }
+.gp-hero-mobile img{ width:100%; height:auto; border-radius:50%; display:block; }
+
+/* Desktop */
+@media (min-width: 769px){
+  .gp-hero-mobile{ display:none !important; }
+  .gp-hero-desktop{
+    display:block !important;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto 24px;
+    height:520px;
+    border-radius:14px;
+    background-size:cover;
+    background-position:center;
+  }
+}
+.gp-zitat{
+  font-style: italic;
+  color: #88B48C; /* Praxisgrün */
+  font-size: 1.05em;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.gp-zitat-autor{
+  display: inline-block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 0.9em;
+  color: #6f7f76; /* ruhiger Grauton aus eurer Palette */
+}
+
+/* Basis */
+body{
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+}
+
+/* Überschriften */
+h1, h2, h3, h4{
+  font-family:'Lora', Georgia, 'Times New Roman', serif;
+}
+
+
+@media (max-width: 768px){
+  body{
+    font-weight: 400;
+  }
+  h1, h2{
+    font-weight: 600;
+  }
+}
+
+
+/* =========================================================
+   Title: Logo + Gesundheitspraxis Yvonne Geistert
+   ========================================================= */
+
+  .jtpl-title{
+    padding: 6px 16px 14px !important;
+    margin-top: 0px !important;
+  }
+
+  section.jtpl-logo{
+    margin-bottom: 2px !important;   /* Logo → Titel enger */
+    padding-bottom: 0 !important;
+  }
+
+  .jtpl-title{
+    padding-top: 2px !important;     /* Titel direkt unter Logo */
+  }
+
+  /* Schriftgröße des Titels (DAS ist der richtige Knoten) */
+  .jtpl-title .j-website-title-content{
+    font-size: 20px !important;
+    line-height: 1.22 !important;
+  }
+
+@media (max-width: 620px){
+  .jtpl-title .j-website-title-content{
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.2px;
+  }
+}
+@media (min-width: 1200px){
+
+  section.jtpl-logo{
+    margin-bottom: 12px;     /* vorher deutlich größer */
+    padding-bottom: 0;
+  }
+    header.jtpl-header{
+    margin-bottom: 28px;   /* bewusst mehr Luft */
+  }
+
+  .jtpl-title{
+    padding-top: 4px;
+    padding-bottom: 12px !important;
+  }
+}
+
+
+/* =========================================
+   Einzelbild – abgerundet, ohne Swipe
+   ========================================= */
+
+.gp-image-frame{
+  position: relative;
+  width: 100%;              /* <-- ENTSCHEIDEND */
+  max-width: none;          /* <-- BEGRENZUNG AUFHEBEN */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #d6e2db;
+  background: #ffffff;
+    margin-top: 0px; margin-bottom: 20px;
+  --img-height: 280px;
+}
+
+
+
+.gp-image-frame img{
+  width: 100%;
+  height: var(--img-height);
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Tablet */
+@media (max-width: 900px){
+  .gp-image-frame{
+    --img-height: 420px;
+        margin-top: 0px; margin-bottom: 20px;
+  }
+}
+/* Mobile */
+@media (max-width: 600px){
+  .gp-image-frame{
+    max-width: 100%;
+    margin-top: 4px; margin-bottom: 20px;
+    --img-height: 300px;
+  }
+}
+/* Mobile */
+@media (max-width: 500px){
+  .gp-image-frame{
+    max-width: 100%;
+    margin: 0px auto 0;
+    --img-height: 250px;
+        margin-top: 16px; margin-bottom: 20px;
+  }
+}
+
+/* =========================================================
+   GP GLOBAL STYLE – AUFGERÄUMT + FOOTER SAUBER + DARK MODE
+   Ziel:
+   - EIN Grünton-System (warm, ruhig, konsistent)
+   - Content-Links grün (nicht Buttons)
+   - Footer/Dark-Flächen: Links & Buttons immer weiß
+   - Dark Mode testbar (aktiv)
+   ========================================================= */
+
+/* =========================================
+   1) TOKENS (Marke & Kontrast)
+   ========================================= */
+:root{
+  /* Marke */
+  --gp-lila: #824e71;
+
+  /* Basis-Grün (Footer-Ton) */
+  --gp-gruen: #486C5E;
+  --gp-gruen-rgb: 72, 108, 94;
+
+  /* Linkfarben (aus Basis-Grün) */
+  --gp-link: var(--gp-gruen);
+  --gp-link-hover: #3E5F54;
+
+  /* Marken-Hellgrün */
+  --gp-hellgruen: #82A98F;
+  --gp-hellgruen-rgb: 130, 169, 143;
+
+  /* Button-Grün (nah am Basis-Grün) */
+  --gp-btn-green: #5A7F73;
+  --gp-btn-green-hover: #4C6E64;
+
+  /* Icons/Bullets */
+  --gp-icon: #3F5F55;
+
+  /* Divider */
+  --gp-divider-w: 80px;
+  --gp-divider-h: 2px;
+  --gp-divider-r: 2px;
+  --gp-divider-my: 20px;
+  --gp-divider-color: #c8d9d1;
+
+  /* Button-System Stellschrauben */
+  --gp-btn-radius: 14px;
+  --gp-btn-pad-y: 14px;
+  --gp-btn-pad-x: 24px;
+  --gp-btn-font: 1.6rem;
+  --gp-btn-weight: 600;
+
+  --gp-btn-gap: 16px;
+  --gp-btn-my: 16px;
+  --gp-scroll-offset: 130px;
+}
+
+
+/* =========================================
+   2) CONTENT-LINKS (systemisch, NICHT Buttons)
+   -> NUR im Content-Bereich (.j-module)
+   ========================================= */
+/* Content-Links nur im HAUPT-INHALT (nicht Footer/Aside) */
+.jtpl-section-main .j-module p a,
+.jtpl-section-main .j-module li a,
+.jtpl-section-main .j-module a:link,
+.jtpl-section-main .j-module a:visited,
+.jtpl-section-content .j-module p a,
+.jtpl-section-content .j-module li a,
+.jtpl-section-content .j-module a:link,
+.jtpl-section-content .j-module a:visited{
+  color: var(--gp-link) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.jtpl-section-main .j-module a:hover,
+.jtpl-section-main .j-module a:focus,
+.jtpl-section-content .j-module a:hover,
+.jtpl-section-content .j-module a:focus{
+  color: var(--gp-link-hover) !important;
+  text-decoration: none !important;
+}
+
+
+/* =========================================
+   3) Zitat (H3-Look)
+   ========================================= */
+.gp-h3-exakt{
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5em;
+  text-align: left;
+  color: var(--gp-lila);
+  margin: 0 0 0.5em 0;
+}
+@media (max-width: 767px){
+  .gp-h3-exakt{ font-size: 22px !important; }
+}
+.gp-h3-exakt .gp-quote-src{ font: inherit; color: inherit; }
+
+/* =========================================
+   4) Mobile Navigation Kontrast
+   ========================================= */
+@media (max-width: 900px){
+  .jtpl-mobile-navigation .cc-nav-level-0 a{ color:#ffffff !important; }
+  .jtpl-mobile-navigation .cc-nav-level-1 a,
+  .jtpl-mobile-navigation .cc-nav-level-1 a:visited{
+    color: #EAF3EE !important;
+  }
+  .jtpl-mobile-navigation .cc-nav-level-1 a:hover,
+  .jtpl-mobile-navigation .cc-nav-level-1 a:active{
+    color: #ffffff !important;
+  }
+}
+
+/* =========================================
+   5) Mehr-lesen
+   ========================================= */
+.gp-mehrbox{
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .25s ease;
+  will-change: max-height, opacity;
+}
+.gp-mehrbox.is-open{ opacity: 1; }
+
+a.mehr-link,
+a.mehr-link:visited{
+  color: var(--gp-link) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  margin-bottom: 10px !important;
+}
+a.mehr-link:hover,
+a.mehr-link:focus,
+a.mehr-link:active{
+  color: var(--gp-link-hover) !important;
+  opacity: .95;
+}
+.gp-mehrbox a,
+.gp-mehrbox a:visited{ color: var(--gp-link) !important; }
+.gp-mehrbox a:hover,
+.gp-mehrbox a:focus,
+.gp-mehrbox a:active{ color: var(--gp-link-hover) !important; }
+
+/* =========================================
+   6) GP BUTTON SYSTEM (vereinheitlicht)
+   ========================================= */
+.gp-btnrow{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: var(--gp-btn-gap);
+  margin-top:10px;
+}
+
+/* In Reihen: keine Einzel-Margins */
+.gp-btnrow a.gp-btn,
+.gp-btnrow a.gp-btn--green,
+.gp-btnrow a.gp-btn-green-sm,
+.gp-btnrow a.gp-btn-outline,
+.gp-btnrow a.gp-btn-soft{
+  margin:0 !important;
+}
+
+/* Basis für Standard-Buttons */
+a.gp-btn,
+a.gp-btn--green,
+a.gp-btn-outline,
+a.gp-btn-soft{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding: var(--gp-btn-pad-y) var(--gp-btn-pad-x);
+  border-radius: var(--gp-btn-radius);
+
+  font-size: var(--gp-btn-font);
+  font-weight: var(--gp-btn-weight);
+  line-height:1.15;
+  white-space:nowrap;
+
+  text-decoration:none !important;
+  transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .08s ease;
+}
+
+/* Wenn nicht in gp-btnrow: Abstand */
+a.gp-btn,
+a.gp-btn--green,
+a.gp-btn-outline,
+a.gp-btn-soft{
+  margin: var(--gp-btn-my) 0;
+}
+
+a.gp-btn:active,
+a.gp-btn--green:active,
+a.gp-btn-outline:active,
+a.gp-btn-soft:active,
+a.gp-btn-green-sm:active{
+  transform: translateY(1px);
+}
+
+/* Lila */
+a.gp-btn{
+  background-color:#8B4F7A;
+  color:#ffffff !important;
+  border:1px solid rgba(139,79,122,0.35);
+}
+a.gp-btn:hover,
+a.gp-btn:focus{
+  background-color:#7A4468;
+  color:#ffffff !important;
+  box-shadow:0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Grün */
+a.gp-btn--green{
+  background-color: var(--gp-btn-green);
+  color:#ffffff !important;
+  border:1px solid rgba(var(--gp-gruen-rgb), 0.35);
+}
+a.gp-btn--green:hover,
+a.gp-btn--green:focus{
+  background-color: var(--gp-btn-green-hover);
+  color:#ffffff !important;
+  box-shadow:0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Outline */
+a.gp-btn-outline{
+  background:#ffffff;
+  border:1px solid rgba(var(--gp-gruen-rgb), 0.50);
+  color: var(--gp-gruen) !important;
+}
+a.gp-btn-outline:hover,
+a.gp-btn-outline:focus{
+  background-color: rgba(var(--gp-gruen-rgb), 0.04);
+  border-color: rgba(var(--gp-gruen-rgb), 0.60);
+}
+
+/* Soft (ruhiger Zweitbutton) */
+a.gp-btn-soft{
+  background: rgba(var(--gp-hellgruen-rgb), 0.18);
+  border: 1px solid rgba(var(--gp-gruen-rgb), 0.35);
+  color: var(--gp-link) !important;
+  font-weight: 650;
+  letter-spacing: .1px;
+}
+a.gp-btn-soft:hover,
+a.gp-btn-soft:focus{
+  background: rgba(var(--gp-hellgruen-rgb), 0.26);
+  border-color: rgba(var(--gp-gruen-rgb), 0.45);
+}
+
+/* Grün klein – Soft Variante */
+a.gp-btn-green-sm{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  font-size: 1.45rem;
+  font-weight: 650;
+  line-height: 1.15;
+
+  background: rgba(var(--gp-hellgruen-rgb), 0.14);
+  border: 1px solid rgba(var(--gp-gruen-rgb), 0.35);
+  color: var(--gp-link) !important;
+
+  text-decoration:none !important;
+  transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .08s ease;
+  margin: 10px 0;
+}
+a.gp-btn-green-sm:hover,
+a.gp-btn-green-sm:focus{
+  background: rgba(var(--gp-hellgruen-rgb), 0.26);
+  border-color: rgba(var(--gp-gruen-rgb), 0.45);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.gp-btnrow a.gp-btn,
+.gp-btnrow a.gp-btn--green,
+.gp-btnrow a.gp-btn-outline,
+.gp-btnrow a.gp-btn-soft,
+.gp-btnrow a.gp-btn-green-sm{
+  margin-bottom: 10px !important;
+}
+
+
+
+/* =========================================
+   GP BOX SYSTEM (Lila + Grün) – einheitlich
+   ========================================= */
+
+/* Basis: gemeinsame Box-Optik */
+.gp-box{
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+}
+
+/* Typo in Boxen (optional, aber hilft gegen Inline-Müll) */
+.gp-box h3{
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.gp-box p{
+  margin: 0 0 14px 0;
+  line-height: 1.65;
+}
+.gp-box p:last-child{ margin-bottom: 0; }
+
+/* Divider innerhalb Box */
+.gp-box .gp-box-divider{
+  height: 1px;
+  margin: 18px 0;
+  opacity: 1;
+}
+
+/* -------------------------
+   LILA BOX
+   ------------------------- */
+.gp-box--lila{
+  background: var(--gp-lila);
+  color: rgba(255,255,255,0.94);
+}
+
+/* Links in lila Box: weiß + leicht abgesetzt */
+.gp-box--lila a,
+.gp-box--lila a:visited{
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  opacity: 0.95;
+}
+.gp-box--lila a:hover,
+.gp-box--lila a:focus{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Divider in lila Box */
+.gp-box--lila .gp-box-divider{
+  background: rgba(255,255,255,0.30);
+}
+
+/* -------------------------
+   GRÜNE BOX (Hellgrün)
+   ------------------------- */
+.gp-box--gruen{
+  background: var(--gp-hellgruen);
+  color: rgba(255,255,255,0.96);
+}
+
+/* Links in grüner Box: weiß (sonst unsichtbar/zu kalt) */
+.gp-box--gruen a,
+.gp-box--gruen a:visited{
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  opacity: 0.95;
+}
+.gp-box--gruen a:hover,
+.gp-box--gruen a:focus{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Divider in grüner Box */
+.gp-box--gruen .gp-box-divider{
+  background: rgba(255,255,255,0.35);
+}
+/* =========================================
+   GP BOX SYSTEM (statt Inline-Styles)
+   - einheitliche Boxen (lila / grün / dunkel)
+   - Links in Boxen nicht mehr "global grün"
+   ========================================= */
+
+/* Basis-Box */
+.gp-box{
+  padding: 18px 28px 22px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+}
+
+/* Farbvarianten */
+.gp-box--lila{ background: var(--gp-lila); color:#fff; }
+.gp-box--green{ background: var(--gp-hellgruen); color:#fff; }
+.gp-box--dark{ background: var(--gp-gruen); color:#fff; }
+
+/* Typo in Boxen */
+.gp-box h2, .gp-box h3, .gp-box h4{
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #fff;
+}
+.gp-box p{
+  margin: 0 0 14px 0;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.96);
+}
+
+/* Trennlinie in Boxen */
+.gp-box .gp-box__line{
+  height: 1px;
+  background: rgba(255,255,255,0.35);
+  margin: 18px 0;
+}
+
+/* Links in Boxen: NICHT grün – sauber lesbar */
+.gp-box a,
+.gp-box a:visited{
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+.gp-box a:hover,
+.gp-box a:focus{
+  color: rgba(255,255,255,0.92) !important;
+}
+
+/* Optional: "zarter" Link-Look (wenn Sie es lieber dezenter als Unterstreichung mögen) */
+.gp-box.gp-box--lila a,
+.gp-box.gp-box--lila a:visited{
+  text-decoration: none;
+  background: rgba(255,255,255,0.14);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+/* Buttons in Boxen: automatisch "invertiert" (weiße Schrift, helle Fläche) */
+.gp-box a.gp-btn,
+.gp-box a.gp-btn--green,
+.gp-box a.gp-btn-soft,
+.gp-box a.gp-btn-outline,
+.gp-box a.gp-btn-green-sm{
+  color:#ffffff !important;
+  background: rgba(255,255,255,0.14) !important;
+  border: 1px solid rgba(255,255,255,0.38) !important;
+  text-decoration: none !important;
+}
+.gp-box a.gp-btn:hover,
+.gp-box a.gp-btn--green:hover,
+.gp-box a.gp-btn-soft:hover,
+.gp-box a.gp-btn-outline:hover,
+.gp-box a.gp-btn-green-sm:hover{
+  background: rgba(255,255,255,0.22) !important;
+  border-color: rgba(255,255,255,0.48) !important;
+}
+
+/* Jimdo-Systembuttons in Boxen (falls noch ohne gp-btn Klasse) */
+.gp-box a[data-action="button"]{
+  color:#ffffff !important;
+}
+/* =========================================
+   Steps / Ablauf-Box (Videosprechstunde)
+   ========================================= */
+.gp-steps__title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 18px 0;
+  color:#fff;
+}
+
+.gp-steps__table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.gp-steps__num{
+  vertical-align: top;
+  padding-right: 22px;
+  color:#fff;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.gp-steps__text{
+  color:#fff;
+  font-size: 1.45rem;
+  line-height: 1.7;
+  padding-bottom: 26px;
+}
+
+.gp-steps__text a{
+  white-space: nowrap;
+}
+
+/* WhatsApp-Icon im Button */
+.gp-wa-icon{
+  height: 1.1em;
+  vertical-align: middle;
+  margin: 0 6px 0 4px;
+}
+
+
+/* Optional: kleine „Meta“-Zeile innerhalb Box */
+.gp-box .gp-box-meta{
+  opacity: 0.92;
+}
+
+/* Buttons IN farbigen Boxen – immer weiss, egal welcher Typ */
+.gp-box--lila a.gp-btn,
+.gp-box--lila a.gp-btn--green,
+.gp-box--lila a.gp-btn-soft,
+.gp-box--lila a.gp-btn-outline,
+.gp-box--gruen a.gp-btn,
+.gp-box--gruen a.gp-btn--green,
+.gp-box--gruen a.gp-btn-soft,
+.gp-box--gruen a.gp-btn-outline{
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+
+/* =========================================
+   7) DARK SURFACES – SAUBERES SYSTEM
+   Wichtig: Dieser Block kommt NACH den Buttonregeln,
+   damit nichts "unsichtbar" wird.
+   ========================================= */
+
+/* 7a) Footer = Dark Surface */
+.jtpl-section-aside,
+.jtpl-section-aside footer{
+  color: rgba(255,255,255,0.92);
+}
+
+/* Links im Footer IMMER weiß (inkl. span, visited) */
+.jtpl-section-aside a,
+.jtpl-section-aside a:visited,
+.jtpl-section-aside a:hover,
+.jtpl-section-aside a:focus,
+.jtpl-section-aside a span,
+.jtpl-section-aside a:visited span,
+.jtpl-section-aside a:hover span{
+  color:#ffffff !important;
+  text-decoration:none !important;
+  background:none !important;
+}
+
+/* Buttons im Footer: invertiert hell */
+.jtpl-section-aside a.gp-btn,
+.jtpl-section-aside a.gp-btn--green,
+.jtpl-section-aside a.gp-btn-outline,
+.jtpl-section-aside a.gp-btn-soft,
+.jtpl-section-aside a.gp-btn-green-sm{
+  color:#ffffff !important;
+  background: rgba(255,255,255,0.16) !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+  box-shadow: none !important;
+}
+.jtpl-section-aside a.gp-btn:hover,
+.jtpl-section-aside a.gp-btn--green:hover,
+.jtpl-section-aside a.gp-btn-outline:hover,
+.jtpl-section-aside a.gp-btn-soft:hover,
+.jtpl-section-aside a.gp-btn-green-sm:hover{
+  background: rgba(255,255,255,0.24) !important;
+  border-color: rgba(255,255,255,0.55) !important;
+}
+
+
+
+/* =========================================
+   8) Listen (Häkchen) + TOC
+   ========================================= */
+.j-module ul,
+.j-module ol{
+  margin: 0.6em 0 1em 0;
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+.j-module ul li,
+.j-module ol li{
+  position: relative;
+  padding-left: 1.35em;
+  margin: 0.35em 0;
+}
+.j-module ul li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--gp-icon);
+  font-weight: 700;
+}
+.j-module ol{ counter-reset: gp-ol; }
+.j-module ol li::before{
+  counter-increment: gp-ol;
+  content: counter(gp-ol) ".";
+  position: absolute;
+  left: 0;
+  top: 0.02em;
+  color: #8B4F7A;
+  font-weight: 600;
+}
+
+/* TOC */
+.j-module ul.gp-toc{ list-style: none !important; padding-left: 0 !important; margin-left: 0 !important; }
+.j-module ul.gp-toc li{ position: relative; padding-left: 1.4em !important; margin: 0.65em 0 !important; list-style: none !important; }
+.j-module ul.gp-toc li::before{
+  content: "↓" !important;
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--gp-link);
+  font-size: 0.95em;
+  line-height: 1.2;
+  transition: color .2s ease, transform .2s ease;
+}
+.j-module ul.gp-toc a{
+  display: inline-block;
+  color: var(--gp-link) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  line-height: 1.45;
+  transition: color .2s ease;
+}
+.j-module ul.gp-toc li:hover::before{ color: var(--gp-link-hover); transform: translateY(2px); }
+.j-module ul.gp-toc a:hover,
+.j-module ul.gp-toc a:focus{ color: var(--gp-link-hover) !important; }
+
+/* =========================================
+   9) Divider (gp-divider + Jimdo HR)
+   ========================================= */
+.gp-divider{
+  background: transparent !important;
+  height: auto !important;
+  width: 100% !important;
+  margin: var(--gp-divider-my) 0 !important;
+  position: relative !important;
+  display: block !important;
+}
+.gp-divider::after{
+  content:"";
+  display:block;
+  width: var(--gp-divider-w);
+  height: var(--gp-divider-h);
+  margin: 0 auto;
+  background: var(--gp-divider-color);
+  border-radius: var(--gp-divider-r);
+}
+
+.j-hr > hr,
+div.j-module.j-hr > hr,
+div.j-module.n.j-hr > hr{
+  border:0 !important;
+  height:0 !important;
+  background:transparent !important;
+  margin:0 !important;
+}
+.j-hr,
+div.j-module.j-hr,
+div.j-module.n.j-hr{
+  padding:0 !important;
+  margin: var(--gp-divider-my) 0 !important;
+  position:relative !important;
+}
+.j-hr::after,
+div.j-module.j-hr::after,
+div.j-module.n.j-hr::after{
+  content:"";
+  display:block;
+  width: var(--gp-divider-w);
+  height: var(--gp-divider-h);
+  margin: 0 auto;
+  background: var(--gp-divider-color);
+  border-radius: var(--gp-divider-r);
+}
+
+/* =========================================
+   10) Hinweisbox + Storybox
+   ========================================= */
+.gp-hint-box{
+  background-color: #e8f1ec;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 0;
+}
+.gp-hint-box table{ border-collapse: collapse; }
+.gp-hint-box td{ vertical-align: top; padding-bottom: 6px; }
+.gp-hint-icon{
+  padding-right: 10px;
+  color: var(--gp-icon);
+  font-size: 16px;
+  line-height: 1.4;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.gp-storybox{
+  background: var(--gp-lila);
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #fff;
+}
+.gp-storybox p{ margin: 0 0 10px 0; color: #fff; }
+
+.gp-mehrsoft,
+.gp-mehrsoft:visited{
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(139, 79, 122, 0.16);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.92) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+.gp-mehrsoft:hover,
+.gp-mehrsoft:focus{ background: rgba(139, 79, 122, 0.22); color: #fff !important; }
+.gp-mehrsoft--close{ margin-top: 10px; }
+
+/* =========================================
+   11) Galerie + Lightbox
+   ========================================= */
+.gp-gallery-swipe{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 10px 0;
+}
+@media (max-width: 768px){
+  .gp-gallery-swipe{
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+  .gp-gallery-swipe > a.gp-imglink{ scroll-snap-align: start; }
+}
+.gp-gallery-swipe a.gp-imglink{
+  display: block;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.gp-gallery-swipe a.gp-imglink.gp-imgframe{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #d6e2db;
+  background: #fff;
+}
+.gp-gallery-swipe a.gp-imgframe img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  background: #f6f8f7;
+}
+@media (max-width: 768px){
+  .gp-gallery-swipe a.gp-imgframe img{ height: 220px; }
+}
+@media (hover: hover) and (pointer: fine){
+  .gp-gallery-swipe a.gp-imglink{ cursor: zoom-in !important; }
+  .gp-gallery-swipe a.gp-imglink:hover img{ filter: brightness(0.98); }
+}
+
+/* =========================================
+   UNIVERSAL MEDIA BLOCK
+   ========================================= */
+
+.gp-media-block img{
+  width: 100%;
+  height: 420px;                 /* Desktop Basis */
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+  display: block;
+}
+
+/* =========================================================
+   DESKTOP LARGE (ab 1200px)
+   – perfekt für 2-spaltige Layouts
+   ========================================================= */
+@media (min-width: 1200px){
+  .gp-media-block img{
+    height: 300px;
+  }
+}
+
+/* =========================================================
+   TABLET (600–900px)
+   – etwas höher für mehr Präsenz
+   ========================================================= */
+@media (min-width: 600px) and (max-width: 900px){
+  .gp-media-block img{
+    height: 500px;
+  }
+}
+
+/* =========================================================
+   MOBILE (bis 820px)
+   – vollbreit, ruhig
+   ========================================================= */
+@media (max-width: 820px){
+  .gp-media-block img{
+    height: 300px;
+    border-radius: 14px;
+  }
+}
+@media (max-width: 520px){
+  .gp-media-block img{
+    height: 220px;
+    border-radius: 14px;
+  }
+}
+
+.gp-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 99999;
+}
+.gp-lightbox.is-open{ display:flex; }
+.gp-lightbox__inner{
+  position: relative;
+  max-width: min(1100px, 96vw);
+  max-height: 90vh;
+}
+.gp-lightbox__img{
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+.gp-lightbox__close{
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 40px;
+}
+.gp-lightbox__close:hover{ filter: brightness(.95); }
+@media (max-width: 600px){
+  .gp-lightbox{ padding: 16px; }
+  .gp-lightbox__close{
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    top: -12px;
+    right: -12px;
+  }
+}
+
+/* =========================================
+   12) Therapie-Kacheln – klickbar
+   ========================================= */
+#lp-therapie-kacheln{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 42px 36px;
+  align-items: start;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+@media (max-width: 820px){
+  #lp-therapie-kacheln{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 22px;
+  }
+}
+#lp-therapie-kacheln .lp-tile{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#lp-therapie-kacheln .lp-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+#lp-therapie-kacheln .lp-tile > a.lp-box{
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  cursor: pointer;
+}
+#lp-therapie-kacheln .lp-icon,
+#lp-therapie-kacheln .lp-title{
+  position: relative;
+  z-index: 2;
+}
+#lp-therapie-kacheln .lp-icon{
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+#lp-therapie-kacheln .lp-icon img{
+  display: block;
+  width: auto;
+  max-height: 100%;
+  max-width: 120px;
+}
+#lp-therapie-kacheln .lp-title{
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #222;
+}
+#lp-therapie-kacheln .lp-tile:has(> a.lp-box) .lp-title{ color: var(--gp-link) !important; }
+#lp-therapie-kacheln .lp-tile > a.lp-box ~ .lp-title{ color: var(--gp-link) !important; }
+
+@media (max-width: 820px){
+  #lp-therapie-kacheln .lp-icon{ height: 78px; margin-bottom: 8px; }
+  #lp-therapie-kacheln .lp-icon img{ max-width: 82px; }
+  #lp-therapie-kacheln .lp-title{ font-size: 1.35rem; }
+}
+#lp-therapie-kacheln .lp-tile:hover .lp-icon img{
+  opacity: 0.8;
+  transition: opacity 0.15s ease-in-out;
+}
+#lp-therapie-kacheln .lp-tile:has(> a.lp-box):hover .lp-title,
+#lp-therapie-kacheln .lp-tile > a.lp-box:hover ~ .lp-title{
+  filter: brightness(0.85);
+  transition: filter 0.15s ease-in-out;
+}
+
+/* =========================================
+   13) Footer Reviewbox (falls genutzt)
+   ========================================= */
+.gp-review-footer{
+  max-width: 520px;
+  margin: 0 auto 14px;
+  padding: 14px 0;
+  background: none !important;
+  border: none !important;
+  border-top: 1px solid rgba(255,255,255,0.35);
+  text-align: left;
+  color: #ffffff !important;
+}
+.gp-review-footer .gp-review-stars{
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #f3cf6a;
+}
+.gp-review-footer .gp-review-text{
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.92) !important;
+}
+.gp-review-footer .gp-review-link,
+.gp-review-footer .gp-review-link:visited{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.20) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+}
+.gp-review-footer .gp-review-link:hover{
+  background: rgba(255,255,255,0.18) !important;
+}
+
+
+
+/* =========================================
+   15) Online-Kurse: Hero + Course Teaser
+   ========================================= */
+.gp-hero-image{
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0;
+}
+.gp-hero-image img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 768px){
+  .gp-hero-image img{ height: 240px; border-radius: 12px; }
+}
+@media (max-width: 480px){
+  .gp-hero-image img{ height: 210px; }
+}
+/* =========================================
+   Compact Hero (für Content-Seiten)
+   ========================================= */
+.gp-hero-image.gp-hero-compact img{
+  height: 320px;
+}
+
+@media (max-width: 1024px){
+  .gp-hero-image.gp-hero-compact img{
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px){
+  .gp-hero-image.gp-hero-compact img{
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px){
+  .gp-hero-image.gp-hero-compact img{
+    height: 190px;
+  }
+}
+
+.gp-course-teaser{
+  background:#f2f7f4 !important;
+  border:1px solid #d6e2db !important;
+  border-radius:16px !important;
+  padding:24px 26px !important;
+  margin:22px auto !important;
+  box-sizing:border-box !important;
+  position:relative !important;
+  overflow:hidden !important;
+
+  display:grid !important;
+  grid-template-columns: 1.35fr 0.65fr !important;
+  column-gap:36px !important;
+  align-items:start !important;
+}
+.gp-course-teaser::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#f2f7f4;
+  z-index:0;
+}
+.gp-course-teaser > *{ position:relative; z-index:1; }
+
+.gp-course-teaser .gp-course-side{
+  justify-self:end !important;
+  text-align:right !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap:12px !important;
+  align-items:flex-end !important;
+}
+.gp-course-teaser .gp-course-body p{
+  margin:0 0 12px 0 !important;
+  color:#222 !important;
+  max-width:none !important;
+}
+.gp-course-teaser .gp-course-meta,
+.gp-course-teaser .gp-course-meta strong,
+.gp-course-teaser .gp-course-meta span{
+  color:#222 !important;
+}
+@media (max-width:820px){
+  .gp-course-teaser{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:14px !important;
+    padding:18px 16px !important;
+  }
+  .gp-course-teaser .gp-course-side{
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+}
+/* =========================================
+   Course Teaser – Longevity Bild-Teaser
+   ========================================= */
+.gp-course-teaser .gp-course-media{
+  width: 100%;
+  max-width: 360px;
+  margin: 0 0 10px 0;
+}
+
+.gp-course-teaser .gp-course-imglink{
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #d6e2db;
+  background: #fff;
+  text-decoration: none !important;
+}
+
+.gp-course-teaser .gp-course-imglink img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 820px){
+  .gp-course-teaser .gp-course-media{
+    max-width: 100%;
+  }
+  .gp-course-teaser .gp-course-imglink img{
+    height: 200px;
+  }
+}
+/* =========================================
+   Longevity Hinweisbox – reduziert & ruhig
+   ========================================= */
+
+.gp-longevity-hint{
+  max-width: 920px;
+  margin: 30px auto 28px;
+  padding: 22px 26px;
+  border-radius: 14px;
+  background: #f6f8f7;
+  border: 1px solid #dde6e1;
+}
+
+.gp-longevity-hint-title{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5b3b57; /* Praxis-Lila, aber gedämpft */
+}
+
+.gp-longevity-hint-text{
+  margin: 0 0 10px 0;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #4f5f57;
+}
+
+.gp-longevity-hint-link{
+  display: inline-block;
+  font-size: 15.5px;
+  color: #3f6b5a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(63,107,90,.35);
+  padding-bottom: 1px;
+}
+
+.gp-longevity-hint-link:hover{
+  border-bottom-color: rgba(63,107,90,.8);
+}
+
+
+
+
+/* =========================================
+   FAQ – Akkordeon (Plus / Minus, clean)
+   ========================================= */
+
+body .gp-faq{
+  width: 100% !important;
+  margin-top: 26px !important; /* Abstand zur H2 */
+}
+
+/* Einzelner Kasten */
+body .gp-faq details{
+  border: 1px solid rgba(79,111,94,0.35) !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  margin: 0 0 18px 0 !important;
+  overflow: hidden !important;
+}
+
+/* Frage-Zeile */
+body .gp-faq details > summary{
+  list-style: none !important;
+  cursor: pointer !important;
+  padding: 16px 20px !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+  color: #4F6F5E !important;
+
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+  text-decoration: none !important;
+  border: 0 !important;
+  outline: none !important;
+}
+
+/* Hover – kein Unterstrich, aber klar klickbar */
+body .gp-faq details > summary:hover{
+  text-decoration: none !important;
+  background: rgba(79,111,94,0.04) !important;
+}
+
+/* Default Marker entfernen */
+body .gp-faq details > summary::-webkit-details-marker{ display: none !important; }
+body .gp-faq details > summary::marker{ content: "" !important; }
+
+/* Plus/Minus rechts */
+body .gp-faq details > summary::after{
+  content: "+" !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  color: #4F6F5E !important;
+  line-height: 1 !important;
+  margin-left: 16px !important;
+}
+body .gp-faq details[open] > summary::after{ content: "–" !important; }
+
+/* KEINE Trennlinie zwischen Frage und Antwort */
+body .gp-faq details[open] > summary{ border-bottom: 0 !important; }
+
+/* Antwort */
+body .gp-faq details > .faq-answer{
+  padding: 10px 20px 18px !important; /* <- Abstand rundum, kein "anklatschen" */
+  margin: 0 !important;
+  border: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #333333 !important;
+}
+
+/* Absatzabstände in Antworten (ruhig, wie oben auf der Seite) */
+body .gp-faq details > .faq-answer p{
+  margin: 10px 0 0 !important;
+}
+body .gp-faq details > .faq-answer p:first-child{
+  margin-top: 0 !important;
+}
+
+/* Links im FAQ: Jimdo-Standard überschreiben (das war dein "zu helles Grün") */
+body .gp-faq .faq-answer a,
+body .gp-faq .faq-answer a:visited{
+  color: #4F6F5E !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+}
+body .gp-faq .faq-answer a:hover,
+body .gp-faq .faq-answer a:focus{
+  color: #4F6F5E !important;
+  text-decoration: none !important; /* kein Unterstrich */
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  body .gp-faq{ margin-top: 32px !important; }
+  body .gp-faq details > summary{
+    font-size: 15.5px !important;
+    padding: 14px 16px !important;
+  }
+  body .gp-faq details > .faq-answer{
+    font-size: 15.5px !important;
+    padding: 10px 16px 14px !important;
+  }
+}
+/* =========================================
+   Onlinekurs-Box Teaserboxen Kurse
+   ========================================= */
+
+@media (max-width: 720px) {
+  .gp-onlinekurs-icon {
+    display: none !important;
+  }
+
+  .gp-onlinekurs-cta {
+    margin-top: 16px !important;
+    text-align: left !important;
+  }
+}
+@media (min-width: 900px) {
+  .gp-onlinekurs-meta {
+    padding-right: 240px; /* Platz für Button */
+  }
+}
+@media (max-width: 700px){
+
+  .gp-onlinekurs-box{
+    padding: 14px 14px !important;
+  }
+
+  .gp-onlinekurs-box > div{
+    gap: 12px !important;
+  }
+
+  .gp-onlinekurs-box .gp-btn-outline{
+    padding: 10px 14px;
+  }
+
+  .gp-onlinekurs-box .gp-onlinekurs-meta{
+    margin-top: 6px !important;
+    font-size: 0.95em;
+  }
+}
+
+
+
+/* =========================================
+   FIX: Smooth Scroll + Scroll-Offset (Jimdo)
+   ========================================= */
+
+/* Smooth scroll global aktivieren */
+html{
+  scroll-behavior: smooth;
+}
+
+/* 
+  Offset damit Anker nicht unter Header/Navi „kleben“.
+  Wert ggf. anpassen: 110–140px ist meist passend.
+*/
+
+
+/* Für alle üblichen Ziele: Überschriften + Elemente mit ID */
+h1[id], h2[id], h3[id], h4[id],
+section[id], div[id], article[id], header[id]{
+  scroll-margin-top: var(--gp-scroll-offset);
+}
+
+/* Optional: Wenn Jimdo beim Klicken oben minimal „zickt“,
+   hilft das bei iOS/Chrome manchmal */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+}
+/* =========================================
+   FAQ – Smooth ohne JS (nur wenn Browser es kann)
+   Nutzt ::details-content (noch nicht überall verfügbar)
+   ========================================= */
+
+@supports selector(details::details-content){
+
+  /* Animation für den Inhalt (Ein-/Ausblenden) */
+  body .gp-faq details::details-content{
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+      opacity   .45s ease,
+      transform .45s ease;
+  }
+
+  body .gp-faq details[open]::details-content{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Höhe (AUF + ZU) meditativ über max-height */
+  body .gp-faq details > summary ~ *{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .9s cubic-bezier(.22,.61,.36,1);
+  }
+
+  body .gp-faq details[open] > summary ~ *{
+    max-height: 2000px; /* ggf. erhöhen, falls Antworten länger */
+  }
+}
+
+/* =========================================================
+   GP TOC Accordion – Wrapper-Styles
+   ========================================================= */
+
+.gp-toc-acc{
+  max-width: 980px;
+  margin: 18px auto 24px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(130, 169, 143, 0.32);
+  overflow: hidden;
+}
+/* ab >800px mehr Luft nach oben */
+@media (max-width: 801px){
+  .gp-toc-acc{
+    margin-top: 30px;
+  }
+}
+/* Kopfzeile */
+.gp-toc-acc__head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 20px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Hover: sanft grün */
+.gp-toc-acc__head:hover{
+  background: rgba(130, 169, 143, 0.06);
+}
+
+/* Titel */
+.gp-toc-acc__title{
+  font-family:'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #486C5E;
+  letter-spacing: 0.2px;
+}
+
+/* Chevron rechts */
+.gp-toc-acc__chev{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(130, 169, 143, 0.32);
+  background: rgba(255,255,255,0.7);
+  color: #486C5E;
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.gp-toc-acc__head:hover .gp-toc-acc__chev{
+  background: rgba(255,255,255,0.95);
+  border-color: rgba(130, 169, 143, 0.30);
+}
+
+/* Wenn offen: Chevron drehen */
+.gp-toc-acc.is-open .gp-toc-acc__chev{
+  transform: rotate(180deg);
+}
+
+/* Body */
+.gp-toc-acc__body{
+  padding: 10px 20px 10px;
+  border-top: 1px solid rgba(130, 169, 143, 0.18);
+  background: #ffffff;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 640px){
+  .gp-toc-acc__head{ padding: 12px 14px; }
+  .gp-toc-acc__body{ padding: 10px 14px 10px; }
+}
+.gp-toc-acc__head{
+  -webkit-tap-highlight-color: transparent;
+}
+.gp-toc-acc__head:focus{
+  outline: none;
+}
+
+.gp-toc-acc__head:focus-visible{
+  outline: 2px solid rgba(130, 169, 143, 0.35);
+  outline-offset: 2px;
+}
+.gp-toc-acc__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85em;
+    color: #6f7f76;
+}
+/* Toggle-Text standardmäßig sichtbar (Desktop) */
+.gp-toc-acc__toggle-text {
+    white-space: nowrap;
+}
+
+/* Auf Mobile ausblenden */
+@media (max-width: 768px) {
+    .gp-toc-acc__toggle-text {
+        display: none;
+    }
+}
+
+.gp-toc-acc__toggle-text {
+    white-space: nowrap;
+}
+
+/* =========================================================
+   GP BLOCKQUOTE WISSEN
+   ========================================================= */
+blockquote.gp-wissen {
+  margin: 32px 0 !important;
+  padding: 20px 24px;
+  background: #faf8fa;
+  border-left: 4px solid #8b6d87;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+blockquote.gp-wissen p {
+  margin: 0 !important;
+  color: #5a4f58;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+blockquote.gp-wissen span {
+  font-style: normal !important;
+}
+
+@media (max-width: 640px) {
+  blockquote.gp-wissen {
+    margin: 20px 0;
+    padding: 16px 18px 16px 22px;
+  }
+  
+  blockquote.gp-wissen p {
+    font-size: 0.95em;
+  }
+}
+/* Autorbox / fachliche Einordnung */
+.gp-author-box {
+    background: #eef5f1;
+    border-radius: 12px;
+    padding: 7px 16px;
+    margin: 12px auto;
+    max-width: 900px;
+}
+
+.gp-author-box__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.gp-author-box__text {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #5a6a62;
+}
+
+.gp-author-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(90,106,98,.35);
+}
+
+.gp-author-link:hover {
+    border-bottom-color: rgba(90,106,98,.6);
+}
+
+.gp-author-meta {
+    font-size: 0.95em;
+}
+
+.gp-author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #fff;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   GP Consult Box – kompakt
+   ========================= */
+
+.gp-consult-box--compact{
+  max-width: 980px;
+  margin: 18px auto 24px;
+  padding: 10px 26px 16px 26px;
+
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(var(--gp-gruen-rgb), .28); /* etwas dunkler */
+  box-shadow: 0 10px 24px rgba(0,0,0,.04);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px 18px;
+  align-items: center;
+}
+
+.gp-consult-box--compact .gp-consult-eyebrow{
+  margin: 4px 0 4px !important;
+    padding-left: 4px; 
+  font-size: 12px;
+  letter-spacing: .14em;
+  font-weight: 750;
+  line-height: 1.15 !important;
+  display: block;
+  text-transform: uppercase;
+  color: rgba(var(--gp-gruen-rgb), .75);
+}
+
+.gp-consult-box--compact .gp-consult-title{
+  margin: 0 0 8px !important;
+  font-family:'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--gp-gruen);
+}
+
+.gp-consult-box--compact .gp-consult-desc{
+  margin: 0 !important;
+  line-height: 1.5;
+  opacity: .92;
+  max-width: 62ch;
+}
+
+/* CTA rechts: kein “kaputter” Button */
+.gp-consult-box--compact .gp-consult-cta{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Button “reset”, damit Jimdo/Module nichts zerschießt */
+.gp-consult-box--compact .gp-consult-btn{
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  padding: 10px 14px !important;
+  min-height: 42px;
+  border-radius: 999px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+
+  text-decoration: none !important;
+}
+
+/* Hover etwas “wertiger” */
+.gp-consult-box--compact .gp-consult-btn:hover{
+  transform: translateY(-1px);
+}
+
+/* Mobile: untereinander, CTA volle Breite */
+@media (max-width: 720px){
+  .gp-consult-box--compact{
+    grid-template-columns: 1fr;
+    padding: 14px 24px;
+  }
+  .gp-consult-box--compact .gp-consult-cta{
+    justify-content: stretch;
+  }
+  .gp-consult-box--compact .gp-consult-btn{
+    width: 100%;
+  }
+}
+.desktop-only { display: inline; }
+.author-info-break { display: none; }
+
+@media (max-width: 600px) {
+    .desktop-only { display: none; }
+    .author-info-break { display: block; }
+}
+
+
+
+/* DARK MODE DEAKTIVIERT
+@media (prefers-color-scheme: dark){
+
+  body{
+    background:#1e2623 !important;
+    color:#e8f1ec !important;
+  }
+
+  .j-module,
+  .j-module p,
+  .j-module li{
+    color:#e8f1ec !important;
+  }
+
+  .j-module a:link,
+  .j-module a:visited{
+    color:#9fd0b8 !important;
+  }
+
+  .j-module a:hover,
+  .j-module a:focus{
+    color:#c8eadb !important;
+  }
+
+  .gp-course-teaser,
+  body .gp-faq details,
+  .gp-longevity-hint,
+  .gp-hint-box{
+    background:#24302b !important;
+    border-color: rgba(232,241,236,0.16) !important;
+  }
+
+  .gp-course-teaser .gp-course-body p,
+  .gp-course-teaser .gp-course-meta,
+  .gp-course-teaser .gp-course-meta strong,
+  .gp-course-teaser .gp-course-meta span,
+  body .gp-faq details > summary,
+  body .gp-faq details > .faq-answer,
+  .gp-longevity-hint-title,
+  .gp-longevity-hint-text{
+    color:#e8f1ec !important;
+  }
+
+  body .gp-faq details > summary:hover{
+    background: rgba(232,241,236,0.06) !important;
+  }
+
+  body .gp-faq details > summary::after{
+    color:#e8f1ec !important;
+  }
+
+  a.gp-btn-outline{
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.35) !important;
+    color:#ffffff !important;
+  }
+}
+END DARK MODE */
+
+
+/* ===== SAFE: Konflikte im alten gp-box Block entschärfen ===== */
+/* Das alte System (.gp-box--gruen) wird auf die neue Schreibweise gemappt */
+.gp-box--gruen{ background: var(--gp-hellgruen) !important; color:#fff !important; }
+
+/* Und: alte Divider-Klasse auf neue Line-Klasse abbilden */
+.gp-box-divider{ background: rgba(255,255,255,0.35) !important; height:1px !important; }
+
+
+/* === FIX: Button-Schriften korrekt (global + Boxen) === */
+
+/* 1) Standard-Buttons (gefüllt) = immer weiss */
+a.gp-btn,
+a.gp-btn:visited,
+a.gp-btn--green,
+a.gp-btn--green:visited{
+  color:#ffffff !important;
+}
+
+/* 2) Helle Buttons (Outline/Soft/Small) = grün (außer in Boxen) */
+a.gp-btn-outline,
+a.gp-btn-outline:visited,
+a.gp-btn-soft,
+a.gp-btn-soft:visited,
+a.gp-btn-green-sm,
+a.gp-btn-green-sm:visited{
+  color: var(--gp-gruen) !important;
+}
+
+/* 3) In farbigen Boxen: ALLE Buttons = weiss */
+.gp-box--lila a.gp-btn,
+.gp-box--lila a.gp-btn--green,
+.gp-box--lila a.gp-btn-outline,
+.gp-box--lila a.gp-btn-soft,
+.gp-box--lila a.gp-btn-green-sm,
+.gp-box--gruen a.gp-btn,
+.gp-box--gruen a.gp-btn--green,
+.gp-box--gruen a.gp-btn-outline,
+.gp-box--gruen a.gp-btn-soft,
+.gp-box--gruen a.gp-btn-green-sm{
+  color:#ffffff !important;
+}
+/* =========================================================
+   FOOTER: Links immer weiss (unabhängig vom Mode)
+   ========================================================= */
+/* Footer: Links immer weiss */
+.jtpl-section-aside .j-module a,
+.jtpl-section-aside .j-module a:visited,
+.jtpl-section-aside .j-module a:hover,
+.jtpl-section-aside .j-module a:focus,
+.jtpl-section-aside .j-module a:active{
+  color:#ffffff !important;
+  text-decoration: none !important;
+  background: none !important;
+}
+/* sanfter Hover nur für Social Icons */
+.social-icon{
+  transition: transform .2s ease, opacity .2s ease;
+  opacity: .75;
+}
+.social-icon:hover{
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* Social-Links im Footer – immer gut lesbar */
+.footer-social a{
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:600;
+}
+.footer-social a:hover{
+  text-decoration:underline;
+}
+/* ===== FIX: gp-gallery-swipe auch ohne <a> ===== */
+.gp-gallery-swipe .gp-imgframe{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #d6e2db;
+  background: #fff;
+  margin: 0;
+}
+
+.gp-gallery-swipe .gp-imgframe img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  background: #f6f8f7;
+}
+
+@media (max-width: 768px){
+  .gp-gallery-swipe .gp-imgframe img{ height: 220px; }
+  .gp-gallery-swipe > .gp-imgframe{ scroll-snap-align: start; }
+}
+
+/* FIX: Links in HTML-Code-Modulen (j-htmlCode) wie normaler Content-Link */
+.j-module.j-htmlCode a:not(.gp-btn):not(.gp-btn--green):not(.gp-btn-outline):not(.gp-btn-soft):not(.gp-btn-green-sm),
+.j-module.j-htmlCode a:visited:not(.gp-btn):not(.gp-btn--green):not(.gp-btn-outline):not(.gp-btn-soft):not(.gp-btn-green-sm){
+  color: var(--gp-link) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+
+/* =========================================
+   Inline-Style Overrides – NUR echte Inline-Hintergründe
+   ========================================= */
+.j-module a[style*="background: rgb(130, 169, 143)"]
+:not(.gp-btn):not(.gp-btn--green):not(.gp-btn-outline):not(.gp-btn-soft):not(.gp-btn-green-sm){
+  background-color: var(--gp-gruen) !important;
+  color: #ffffff !important;
+}
+
+
+/* ========= Footer-Buttons: Text erzwingen ========= */
+/* (Jimdo kann in Footer-Links manchmal font-size/opacity/text-indent kaputt-stylen) */
+
+footer a.gp-review-link,
+footer a.gp-review-link:visited,
+.j-footer a.gp-review-link,
+.j-footer a.gp-review-link:visited,
+#footer a.gp-review-link,
+#footer a.gp-review-link:visited{
+  /* Text sichtbar machen (egal was vorher passiert ist) */
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.2px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-indent: 0 !important;
+  -webkit-text-fill-color: rgba(255,255,255,0.95) !important;
+  color: rgba(255,255,255,0.95) !important;
+
+  /* Button-Look */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 18px !important;
+  border-radius: 14px !important;
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  text-decoration: none !important;
+  font-weight: 650 !important;
+
+  /* falls irgendwo ein Filter/Blend aktiv ist */
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+footer a.gp-review-link:hover,
+.j-footer a.gp-review-link:hover,
+#footer a.gp-review-link:hover{
+  background: rgba(255,255,255,0.16) !important;
+  border-color: rgba(255,255,255,0.55) !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+}
+
+/* =========================
+   Footer: Textlinks sichtbar machen
+   ========================= */
+
+/* Tel + Mail Links */
+footer a[href^="tel"],
+footer a[href^="mailto"],
+.j-footer a[href^="tel"],
+.j-footer a[href^="mailto"],
+#footer a[href^="tel"],
+#footer a[href^="mailto"]{
+  color: rgba(255,255,255,0.95) !important;
+  -webkit-text-fill-color: rgba(255,255,255,0.95) !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+/* Hover */
+footer a[href^="tel"]:hover,
+footer a[href^="mailto"]:hover{
+  text-decoration: underline !important;
+}
+
+/* =========================
+   Footer: Social Media Icons
+   ========================= */
+
+/* Falls SVG-Icons verwendet werden */
+footer a svg,
+.j-footer a svg{
+  fill: rgba(255,255,255,0.75) !important;
+  opacity: 1 !important;
+}
+
+/* Falls Font-Icons (f, in, X) */
+footer a,
+footer a i,
+.j-footer a,
+.j-footer a i{
+  color: rgba(255,255,255,0.75) !important;
+  opacity: 1 !important;
+}
+
+/* Hover für Social Icons */
+footer a:hover svg,
+footer a:hover i{
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+/* Footer Socials sichtbar machen */
+footer .footer-social a,
+.j-footer .footer-social a{
+  color: rgba(255,255,255,.) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: rgba(255,255,255,.75) !important;
+}
+
+/* Falls Jimdo die Icons über ::before/::after rendert */
+footer .footer-social a::before,
+footer .footer-social a::after,
+.j-footer .footer-social a::before,
+.j-footer .footer-social a::after{
+  color: rgba(255,255,255,.75) !important;
+  opacity: 1 !important;
+}
+
+/* Hover */
+footer .footer-social a:hover,
+.j-footer .footer-social a:hover{
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Ganz wichtig: falls irgendwo ein globales opacity auf dem Container liegt */
+footer .footer-social,
+.j-footer .footer-social{
+  opacity: 1 !important;
+}
+sub {
+  vertical-align: baseline;
+  font-size: 0.75em;
+  position: relative;
+  top: 0.25em;
+  line-height: 0;
+}
+
+/* ===== H2: mobil ausgewogen kleiner ===== 
+@media (max-width: 768px){
+  body .jtpl-section-main h2,
+  body .jtpl-section-content h2,
+  body .j-module h2,
+  body .j-text h2{
+    font-size: 2.5EM !important;
+    line-height: 1.8 !important;
+  }
+}*/
+
+/* sehr kleine Geräte minimal nachjustieren 
+@media (max-width: 520px){
+  body .jtpl-section-main h2,
+  body .jtpl-section-content h2,
+  body .j-module h2,
+  body .j-text h2{
+    font-size: 2.0rem !important;
+    line-height: 1.6 !important;
+  }
+}*/
+
+/* ===== WISSEN – SELBSTTEST-BOX (final ruhig) ===== */
+
+.gp-wissen-selbsttest-box{
+  border: 1px solid #e3ebe7;
+  border-radius: 18px;
+  padding: 20px !important;
+  background: #f6f9f7;
+  margin: 20px 0 20px 0; /* Luft nach oben & unten */
+}
+
+/* Titel */
+.gp-wissen-selbsttest-box .gp-wissen-selbsttest-title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #4f6f61; /* dein dunkles Grün */
+}
+
+
+/* Text */
+.gp-wissen-selbsttest-text{
+  margin: 0 0 12px 0;
+  line-height: 1.55;
+  color: #1f2b26;
+}
+
+/* Meta */
+.gp-wissen-selbsttest-meta{
+  margin: 0 0 10px 0;
+  font-size: 13px !important;
+  color: #5c6a64;
+}
+
+/* Mobil: mehr Luft zum nächsten Block */
+@media (max-width: 640px){
+  .gp-wissen-selbsttest-box{
+    margin: 24px 0 34px 0;
+  }
+}
+/* ===============================
+   SELBSTTEST BOX GLOBAL
+   =============================== */
+.gp-global-selbsttest-box {
+  background: #f2f5f3;
+  border-radius: 18px;
+  padding: 10px 20px;
+  margin: 15px 0 15px 0;
+}
+
+.gp-global-selbsttest-box h3 {
+  margin-bottom: 10px;
+}
+
+.gp-global-selbsttest-box p {
+  margin-bottom: 12px;
+}
+
+.gp-global-selbsttest-box .meta {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+/* ===============================
+   PRESSE TEASER
+   =============================== */
+.gp-press-note-longevity{
+  margin:24px 0;
+  font-size:0.95rem;
+  line-height:1.6;
+  opacity:0.85;
+}
+
+.gp-press-note-longevity a{
+  text-decoration:none;
+  font-weight:500;
+  color:#6b8f80;
+}
+
+.gp-press-note-longevity a:hover{
+  text-decoration:underline;
+}
+
+
+
+/*]]>*/
+</style>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+  function toggleMehr(e){
+    var link = e.target.closest && e.target.closest('a.mehr-link');
+    if(!link) return;
+
+    e.preventDefault();
+
+    var id = link.getAttribute('data-toggle');
+    if(!id) return;
+
+    var box = document.getElementById(id);
+    if(!box) return;
+
+    var isOpen = box.classList.contains('is-open');
+
+    // Toggle-Klasse
+    box.classList.toggle('is-open', !isOpen);
+
+    // aria-hidden passend setzen (für sauber)
+    box.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+
+    // Höhe animieren (weil du max-height nutzt)
+    if(!isOpen){
+      box.style.maxHeight = box.scrollHeight + 'px';
+      box.style.opacity = '1';
+    }else{
+      box.style.maxHeight = '0px';
+      box.style.opacity = '0';
+    }
+
+    // Linktext wechseln
+    var openText  = link.getAttribute('data-text-open')  || '>> mehr lesen';
+    var closeText = link.getAttribute('data-text-close') || '<< weniger anzeigen';
+    link.textContent = isOpen ? openText : closeText;
+  }
+
+  document.addEventListener('click', toggleMehr, false);
+
+  // Initial: alle gp-mehrboxen sicher auf "zu"
+  document.querySelectorAll('.gp-mehrbox').forEach(function(box){
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden','true');
+    box.style.maxHeight = '0px';
+    box.style.opacity = '0';
+  });
+})();
+//]]>
+</script>
+
+<style>
+/* <![CDATA[ */
+/* ===============================
+   COOKIE BANNER – CLEAN & FAIR
+   =============================== */
+
+/* Grundcontainer */
+.cc-individual-cookie-settings.ui-dialog {
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  padding: 0;
+  font-size: 14px;
+  max-width: 420px;
+}
+
+/* Titelbereich */
+.cc-individual-cookie-settings h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Text ruhiger & kompakter */
+.cc-individual-cookie-settings-texts p {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #666;
+}
+
+/* Kategorien als ruhige Karten */
+.category-list .category,
+.cookie-list .cookie {
+  background: #f7f8f9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+/* Toggle ruhiger */
+.toggle .fill {
+  background: #d6d9dd;
+}
+.toggle[data-value="all"] .fill {
+  background: #8fb3a1; /* dein helles Grün – neutral */
+}
+
+/* ===============================
+   BUTTONS – RECHTLICH SAUBER
+   =============================== */
+
+/* Alle Buttons gleich */
+.cc-individual-cookie-settings-actions .btn {
+  background: transparent;
+  border: 1.5px solid #8fb3a1;
+  color: #3f5f52;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Kein Hervorheben von "Alles erlauben" */
+#cookie-settings-all,
+#cookie-settings-selected,
+#cookie-settings-reject-all {
+  background: transparent !important;
+  color: #3f5f52 !important;
+}
+
+/* Hover nur leicht – kein Nudging */
+.cc-individual-cookie-settings-actions .btn:hover {
+  background: rgba(143,179,161,0.12);
+}
+
+/* ===============================
+   MOBIL: BOTTOM-SHEET statt POPUP
+   =============================== */
+@media (max-width: 768px) {
+  .cc-individual-cookie-settings.ui-dialog {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+
+/* =========================================
+   Produktkasten Wissensseiten (zb Vitamin-D  – volle Breite?
+   ========================================= */
+
+.gp-vitd-box{
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;          /* WICHTIG: verhindert Überstand */
+  background: #f2f7f4;
+  border: 1px solid #d6e2db;
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin: 24px 0;
+}
+
+/* Inneres Layout */
+.gp-vitd-box-inner{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Bild links – bewusst größer */
+.gp-vitd-box-img{
+  flex: 0 0 110px;        /* <-- größer als vorher */
+  max-width: 110px;
+  box-sizing: border-box;
+}
+
+.gp-vitd-box-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #d6e2db;
+}
+
+/* Textbereich */
+.gp-vitd-box-text{
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+/* Titel */
+.gp-vitd-box-title{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #486C5E; /* GP-Grün */
+}
+
+/* Text normal, ruhig */
+.gp-vitd-box-text p{
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #222;
+}
+
+/* Link */
+.gp-vitd-box-link{
+  margin: 15px 0 0 0;
+}
+
+.gp-vitd-box-link a{
+  font-weight: 600;
+  color: #486C5E;
+  text-decoration: none;
+}
+
+.gp-vitd-box-link a:hover{
+  text-decoration: underline;
+}
+.gp-vitd-box-content sub {
+  vertical-align: baseline;
+  font-size: 0.75em;
+  position: relative;
+  top: 0.25em;
+  line-height: 0;
+}
+
+/* =========================
+   Mobile Anpassung
+   ========================= */
+@media (max-width: 640px){
+
+  .gp-vitd-box-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gp-vitd-box-img{
+    flex: 0 0 auto;
+    max-width: 140px;     /* mobil sogar noch etwas größer */
+  }
+
+  .gp-vitd-box{
+    padding: 18px 18px;
+  }
+}
+
+/* =========================
+   Trustpilot
+   ========================= */
+/* Wrapper – ruhiger Abschluss, keine Box */
+.gp-trust-lite {
+  margin: 10px 0 30px;
+  text-align: center;
+}
+
+/* Überschrift */
+.gp-trust-lite-title {
+  margin: 0 0 6px;
+  font-size: 26px;
+  line-height: 1.3;
+  color: #6b3f63; /* dein Lila */
+}
+
+/* Erklärungstext */
+.gp-trust-lite-text {
+  margin: 0 0 10px;
+  color: #5f6d66;
+  font-size: 16px;
+}
+
+/* Sterne */
+.gp-trust-stars {
+  margin: 6px 0 14px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #f5b400;
+}
+
+/* Button sichtbar machen (Outline-Button!) */
+.gp-trust-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+
+  font-size: 15px;
+  line-height: 1.2;
+
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+/* =========================
+   Schriftformatierung WISSEN
+   ========================= */
+.wissen-content p {
+  margin: 0 0 12px 0;
+}
+
+.wissen-content h2 {
+  margin: 10px 0 24px 0;
+}
+
+.wissen-content h3 {
+  margin: 0px 0 12px 0;
+  font-size: 22px !important;
+}
+
+/* ===== Wissensliste: Punkt fein & nah ===== */
+
+.wissen-content .wissen-list,
+.product-content .wissen-list{
+  list-style: none;
+  margin: 12px 0 20px 0;
+  padding: 0;
+}
+
+.wissen-content .wissen-list li,
+.product-content .wissen-list li{
+  position: relative;
+  padding-left: 14px;
+  margin: 0 0 6px 0;
+  line-height: 1.6;
+}
+
+.wissen-content .wissen-list li::before,
+.product-content .wissen-list li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 14px;
+  color: #6f8f80;
+}
+
+/* Kasten: Liste insgesamt unten enger + letzter Punkt ohne Abstand */
+.gp-hint-box .wissen-list{
+  margin-bottom: 0 !important;
+}
+
+.gp-hint-box .wissen-list li:last-child{
+  margin-bottom: 0 !important;
+}
+
+blockquote.gp-wissen a.mehr-link {
+  color: #8B4F7A !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+blockquote.gp-wissen a.mehr-link:hover{
+  color: #6f3c5e !important;
+  text-decoration: none;
+  opacity: .9;
+}
+.gp-wissen .mehr-link::after {
+  content: " →";
+}
+.praxis-einordnung {
+  border-left: 4px solid rgba(139,79,122,0.45); /* euer Lila */
+  padding-left: 18px;
+  margin: 18px 0;
+}
+
+.praxis-einordnung p {
+  margin: 0 0 10px 0;
+}
+/* Entschärfte Hint-Box */
+.gp-hint-box.hint-soft {
+  background: transparent !important;
+  border: none !important;
+  border-left: 4px solid rgba(72,108,94,0.35) !important;
+  padding: 0px 18px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================
+   CTA Box – Selbsttest / Kurs / Hinweise
+   ========================= */
+
+.gp-cta-box{
+max-width:980px;
+margin:28px auto;
+padding:26px 28px;
+
+border-radius:18px;
+background:#f2f7f4;
+border:1px solid rgba(var(--gp-gruen-rgb),0.35);
+}
+
+.gp-cta-inner{
+display:flex;
+flex-wrap:wrap;
+gap:28px;
+align-items:flex-end;
+justify-content:space-between;
+}
+
+.gp-cta-text{
+flex:1;
+min-width:260px;
+}
+
+.gp-cta-title{
+font-size:1.35em;
+line-height:1.3;
+color:#3f6f5b;
+margin-bottom:14px;
+font-weight:400;
+font-family:Lora, serif;
+}
+
+.gp-cta-desc{
+font-size:16px;
+line-height:1.6;
+color:#3f4f48;
+margin-bottom:14px;
+max-width:640px;
+}
+
+.gp-cta-meta{
+font-size:14px;
+color:#6a7a73;
+}
+
+.gp-cta-button{
+min-width:220px;
+text-align:right;
+margin-top:12px;
+}
+
+/* Button stärker im CTA-Kasten */
+
+.gp-cta-box .gp-btn-green-sm{
+background:rgba(var(--gp-gruen-rgb),0.85);
+color:#fff !important;
+border:1px solid rgba(var(--gp-gruen-rgb),1);
+}
+
+.gp-cta-box .gp-btn-green-sm:hover{
+background:rgba(var(--gp-gruen-rgb),1);
+}
+
+/* Mobile */
+
+@media (max-width:700px){
+
+.gp-cta-button{
+text-align:center;
+width:100%;
+}
+
+}
+.gp-cta-box .gp-btn-green-sm{
+  background: rgba(var(--gp-gruen-rgb),0.85);
+  border:1px solid rgba(var(--gp-gruen-rgb),1);
+  color:#ffffff !important;
+}
+/*]]>*/
+</style>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+  function setTocOpen(wrap, open){
+    if(!wrap) return;
+
+    var btn  = wrap.querySelector('.gp-toc-acc__head');
+    var body = wrap.querySelector('[data-gp-toc-body]');
+    var lbl  = wrap.querySelector('[data-gp-toc-label]');
+    if(!btn || !body) return;
+
+    wrap.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    body.hidden = !open;
+    if(lbl) lbl.textContent = open ? 'AUSBLENDEN' : 'ANZEIGEN';
+  }
+
+  function toggleToc(e){
+    // Klick auf Kopfzeile?
+    var head = e.target.closest && e.target.closest('.gp-toc-acc__head');
+    if(head){
+      e.preventDefault();
+      var wrap = head.closest('[data-gp-toc]');
+      if(!wrap) return;
+      var isOpen = wrap.classList.contains('is-open');
+      setTocOpen(wrap, !isOpen);
+      return;
+    }
+
+    // Klick auf Link im TOC -> einklappen (optional, fühlt sich wie ZGD an)
+    var link = e.target.closest && e.target.closest('[data-gp-toc] .gp-toc a');
+    if(link){
+      var w = link.closest('[data-gp-toc]');
+      setTocOpen(w, false);
+      return;
+    }
+  }
+
+  document.addEventListener('click', toggleToc, false);
+
+  // Initial: alle TOCs zu
+  document.querySelectorAll('[data-gp-toc]').forEach(function(wrap){
+    setTocOpen(wrap, false);
+  });
+})();
+//]]>
+</script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".gp-toc-acc__head");
+    if (!btn) return;
+
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    const textEl = btn.querySelector(".gp-toc-acc__toggle-text");
+
+    if (textEl) {
+        textEl.textContent = expanded
+            ? textEl.dataset.textOpen
+            : textEl.dataset.textClosed;
+    }
+});
+//]]>
+</script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+(function () {
+  function closeDetails(d) {
+    if (!d.open) return;
+
+    // Höhe aktuell messen
+    const content = d.querySelector('.faq-answer') || d.querySelector(':scope > *:not(summary)');
+    if (!content) { d.open = false; return; }
+
+    const start = content.scrollHeight;
+    content.style.overflow = 'hidden';
+    content.style.maxHeight = start + 'px';
+
+    // nächster Frame -> auf 0 animieren
+    requestAnimationFrame(() => {
+      content.style.maxHeight = '0px';
+    });
+
+    // nach Animation wirklich schließen + cleanup
+    const dur = 450;
+    window.setTimeout(() => {
+      d.open = false;
+      content.style.maxHeight = '';
+      content.style.overflow = '';
+    }, dur);
+  }
+
+  function openDetails(d) {
+    if (d.open) return;
+
+    const content = d.querySelector('.faq-answer') || d.querySelector(':scope > *:not(summary)');
+    if (!content) { d.open = true; return; }
+
+    // zuerst öffnen, dann Höhe animieren
+    d.open = true;
+    content.style.overflow = 'hidden';
+    content.style.maxHeight = '0px';
+
+    requestAnimationFrame(() => {
+      const end = content.scrollHeight;
+      content.style.maxHeight = end + 'px';
+    });
+
+    const dur = 450;
+    window.setTimeout(() => {
+      content.style.maxHeight = '';
+      content.style.overflow = '';
+    }, dur);
+  }
+
+  document.addEventListener('click', function (e) {
+    const summary = e.target.closest && e.target.closest('.gp-faq details > summary');
+    if (!summary) return;
+
+    e.preventDefault();
+    const current = summary.parentElement; // details
+
+    // alle anderen schließen
+    document.querySelectorAll('.gp-faq details[open]').forEach(d => {
+      if (d !== current) closeDetails(d);
+    });
+
+    // current togglen
+    if (current.open) closeDetails(current);
+    else openDetails(current);
+  });
+})();
+//]]>
+</script>
